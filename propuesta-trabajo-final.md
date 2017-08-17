@@ -1,4 +1,4 @@
-## Grupo (Empty Name)
+## Grupo MonadGames
 
 # Propuesta de posibles trabajos finales para la materia "Introducción a la programación de Vídeo Juegos"
 
