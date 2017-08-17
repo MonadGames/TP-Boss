@@ -2,7 +2,7 @@
 
 # Propuesta de posibles trabajos finales para la materia "Introducción a la programación de Vídeo Juegos"
 
-#### Integrantes
+### Integrantes
   - [Maljkovich Gabriel](https://github.com/glmaljkovich)
   - [Lochbaum Federico](https://github.com/FedeLochbaum)
   
