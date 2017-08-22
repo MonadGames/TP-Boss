@@ -56,7 +56,31 @@
 
 
 - #### ¿Porqué jugarlo?
-  Por que no? Si no tenés vida.
+  Por que te copa que el mundo reaccione a tus deciciones. Por que queres recorrer todos los caminos posibles. Por que leiste la intro... y ya no hay vuelta atras.
 
 - #### Juegos similares
   "Undertale", "Hollow Knight", "Ori and the blind forest", "Salt and Sanctuary"
+
+---
+
+### Propuesta 3
+- #### Nombre del juego: Mazos contra la humanidad
+
+- #### Tecnología a utilizar: Unity 3D / Phaser / Ionic
+
+- #### Genero: Cards game
+
+- #### Historia y contexto de fondo
+  En mazos contra la humanidad tres o mas jugadores compiten por quien es el mas indecente de todos. Hay cartas de dos tipos: Negras y blancas.
+  Las Negras contienen una frase con un espacio en blanco para completar. Ej: "Nada como despertarse con _______ a tu lado."
+  Las Blancas contienen respuestas bizarras. En cada turno uno de los jugadores levanta una carta negra y se la muestra a los demas para que pongan una de sus cartas blancas. El jugador de la carta negra _(Czar)_ entonces elije la que mas gracia le causa y ese jugador recibe un punto. Asi, cada turno hay un _Czar_ distinto y gana el jugador que mas puntos recibe por sus respuestas graciosas.
+
+- #### Alcance
+  La idea es hacer el juego para plataformas mobile ya que hay buenas versiones web pero las que hay para Android son malisimas. Tiene que ser multijugador, manejar multiples sesiones (servidor) y permitir mazos personalizados.
+
+
+- #### ¿Porqué jugarlo?
+  Por que sos un perversillo. Y a parte queres jugarlo en una reunion con amigos y el juego fisico no te da la oportunidad de usar mazos personalizados y las versiones web no son practicas para reuniones presenciales (salvo que te gusten las LAN party)
+
+- #### Juegos similares
+  "Cards Against Humanity"
