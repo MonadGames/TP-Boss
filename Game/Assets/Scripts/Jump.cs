@@ -6,9 +6,6 @@ public class Jump : MonoBehaviour {
 	[Range(1, 10)]
 	public float jumpVelocity;
 
-	[Range(-5, 2)]
-	public float maxJump;
-
 	private Animator anim;
 
 	private Rigidbody2D rb;
@@ -18,12 +15,16 @@ public class Jump : MonoBehaviour {
 		anim = GetComponent<Animator> ();
 	}
 
-	// Update is called once per frame
 	void Update () {
-		if (Input.GetButtonDown ("Jump") && (rb.position.y < maxJump)) {
+		checkForJump ();
+	}
+
+	private void checkForJump(){
+		if (Input.GetButtonDown ("Jump") && (rb.position.y < 0.5f)) {
 			rb.velocity = Vector2.up * jumpVelocity;
 			anim.SetTrigger ("Jump");
-		} else if(rb.position.y < 0){
+		} else 
+			if(rb.velocity.y == 0 && rb.velocity.x == 0){
 			anim.SetTrigger ("Pause");
 		}
 	}
