@@ -4,6 +4,7 @@ using System.Collections;
 public class Character : MonoBehaviour {
 
 	public float speed;
+	public float acceleration;
 	private bool isDead = false;
 	private bool isRight;
 	private Rigidbody2D rb;
@@ -24,6 +25,7 @@ public class Character : MonoBehaviour {
 	}
 
 	private void checkForMove(){
+		// faltaria hacer que la velocidad cambie usando la aceleracion. Asi pasa de caminar a correr
 		var move = new Vector3 (Input.GetAxis ("Horizontal"), Input.GetAxis ("Vertical"), 0);
 		transform.position += move * speed * Time.deltaTime;
 	}
@@ -33,15 +35,13 @@ public class Character : MonoBehaviour {
 	}
 
 	private void checkForActions(){
-		/*
-		if (rb.velocity.x != 0) {
+		if (rb.velocity.x > 0 && rb.velocity.x <= 2) {
+			anim.SetTrigger ("Walk");
+		} else if (rb.velocity.x > 2) {
 			anim.SetTrigger ("Run");
-		} else if (rb.velocity.x > 0 && rb.velocity.y > 0) {
-			anim.SetTrigger ("JumpWithVelocity");
 		} else {
-			anim.SetTrigger ("Pause");
+			anim.SetTrigger ("Idle");
 		}
-		*/
 	}
 
 	private void flip(){

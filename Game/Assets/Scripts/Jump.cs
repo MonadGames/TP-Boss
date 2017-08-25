@@ -22,10 +22,10 @@ public class Jump : MonoBehaviour {
 	private void checkForJump(){
 		if (Input.GetButtonDown ("Jump") && (rb.position.y < 0.5f)) {
 			rb.velocity = Vector2.up * jumpVelocity;
-			anim.SetTrigger ("Jump");
+			//anim.SetTrigger ("Jump");
 		} else 
 			if(rb.velocity.y == 0 && rb.velocity.x == 0){
-			anim.SetTrigger ("Pause");
+			//anim.SetTrigger ("Pause");
 		}
 	}
 }
