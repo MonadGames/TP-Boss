@@ -16,7 +16,8 @@ public class Character : MonoBehaviour {
 		anim = GetComponent<Animator> ();
 	}
 
-	void Update () {
+	void FixedUpdate () {
+		rb.rotation = 0;
 		if (!isDead) {
 			checkForMove ();
 			checkForActions ();
@@ -35,12 +36,10 @@ public class Character : MonoBehaviour {
 	}
 
 	private void checkForActions(){
-		if (rb.velocity.x > 0 && rb.velocity.x <= 2) {
+		if (rb.velocity.x != 0) {
 			anim.SetTrigger ("Walk");
-		} else if (rb.velocity.x > 2) {
-			anim.SetTrigger ("Run");
 		} else {
-			//anim.SetTrigger ("Idle");
+			anim.SetTrigger ("Idle");
 		}
 	}
 
@@ -53,4 +52,5 @@ public class Character : MonoBehaviour {
 			transform.localScale = scale;
 		}
 	}
+		
 }
