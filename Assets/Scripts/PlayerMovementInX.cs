@@ -1,10 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Character : MonoBehaviour {
+public class PlayerMovementInX : MonoBehaviour {
+	
+	[Range(3, 6)]
+	public float runSpeed;
 
-	public float speed;
-	public float acceleration;
+	[Range(1, 2)]
+	public float walkSpeed;
+
 	private bool isDead = false;
 	private bool isRight;
 	private Rigidbody2D rb;
@@ -26,8 +30,6 @@ public class Character : MonoBehaviour {
 	}
 
 	private void checkForMove(){
-		// move();
-		// faltaria hacer que la velocidad cambie usando la aceleracion. Asi pasa de caminar a correr
 		if (shouldMove()) {
 			anim.SetTrigger ("Walk");
 			move ();
@@ -53,8 +55,16 @@ public class Character : MonoBehaviour {
 	}
 
 	private void move(){
-		var move = new Vector3 (Input.GetAxis ("Horizontal"), Input.GetAxis ("Vertical"), 0);
-		transform.position += move * speed * Time.deltaTime;
+		var movement = new Vector3 (Input.GetAxis ("Horizontal"), Input.GetAxis ("Vertical"), 0);
+		if (Input.GetKey(KeyCode.LeftShift)) { 
+			move(movement, runSpeed);
+		} else {
+			move(movement, walkSpeed);
+		}
+	}
+
+	private void move(Vector3 movement, float speed){
+		transform.position += movement * speed * Time.deltaTime;
 	}
 
 	private bool shouldMove(){
