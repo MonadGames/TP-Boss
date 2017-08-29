@@ -9,7 +9,7 @@ public class PlayerMovementInX : MonoBehaviour {
 	[Range(1, 2)]
 	public float walkSpeed;
 
-	private bool isDead = false;
+	public bool isDead = false;
 	private bool isRight;
 	private Rigidbody2D rb;
 	private Animator anim;
@@ -30,6 +30,8 @@ public class PlayerMovementInX : MonoBehaviour {
 	}
 
 	private void checkForMove(){
+
+		// POR FAVOR SAQUEMOS ESTE CODIGO FEO FEO Y USEMOS CheckForActions QUE ESTA BONITO.
 		if (shouldMove()) {
 			anim.SetTrigger ("Walk");
 			move ();
@@ -39,17 +41,16 @@ public class PlayerMovementInX : MonoBehaviour {
 			rb.velocity = new Vector2(0, rb.velocity.y);
 			walking = false;
 		}
-
-	}
-
-	void OnCollisionEnter2D (){
-		isDead = false; 
 	}
 
 	private void checkForActions(){
-		if (rb.velocity.x > 0) {
+		float speed = rb.velocity.x;
+
+		if (speed.Equals(walkSpeed))
 			anim.SetTrigger ("Walk");
-		} else if(rb.velocity.x == 0){
+		else if (speed.Equals(runSpeed))
+			anim.SetTrigger ("Run");
+		else {
 			anim.SetTrigger ("Idle");
 		}
 	}
@@ -57,13 +58,13 @@ public class PlayerMovementInX : MonoBehaviour {
 	private void move(){
 		var movement = new Vector3 (Input.GetAxis ("Horizontal"), Input.GetAxis ("Vertical"), 0);
 		if (Input.GetKey(KeyCode.LeftShift)) { 
-			move(movement, runSpeed);
+			movePlayer(movement, runSpeed);
 		} else {
-			move(movement, walkSpeed);
+			movePlayer(movement, walkSpeed);
 		}
 	}
 
-	private void move(Vector3 movement, float speed){
+	private void movePlayer(Vector3 movement, float speed){
 		transform.position += movement * speed * Time.deltaTime;
 	}
 
@@ -80,5 +81,5 @@ public class PlayerMovementInX : MonoBehaviour {
 			transform.localScale = scale;
 		}
 	}
-		
+
 }

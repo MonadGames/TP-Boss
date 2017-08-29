@@ -23,26 +23,23 @@ public class PlayerMovementInY : MonoBehaviour {
 
 	private void checkForMove(){
 		checkForJump ();
-		checkForDown ();
+		checkForBend ();
 	}
 
-	public void checkForDown(){
-		if (Input.GetKey(KeyCode.DownArrow) && isColliderWithFloor()) {
-			// anim of down character
+	public void checkForBend(){
+		if (Input.GetKey(KeyCode.DownArrow) && itsDontMove()) {
+			anim.SetTrigger ("Bend");
 		}
 	}
 
 	public void checkForJump(){
-		if (Input.GetKey(KeyCode.Space) && isColliderWithFloor()) {
+		if (Input.GetKey(KeyCode.Space) && itsDontMove()) {
 			rb.velocity = Vector2.up * jumpSpeed;
-			//anim.SetTrigger ("Jump");
+			anim.SetTrigger ("Jump");
 		}
 	}
 
-	public bool isColliderWithFloor(){
-		Collider2D collider = GetComponent<BoxCollider2D>();
-		return true;
-		//return (collider.gameObject.tag == "Floor");
-		// pense que esto iba a andar y por alguna razon colisiona con algo de tag "Player"
+	private bool itsDontMove(){
+		return rb.velocity.y == 0;
 	}
 }
