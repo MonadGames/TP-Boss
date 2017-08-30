@@ -6,7 +6,7 @@ public class EnemyAI : MonoBehaviour {
 
 
 	public int radiusOfMovement = 2;
-	public float enemySpeed = 50f;
+	public float enemySpeed = 1f;
 
 	public bool isFacingRight;
 	private float startPos;
@@ -37,21 +37,18 @@ public class EnemyAI : MonoBehaviour {
 
 	public void normalMovement(){
 		if (moveRight) {
-			enemyRigidBody2D.AddForce(enemyRigidBody2D.position * enemySpeed * Time.deltaTime);
+			enemyRigidBody2D.velocity = new Vector2(enemySpeed, 0);
 			if (!isFacingRight)
+				flip ();
+		} else {
+			enemyRigidBody2D.velocity = new Vector2(-enemySpeed, 0);
+			if (isFacingRight)
 				flip();
 		}
 
 		if (enemyRigidBody2D.position.x >= endPos)
 			moveRight = false;
-
-		if (!moveRight) {
-			enemyRigidBody2D.AddForce(enemyRigidBody2D.position * - enemySpeed * Time.deltaTime);
-			if (isFacingRight)
-				flip();
-		}
-
-		if (enemyRigidBody2D.position.x <= startPos)
+		else if (enemyRigidBody2D.position.x <= startPos)
 			moveRight = true;
 	}
 
