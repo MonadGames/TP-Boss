@@ -4,6 +4,17 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 
+
+	private float health;
+	private float energy;
+	private float defense;
+
+	public Player(){
+		health = 100f;
+		energy = 20f;
+		defense = 0f;
+	}
+
 	// Use this for initialization
 	void Start () {
 		
