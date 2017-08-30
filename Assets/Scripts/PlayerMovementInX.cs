@@ -23,39 +23,33 @@ public class PlayerMovementInX : MonoBehaviour {
 	void FixedUpdate () {
 		if (!isDead) {
 			move ();
-			checkForActions ();
 			flip ();
 		}
 	}
-
-	private void checkForActions() {
-		float speed = rb.velocity.x;
-		if (shouldMove()) {
-			if (speed < runSpeed)
-				anim.SetTrigger ("Walk");
-			else 
-				anim.SetTrigger ("Run");
-		} else {
-			anim.SetTrigger ("Idle");
-			rb.velocity = new Vector2(0, rb.velocity.y);
-		}
-/*		
-		if (speed.Equals (walkSpeed))
-			anim.SetTrigger ("Walk");
-		else if (speed.Equals (runSpeed))
-			anim.SetTrigger ("Run");
-		else
-			anim.SetTrigger ("Idle");
-					*/
-	}
-
+		
 	private void move(){
 		var movement = new Vector3 (Input.GetAxis ("Horizontal"), Input.GetAxis ("Vertical"), 0);
-		if (Input.GetKey(KeyCode.LeftShift)) { 
-			movePlayer(movement, runSpeed);
-		} else {
-			movePlayer(movement, walkSpeed);
-		}
+		if (shouldMove()) {
+			if (Input.GetKey (KeyCode.LeftShift))
+				run (movement);
+			else
+				walk (movement);
+		} else
+			idle ();
+	}
+
+	private void run(Vector3 movement){
+		movePlayer (movement, runSpeed);
+		anim.SetTrigger ("Run");
+	}
+
+	private void walk(Vector3 movement){
+		movePlayer (movement, walkSpeed);
+		anim.SetTrigger ("Walk");
+	}
+
+	private void idle(){
+		anim.SetTrigger ("Idle");
 	}
 
 	private void movePlayer(Vector3 movement, float speed){
@@ -74,6 +68,21 @@ public class PlayerMovementInX : MonoBehaviour {
 			scale.x *= -1;
 			transform.localScale = scale;
 		}
+	}
+
+	private void checkForActions() {
+		/*	
+		float speed = rb.velocity.x;
+		if (shouldMove()) {
+			if (speed < runSpeed)
+				anim.SetTrigger ("Walk");
+			else 
+				anim.SetTrigger ("Run");
+		} else {
+			anim.SetTrigger ("Idle");
+			rb.velocity = new Vector2(0, rb.velocity.y);
+		}
+	*/
 	}
 
 }
