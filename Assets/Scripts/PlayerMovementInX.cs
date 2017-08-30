@@ -39,13 +39,13 @@ public class PlayerMovementInX : MonoBehaviour {
 	}
 
 	private void run(Vector3 movement){
-		movePlayer (movement, runSpeed);
 		anim.SetTrigger ("Run");
+		movePlayer (movement, runSpeed);
 	}
 
 	private void walk(Vector3 movement){
-		movePlayer (movement, walkSpeed);
 		anim.SetTrigger ("Walk");
+		movePlayer (movement, walkSpeed);
 	}
 
 	private void idle(){

@@ -2,17 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour {
+public class Player : Character {
 
-
-	private float health;
-	private float energy;
-	private float defense;
+	private int countOfGoodActions = 0;
+	private int countOfBadActions = 0;
 
 	public Player(){
-		health = 100f;
-		energy = 20f;
-		defense = 0f;
+		
 	}
 
 	// Use this for initialization
