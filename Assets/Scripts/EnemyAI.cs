@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyIA : MonoBehaviour {
+public class EnemyAI : MonoBehaviour {
 
 
 	public int radiusOfMovement = 2;
-	public float enemySpeed = 200;
+	public float enemySpeed = 50f;
 
 	public bool isFacingRight;
 	private float startPos;
 	private float endPos;
 
-	private bool isDetectEnemy;
+	private bool isDetectPlayer = false;
 
 	Rigidbody2D enemyRigidBody2D;
 	private GameObject player;
@@ -32,12 +32,12 @@ public class EnemyIA : MonoBehaviour {
 		
 	public void Update() {
 		normalMovement ();
-		detectEnemy ();
+		detectPlayer ();
 	}
 
 	public void normalMovement(){
 		if (moveRight) {
-			enemyRigidBody2D.AddForce(Vector2.right * enemySpeed * Time.deltaTime);
+			enemyRigidBody2D.AddForce(enemyRigidBody2D.position * enemySpeed * Time.deltaTime);
 			if (!isFacingRight)
 				flip();
 		}
@@ -46,7 +46,7 @@ public class EnemyIA : MonoBehaviour {
 			moveRight = false;
 
 		if (!moveRight) {
-			enemyRigidBody2D.AddForce(-Vector2.right * enemySpeed * Time.deltaTime);
+			enemyRigidBody2D.AddForce(enemyRigidBody2D.position * - enemySpeed * Time.deltaTime);
 			if (isFacingRight)
 				flip();
 		}
@@ -55,7 +55,7 @@ public class EnemyIA : MonoBehaviour {
 			moveRight = true;
 	}
 
-	public void detectEnemy(){
+	public void detectPlayer(){
 		
 	}
 

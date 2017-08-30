@@ -630,6 +630,11 @@ MonoBehaviour:
   radiusOfMovement: 2
   enemySpeed: 200
   isFacingRight: 0
+  startPos: 0
+  endPos: 0
+  isDetectEnemy: 0
+  enemyRigidBody2D: {fileID: 0}
+  player: {fileID: 0}
   moveRight: 1
 --- !u!50 &730695769
 Rigidbody2D:
@@ -676,6 +681,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.6537457, y: 7.6801014}
   m_EdgeRadius: 0
+--- !u!114 &730695771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 730695765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f14afb26e03642e49bcbd72bc514a4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radiusOfMovement: 2
+  enemySpeed: 50
+  isFacingRight: 0
+  moveRight: 1
 --- !u!1 &1066622372
 GameObject:
   m_ObjectHideFlags: 0
