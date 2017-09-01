@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 15.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="sky_x5F_gradient.ai" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	 x="0px" y="0px" width="999.95px" height="500px" viewBox="0 0 999.95 500" style="enable-background:new 0 0 999.95 500;"
+	 xml:space="preserve">
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="193.8623" y1="-499.9746" x2="500.3373" y2="-499.9746" gradientTransform="matrix(3.262909e-006 1 -1 -0.001 -2.890653e-004 -1.058460e-004)">
+	<stop  offset="0" style="stop-color:#DEB96B"/>
+	<stop  offset="1" style="stop-color:#D8E8D9"/>
+</linearGradient>
+<rect style="fill-rule:evenodd;clip-rule:evenodd;fill:url(#SVGID_1_);" width="999.95" height="500"/>
+</svg>

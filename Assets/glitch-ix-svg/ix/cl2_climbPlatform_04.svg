@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 15.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="buildings" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="186.4px" height="48.7px" viewBox="0 0 186.4 48.7" style="enable-background:new 0 0 186.4 48.7;" xml:space="preserve">
+<g>
+	<polygon style="fill-rule:evenodd;clip-rule:evenodd;fill:#81908E;" points="144,33.7 0,48.7 4.5,27.7 139.5,9.7 	"/>
+	<polygon style="fill-rule:evenodd;clip-rule:evenodd;fill:#949F9E;" points="185.7,10 144,33.7 139.5,9.7 186.4,0 	"/>
+	
+		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="17.0234" y1="26.3467" x2="170.2207" y2="26.3467" gradientTransform="matrix(0.9943 -0.1066 0.1066 0.9943 3.807396e-004 1.747534e-004)">
+		<stop  offset="0" style="stop-color:#D5DAD8"/>
+		<stop  offset="1" style="stop-color:#99ABAF"/>
+	</linearGradient>
+	<polygon style="fill-rule:evenodd;clip-rule:evenodd;fill:url(#SVGID_1_);" points="65.55,9.15 186.4,0 141.55,21.65 4.5,27.7 	"/>
+	<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#586A69;" d="M125.1,32.5c5.967-0.566,10.367-2.066,13.2-4.5
+		c1.434-1.233,2.25-2.4,2.45-3.5l0.7,7.65c-25.134,2.666-45.367,4.883-60.7,6.649c-15.333,1.8-41.667,4.7-79,8.7l4-17.35
+		c1.167,1.833,3.233,3.633,6.2,5.399c5.966,3.566,13.466,5.217,22.5,4.95c8.9-0.3,24.917-1.55,48.05-3.75
+		C94.634,35.583,108.833,34.167,125.1,32.5z"/>
+	<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#778583;" d="M169.35,17.45c6.934-3.934,11.184-6.6,12.75-8
+		c1.101-0.967,2.017-2.2,2.75-3.7c0.367-0.733,0.617-1.383,0.75-1.95l-0.35,5.85l-40.3,22.8l-2.2-9.8l2.95,2
+		c2.5,1.167,5.133,1.333,7.899,0.5C156.634,24.25,161.884,21.683,169.35,17.45z"/>
+	<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#CCCFCD;" d="M184.6,1.95c-3.966,2.466-8.199,5.033-12.699,7.7
+		c-8.967,5.267-14.733,8.317-17.301,9.15c-2.566,0.833-5.166,1.567-7.8,2.2l-3.2,0.65L184.6,1.95z"/>
+	<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#B9BFBE;" d="M136.95,25.8c-1.867,0.767-24.15,1.517-66.85,2.25
+		c-21.367,0.4-42.533,0.7-63.5,0.9l133.65-6c0.2,0.167,0.217,0.417,0.05,0.75C139.934,24.333,138.816,25.033,136.95,25.8z"/>
+	<g>
+		<polygon style="fill-rule:evenodd;clip-rule:evenodd;fill:#E6E9E8;" points="53.2,25.55 16.65,27.2 69.15,8.9 92,7.15 		"/>
+		<polygon style="fill-rule:evenodd;clip-rule:evenodd;fill:#ABC4CF;" points="162.7,1.8 180.65,0.45 136.55,21.9 111.4,23 		"/>
+		<polygon style="fill-rule:evenodd;clip-rule:evenodd;fill:#A9BBBF;" points="100.75,6.5 118.4,5.15 87.7,24.05 62.35,25.15 		"/>
+		<polygon style="fill-rule:evenodd;clip-rule:evenodd;fill:#CFD2D1;" points="128,4.45 141.55,3.4 105.3,23.25 94.5,23.75 		"/>
+	</g>
+</g>
+</svg>

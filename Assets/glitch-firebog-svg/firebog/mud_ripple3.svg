@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 15.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="66px" height="20.45px" viewBox="0 0 66 20.45" style="enable-background:new 0 0 66 20.45;" xml:space="preserve">
+<symbol  id="FlashAICB_x2F_mud_x5F_ripple_x2F__x3C_Compound_Path_x3E_" viewBox="0 -20.453 65.8 20.454">
+	<g id="Layer_1_2_">
+		<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#524741;" d="M47.55-13.3c4.434,1.233,6.65,2.733,6.65,4.5
+			c0,1.767-2.217,3.267-6.65,4.5c-4.433,1.233-9.783,1.833-16.05,1.8c-6.233-0.033-11.567-0.683-16-1.95
+			c-4.433-1.233-6.65-2.733-6.65-4.5c0.033-1.767,2.267-3.267,6.7-4.5c4.434-1.233,9.767-1.833,16-1.8
+			C37.783-15.217,43.117-14.567,47.55-13.3z M56.15-2.9c6.434-1.967,9.65-4.367,9.65-7.2c0.034-2.833-3.167-5.267-9.6-7.3
+			c-6.434-2-14.184-3.017-23.25-3.05c-9.067-0.066-16.817,0.883-23.25,2.85c-6.434,1.967-9.667,4.367-9.7,7.2
+			c0,2.833,3.2,5.267,9.6,7.3c6.433,2,14.183,3.033,23.25,3.1C41.95,0.033,49.717-0.933,56.15-2.9z"/>
+	</g>
+</symbol>
+<symbol  id="ripple" viewBox="-32.9 -10.253 65.8 20.454">
+	<g id="Layer_1_3_">
+		
+			<use xlink:href="#FlashAICB_x2F_mud_x5F_ripple_x2F__x3C_Compound_Path_x3E_"  width="65.8" height="20.454" y="-20.453" transform="matrix(1 0 0 1 -32.8999 10.2002)" style="overflow:visible;opacity:0.3008;enable-background:new    ;"/>
+	</g>
+</symbol>
+<use xlink:href="#ripple"  width="65.8" height="20.454" x="-32.9" y="-10.253" transform="matrix(0.9784 0 0 -0.9784 32.9502 10.2002)" style="overflow:visible;opacity:0.0898;enable-background:new    ;"/>
+</svg>

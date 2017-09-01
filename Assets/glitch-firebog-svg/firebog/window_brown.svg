@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 15.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="FlashAICB" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="108.7px" height="108.8px" viewBox="0 0 108.7 108.8" style="enable-background:new 0 0 108.7 108.8;" xml:space="preserve"
+	>
+<symbol  id="FlashAICB_Assets_x2F_window_x5F_brown_x2F__x3C_Path_x3E_" viewBox="0 -108.611 108.667 108.611">
+	<g id="Layer_1_3_">
+		<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#261F17;" d="M86.05,0c7.034-4.767,12.45-11.083,16.25-18.95
+			c4.1-8.466,6.217-18.533,6.35-30.2c0.133-11.3-0.5-20.35-1.9-27.15c-1.6-7.667-4.383-13.767-8.35-18.3
+			c-4.167-4.733-10.05-8.217-17.65-10.45c-7.533-2.233-17.433-3.417-29.7-3.55c-13.066-0.133-23.667,0.934-31.8,3.2
+			C11.017-103.067,4.6-99.333,0-94.2c4.767-2.933,10.733-5.066,17.9-6.4c7.1-1.333,15.7-1.933,25.8-1.8
+			c12.267,0.133,22.167,1.316,29.7,3.55c7.6,2.233,13.483,5.7,17.65,10.4c3.967,4.534,6.75,10.633,8.35,18.3
+			c1.4,6.8,2.033,15.85,1.9,27.15C101.067-24.533,95.983-10.2,86.05,0z"/>
+	</g>
+</symbol>
+<symbol  id="FlashAICB_Assets_x2F_window_x5F_brown_x2F__x3C_Path_x3E__x5F_1" viewBox="-0.005 -118.562 120.172 118.568">
+	<g id="Layer_1_2_">
+		
+			<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="92.9937" y1="32.6611" x2="213.1512" y2="32.6611" gradientTransform="matrix(0.9999 0.0114 -0.0114 0.9999 -92.6191 -93.6982)">
+			<stop  offset="0" style="stop-color:#665736"/>
+			<stop  offset="1" style="stop-color:#FFFFFF"/>
+		</linearGradient>
+		<path style="fill-rule:evenodd;clip-rule:evenodd;fill:url(#SVGID_1_);" d="M118.25-86.25c-1.6-7.667-4.383-13.767-8.35-18.3
+			c-4.167-4.733-10.05-8.217-17.65-10.45c-7.533-2.233-17.433-3.417-29.7-3.55c-24.1-0.267-40.633,4.033-49.6,12.9
+			c-4.567,4.467-7.867,10.5-9.9,18.1c-1.9,7-2.917,16.033-3.05,27.1C-0.2-40.317,5.55-24.967,17.25-14.4
+			C27.683-5,41.817-0.2,59.65,0c17.8,0.2,31.967-4.283,42.5-13.45c11.767-10.267,17.767-25.483,18-45.65
+			C120.283-70.4,119.65-79.45,118.25-86.25z"/>
+	</g>
+</symbol>
+<g>
+	
+		<radialGradient id="SVGID_2_" cx="71.4043" cy="71.4043" r="71.3857" gradientTransform="matrix(0.7617 0 0 -0.7617 -0.0498 108.78)" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#000000"/>
+		<stop  offset="0.8824" style="stop-color:#000000;stop-opacity:0.2863"/>
+		<stop  offset="1" style="stop-color:#000000;stop-opacity:0"/>
+	</radialGradient>
+	<path style="fill-rule:evenodd;clip-rule:evenodd;fill:url(#SVGID_2_);" d="M108.686,54.272c0.102,10.359-0.482,18.649-1.752,24.87
+		c-1.422,7.059-3.936,12.657-7.541,16.796c-3.758,4.342-9.064,7.541-15.92,9.598c-6.83,2.031-15.793,3.11-26.889,3.237
+		c-11.249,0.127-20.465-0.749-27.65-2.628c-7.262-1.904-13.013-4.977-17.253-9.217c-4.113-4.113-7.097-9.648-8.95-16.605
+		C1.004,73.925,0.09,65.647-0.012,55.491c-0.203-18.484,4.977-32.563,15.539-42.237C24.973,4.596,37.77,0.178,53.917,0
+		c16.098-0.178,28.92,3.948,38.467,12.378C103.023,21.798,108.457,35.763,108.686,54.272z"/>
+	<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#2F241A;" d="M98.631,74.953c-1.219,5.84-3.339,10.486-6.36,13.939
+		c-3.174,3.605-7.655,6.259-13.444,7.96c-5.738,1.701-13.279,2.603-22.623,2.704c-18.357,0.203-30.951-3.072-37.781-9.826
+		c-3.479-3.402-5.992-7.998-7.541-13.787C9.434,70.611,8.659,63.73,8.558,55.301c-0.152-15.336,4.228-27.028,13.14-35.077
+		c7.947-7.16,18.713-10.816,32.297-10.969c13.559-0.152,24.35,3.263,32.373,10.245c8.963,7.82,13.533,19.411,13.711,34.772
+		C100.18,62.88,99.697,69.773,98.631,74.953z"/>
+	
+		<use xlink:href="#FlashAICB_Assets_x2F_window_x5F_brown_x2F__x3C_Path_x3E__x5F_1"  width="120.172" height="118.568" x="-0.005" y="-118.562" transform="matrix(0.7617 0 0 -0.7617 8.4502 9.25)" style="overflow:visible;opacity:0.6016;enable-background:new    ;"/>
+	
+		<use xlink:href="#FlashAICB_Assets_x2F_window_x5F_brown_x2F__x3C_Path_x3E_"  width="108.667" height="108.611" y="-108.611" transform="matrix(0.7617 0 0 -0.7617 17.2998 16.5498)" style="overflow:visible;enable-background:new    ;"/>
+</g>
+</svg>

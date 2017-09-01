@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 15.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="62.55px" height="85px" viewBox="0 0 62.55 85" style="enable-background:new 0 0 62.55 85;" xml:space="preserve">
+<g>
+	<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#C1AF7A;" d="M34.55,0.3c1.3,13.534,2.467,27.15,3.5,40.85
+		c2.066,27.367,2.4,41.417,1,42.15c-1.633,0.9-3.616,1.434-5.95,1.601c-2.3,0.199-5.417,0.066-9.35-0.4
+		c-5.667-0.667-10.633-3.417-14.9-8.25C2.817,69.417-0.133,59.533,0,46.6c0.133-12.733,2.767-23.433,7.9-32.1
+		c3.4-5.7,7.184-9.733,11.35-12.1c2-1.133,5.15-1.816,9.45-2.05C30.867,0.217,32.816,0.2,34.55,0.3z"/>
+	<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#D3C6A1;" d="M54.15,9.05c6.5,7.767,9.233,19.1,8.199,34
+		C61.316,58.017,57.2,69.2,50,76.6c-5.634,5.733-11.866,8.384-18.7,7.95c-6.8-0.467-12.55-3.416-17.25-8.85
+		c-6.1-7-8.867-16.95-8.3-29.851C6.383,32.317,9.6,21.183,15.4,12.45c5.233-7.833,11.133-11.967,17.7-12.4
+		C41.6-0.517,48.616,2.483,54.15,9.05z"/>
+	
+		<radialGradient id="SVGID_1_" cx="-31.6621" cy="-39.2646" r="48.7078" gradientTransform="matrix(-0.9993 -0.0367 -0.0367 0.9993 -2.882 78.4755)" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#A6A68F"/>
+		<stop  offset="0.1804" style="stop-color:#B7B89D"/>
+		<stop  offset="0.4588" style="stop-color:#CDCDAE"/>
+		<stop  offset="0.6941" style="stop-color:#DBDAB8"/>
+		<stop  offset="0.8588" style="stop-color:#E0DEBC"/>
+	</radialGradient>
+	<path style="fill-rule:evenodd;clip-rule:evenodd;fill:url(#SVGID_1_);" d="M58.55,40.1c-0.533,12.433-3.483,22.383-8.85,29.85
+		c-4.967,6.934-10.384,9.833-16.25,8.7c-5.4-1.034-9.583-5.7-12.55-14C18,56.55,17.167,47.667,18.4,38
+		c1.367-10.667,3.95-18.85,7.75-24.55c3.1-4.667,6.633-7.267,10.6-7.8c5.333-0.7,10.217,1.684,14.65,7.15
+		C56.667,19.333,59.05,28.433,58.55,40.1z"/>
+	<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#32494B;" d="M22.95,20.85l1.25,0.7c0.966,0.733,1.867,1.767,2.7,3.1
+		c2.6,4.2,3.9,10.5,3.9,18.9c-0.033,8.4-1.15,15.65-3.35,21.75c-1.133,3.066-2.25,5.283-3.35,6.65
+		c-1.533-2.101-2.983-4.884-4.35-8.351c-2.767-6.899-3.783-13.683-3.05-20.35c0.733-6.667,2-12.4,3.8-17.2
+		C21.4,23.65,22.217,21.917,22.95,20.85z"/>
+</g>
+</svg>

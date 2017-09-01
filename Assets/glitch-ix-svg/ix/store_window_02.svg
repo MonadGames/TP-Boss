@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 15.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="wall_items" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="79.65px" height="92.6px" viewBox="0 0 79.65 92.6" style="enable-background:new 0 0 79.65 92.6;" xml:space="preserve">
+<g>
+	<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#554D3D;" d="M32.15,0.1C45.95-1.267,58,13.15,68.3,43.35
+		c5.167,15.133,8.95,30.383,11.351,45.75l-79.5,3.5c-0.5-14.833,0.467-29.816,2.9-44.949C7.883,17.417,17.583,1.567,32.15,0.1z"/>
+	
+		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-80.2808" y1="-38.5068" x2="186.2218" y2="-38.5068" gradientTransform="matrix(0.0044 1 -1 0.0044 1.231008e-004 -1.273686e-004)">
+		<stop  offset="0" style="stop-color:#DEB96B"/>
+		<stop  offset="1" style="stop-color:#D8E8D9"/>
+	</linearGradient>
+	<path style="fill-rule:evenodd;clip-rule:evenodd;fill:url(#SVGID_1_);" d="M32.95,11.1C45.483,10.767,54.8,22.783,60.9,47.15
+		C63.967,59.35,65.767,71.566,66.3,83.8l-54.65,1.3c-0.566-12.199-0.1-24.449,1.4-36.75C16.05,23.817,22.683,11.4,32.95,11.1z"/>
+</g>
+</svg>

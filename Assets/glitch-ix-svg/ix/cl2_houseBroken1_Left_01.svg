@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 15.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Isolation_Mode" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" width="139.6px" height="38.5px" viewBox="0 0 139.6 38.5" style="enable-background:new 0 0 139.6 38.5;"
+	 xml:space="preserve">
+<g>
+	<polygon style="fill-rule:evenodd;clip-rule:evenodd;fill:#9EAEAB;" points="138.2,8.35 139.6,34.75 128,38.5 124.3,13.45 	"/>
+	<polygon style="fill-rule:evenodd;clip-rule:evenodd;fill:#9EAEAB;" points="103.45,32.45 80.25,21.8 94.6,14.35 108.05,19.45 	"/>
+	<polygon style="fill-rule:evenodd;clip-rule:evenodd;fill:#758784;" points="50.1,12.5 37.1,19.45 32,6.5 43.6,0.45 	"/>
+	
+		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-310.2373" y1="-21.5498" x2="-0.4623" y2="-21.5498" gradientTransform="matrix(-1 0 0 -1 0 0)">
+		<stop  offset="0" style="stop-color:#9EAEAB"/>
+		<stop  offset="1" style="stop-color:#81908E"/>
+	</linearGradient>
+	<polygon style="fill-rule:evenodd;clip-rule:evenodd;fill:url(#SVGID_1_);" points="128,38.5 3.25,36.6 0,4.6 32,6.5 39,16.7 
+		46.4,6.95 51.95,21.3 86.75,20.4 100.2,27.35 106.2,13.9 124.3,13.45 	"/>
+	<polygon style="fill-rule:evenodd;clip-rule:evenodd;fill:#AFBBB8;" points="0,4.6 16.25,0 43.6,0.45 32,6.5 	"/>
+	<polygon style="fill-rule:evenodd;clip-rule:evenodd;fill:#AFBBB8;" points="86.75,20.4 51.95,21.3 63.55,15.3 94.6,14.35 	"/>
+	<polygon style="fill-rule:evenodd;clip-rule:evenodd;fill:#AFBBB8;" points="124.3,13.45 106.2,13.9 117.35,7.85 138.2,8.35 	"/>
+	<polygon style="fill-rule:evenodd;clip-rule:evenodd;fill:#9EAEAB;" points="46.4,6.95 55.2,3.25 63.55,15.3 51.95,21.3 	"/>
+	<g>
+		<polygon style="fill-rule:evenodd;clip-rule:evenodd;fill:#6C7C79;" points="121.9,28.4 126.5,28.15 126.7,29.55 104,30.7 
+			104.15,38.1 102.75,38.1 102.6,30.8 90,31.45 55.5,29.55 55.7,37.4 54.3,37.4 54.1,29.5 44.8,28.95 8.15,29.2 8.65,36.7 
+			7.25,36.7 6.75,29.25 7.3,29.2 2.5,29.25 2.4,27.85 34.55,27.65 34.25,10.1 34.1,10.1 0.35,8.1 0.25,6.7 33.55,8.7 35.7,11.85 
+			35.95,27.65 44.85,27.6 77.85,29.4 77.85,20.65 79.25,20.6 79.25,29.45 90.05,30.05 120.5,28.45 119.9,13.55 121.3,13.5 		"/>
+		<polygon style="fill-rule:evenodd;clip-rule:evenodd;fill:#6C7C79;" points="46.75,7.85 47.25,9.2 44.55,9.35 45.65,7.9 		"/>
+	</g>
+</g>
+</svg>

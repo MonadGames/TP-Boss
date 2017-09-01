@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 15.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Isolation_Mode" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" width="46.65px" height="28.45px" viewBox="0 0 46.65 28.45" style="enable-background:new 0 0 46.65 28.45;"
+	 xml:space="preserve">
+<symbol  id="FlashAICB_x2F_Isolation_Mode_x2F__x3C_Path_x3E__x5F_4" viewBox="0 -19.85 46.65 19.85">
+	<g id="Layer_1_2_">
+		<polygon style="fill-rule:evenodd;clip-rule:evenodd;" points="40.65,-4.9 36,-6.15 29.35,-10.65 25.65,-11.75 21.25,-15 
+			17.25,-16.4 12.5,-19.85 0,-15.85 17,-8.5 43.65,0 46.65,-1.65 		"/>
+	</g>
+</symbol>
+<g>
+	
+		<use xlink:href="#FlashAICB_x2F_Isolation_Mode_x2F__x3C_Path_x3E__x5F_4"  width="46.65" height="19.85" y="-19.85" transform="matrix(1 0 0 -1 0 8.6001)" style="overflow:visible;opacity:0.4102;"/>
+	<polygon style="fill-rule:evenodd;clip-rule:evenodd;fill:#AAB9B6;" points="3.3,16.7 15.05,18.55 12.6,26.45 4.4,24.3 	"/>
+	<polygon style="fill-rule:evenodd;clip-rule:evenodd;fill:#B9C4C2;" points="40.4,6.8 29.6,12.85 26.8,8.65 37.15,0 44.75,0.15 	
+		"/>
+	
+		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="17.2339" y1="18.2061" x2="37.5351" y2="18.2061" gradientTransform="matrix(0.9839 -0.1786 0.1786 0.9839 -1.779795e-004 1.732558e-004)">
+		<stop  offset="0" style="stop-color:#C2CBC9"/>
+		<stop  offset="1" style="stop-color:#D4DCDC"/>
+	</linearGradient>
+	<polygon style="fill-rule:evenodd;clip-rule:evenodd;fill:url(#SVGID_1_);" points="44.45,10.35 40.15,12.55 35.65,13.85 
+		28.5,18.4 25,19.25 20.3,22.55 16.35,23.95 12.6,26.45 12.3,19.65 25.25,5.45 32.7,9.75 44.75,0.15 	"/>
+	<polygon style="fill-rule:evenodd;clip-rule:evenodd;fill:#B9C4C2;" points="25.25,5.45 12.3,19.65 3.3,16.7 7.8,11.75 13.2,11.15 
+		15.7,5.25 	"/>
+</g>
+</svg>
