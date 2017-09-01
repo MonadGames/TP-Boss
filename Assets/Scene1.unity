@@ -684,9 +684,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radiusOfMovement: 2
+  radiusOfVision: 2
   enemySpeed: 1
   isFacingRight: 0
   moveRight: 1
+  enemyDetected: 0
 --- !u!1 &1066622372
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,18 +6,17 @@ public class EnemyAI : MonoBehaviour {
 
 
 	public int radiusOfMovement = 2;
+	public float radiusOfVision = 2f;
 	public float enemySpeed = 1f;
-
 	public bool isFacingRight;
+	public bool moveRight = true;
+	public bool enemyDetected = false;
+
 	private float startPos;
 	private float endPos;
-
-	private bool isDetectPlayer = false;
-
-	Rigidbody2D enemyRigidBody2D;
+	private Rigidbody2D enemyRigidBody2D;
 	private GameObject player;
 
-	public bool moveRight = true;
 
 	void Start () {
 		enemyRigidBody2D = GetComponent<Rigidbody2D>();
@@ -31,19 +30,21 @@ public class EnemyAI : MonoBehaviour {
 	}
 		
 	public void Update() {
-		normalMovement ();
 		detectPlayer ();
+		normalMovement ();
 	}
 
 	public void normalMovement(){
-		if (moveRight) {
-			enemyRigidBody2D.velocity = new Vector2(enemySpeed, 0);
-			if (!isFacingRight)
-				flip ();
-		} else {
-			enemyRigidBody2D.velocity = new Vector2(-enemySpeed, 0);
-			if (isFacingRight)
-				flip();
+		if (!enemyDetected) {
+			if (moveRight) {
+				enemyRigidBody2D.velocity = new Vector2 (enemySpeed, 0);
+				if (!isFacingRight)
+					flip ();
+			} else {
+				enemyRigidBody2D.velocity = new Vector2 (-enemySpeed, 0);
+				if (isFacingRight)
+					flip ();
+			}
 		}
 
 		if (enemyRigidBody2D.position.x >= endPos)
@@ -53,7 +54,15 @@ public class EnemyAI : MonoBehaviour {
 	}
 
 	public void detectPlayer(){
-		
+		float range = Vector2.Distance (transform.position, player.transform.position);
+
+		if (range <= radiusOfVision) {
+			enemyDetected = true;
+
+			transform.position = Vector2.MoveTowards(transform.position, player.transform.position, enemySpeed * Time.deltaTime);
+
+		} else
+			enemyDetected = false;
 	}
 
 	public void flip() {
