@@ -17,7 +17,7 @@ public class Enemy : Character {
 	{
 		if (collision.gameObject.name == "Player")
 		{
-			collision.gameObject.SendMessageUpwards ("damage", damage);
+			//(collision.gameObject  as Player).damage (damage);
 		}
 	}
 

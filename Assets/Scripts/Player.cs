@@ -25,10 +25,12 @@ public class Player : Character {
 
 	public void OnCollisionExit(Collision collision)
 	{
-		if (collision.gameObject.tag == "Enemy")
-		{
 
-		}
+		Destroy(collision.gameObject);
+//		if (collision.gameObject.tag == "Enemy")
+//		{
+//			print ("Attack");
+//		}
 	}
 		
 	public void damage(float enemyDamage){

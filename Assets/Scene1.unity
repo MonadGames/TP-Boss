@@ -774,7 +774,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radiusOfMovement: 2
   radiusOfVision: 2
-  radiusOfAttack: 0.4
   enemySpeed: 1
   isFacingRight: 0
   moveRight: 1
@@ -1223,6 +1222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  damage: 20
   energy: 20
   defense: 0
 --- !u!114 &1711671889
@@ -1248,7 +1248,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.31201506
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -1455,7 +1455,7 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 1
+  m_UseAutoMass: 0
   m_Mass: 0.097699985
   m_LinearDrag: 0
   m_AngularDrag: 0.05
@@ -1533,7 +1533,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radiusOfMovement: 2
   radiusOfVision: 2
-  radiusOfAttack: 0.4
   enemySpeed: 0.8
   isFacingRight: 0
   moveRight: 1
