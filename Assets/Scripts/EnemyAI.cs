@@ -7,7 +7,6 @@ public class EnemyAI : MonoBehaviour {
 
 	public int radiusOfMovement = 2;
 	public float radiusOfVision = 2f;
-	public float radiusOfAttack = 0.4f;
 	public float enemySpeed = 1f;
 	public bool isFacingRight;
 	public bool moveRight = true;
@@ -64,25 +63,21 @@ public class EnemyAI : MonoBehaviour {
 			enemyDetected = true;
 			flipToPlayer ();
 			transform.position = Vector2.MoveTowards(transform.position, player.transform.position, enemySpeed * Time.deltaTime);
-			if (range <= radiusOfAttack)
-				attack ();
 		} else
 			enemyDetected = false;
 	}
 
 	public void flipToPlayer (){
-		// podria mejorarse. Creo que no funciona tan bien.
-		if (! (player.transform.localScale.x == transform.localScale.x))
+		float myX = transform.position.x ;
+		float playerX = player.transform.position.x;
+		float myScaleX = transform.localScale.x;
+
+		if (myX > playerX && myScaleX > 0 || myX < playerX && myScaleX < 0)
 			flip ();
-		//
 	}
 
 	public void flip() {
 		transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
 		isFacingRight = transform.localScale.x > 0;
-	}
-
-	public void attack (){
-		print ("attack");
 	}
 }

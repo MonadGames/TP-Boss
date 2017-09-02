@@ -13,8 +13,20 @@ public class Enemy : Character {
 	public void checkForAnimation(){
 	}
 
-	//public abstract void attack(){
-	//} 
+	public void OnCollisionEnter (Collision collision)
+	{
+		if (collision.gameObject.name == "Player")
+		{
+			collision.gameObject.SendMessageUpwards ("damage", damage);
+		}
+	}
 
+	public void OnCollisionExit(Collision collision)
+	{
+		if (collision.gameObject.tag == "Player")
+		{
+
+		}
+	}
 
 }

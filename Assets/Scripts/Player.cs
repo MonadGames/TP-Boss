@@ -30,4 +30,8 @@ public class Player : Character {
 
 		}
 	}
+		
+	public void damage(float enemyDamage){
+		health = health - (enemyDamage - defense);
+	}
 }
