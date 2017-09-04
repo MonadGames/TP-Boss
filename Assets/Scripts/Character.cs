@@ -12,11 +12,12 @@ public class Character : MonoBehaviour {
 	protected Animator anim;
 
 	public Character() {
-		myBody = GetComponent<Rigidbody2D> ();
-		anim = GetComponent<Animator> ();
+		
 	}
 
 	void Start () {
+		myBody = GetComponent<Rigidbody2D> ();
+		anim = GetComponent<Animator> ();
 	}
 
 	void Update () {

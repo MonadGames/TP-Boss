@@ -1,30 +1,35 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using System.Collections;
 
-public class Player : Character {
-
-	private int countOfGoodActions = 0;
-	private int countOfBadActions = 0;
+public class PlayerHealth : MonoBehaviour
+{	
+	public float health = 100f;					// The player's health.
+	public float damage = 10f;			// The amount of damage to take when enemies touch the player
 	public float repeatDamagePeriod = 2f;		// How frequently the player can be damaged.
 	public float hurtForce = 10f;				// The force with which the player is pushed when hurt.
 	private SpriteRenderer healthBar;			// Reference to the sprite renderer of the health bar.
 	private float lastHitTime;					// The time at which the player was last hit.
 	private Vector3 healthScale;				// The local scale of the health bar initially (with full health).
+	private Player playerControl;		// Reference to the Player script.
+	private Animator anim;						// Reference to the Animator on the player
 
-	void Start () {
+
+	void Awake ()
+	{
+		// Setting up references.
+		playerControl = GetComponent<Player>();
 		healthBar = GameObject.Find("HealthBar").GetComponent<SpriteRenderer>();
+		anim = GetComponent<Animator>();
+
 		// Getting the intial scale of the healthbar (whilst the player has full health).
 		healthScale = healthBar.transform.localScale;
 	}
 
-	void Update () {
-		
-	}
 
-	public void OnCollisionEnter2D (Collision2D collision)
+	void OnCollisionEnter2D (Collision2D col)
 	{
-		if (collision.gameObject.tag == "Enemy")
+		// If the colliding gameobject is an Enemy...
+		if(col.gameObject.tag == "Enemy")
 		{
 			// ... and if the time exceeds the time of the last hit plus the time between hits...
 			if (Time.time > lastHitTime + repeatDamagePeriod) 
@@ -33,7 +38,7 @@ public class Player : Character {
 				if(health > 0f)
 				{
 					// ... take damage and reset the lastHitTime.
-					TakeDamage(collision.transform); 
+					TakeDamage(col.transform); 
 					lastHitTime = Time.time; 
 				}
 				// If the player doesn't have health, do some stuff, let him fall into the river to reload the level.
@@ -54,7 +59,7 @@ public class Player : Character {
 					}
 
 					// ... disable user Player Control script
-					this.enabled = false;
+					GetComponent<Player>().enabled = false;
 
 					// ... Trigger the 'Die' animation state
 					anim.SetTrigger("Die");
@@ -63,19 +68,6 @@ public class Player : Character {
 		}
 	}
 
-	public void OnCollisionExit(Collision collision)
-	{
-
-		Destroy(collision.gameObject);
-//		if (collision.gameObject.tag == "Enemy")
-//		{
-//			print ("Attack");
-//		}
-	}
-		
-//	public void damage(float enemyDamage){
-//		health = health - (enemyDamage - defense);
-//	}
 
 	void TakeDamage (Transform enemy)
 	{
@@ -89,7 +81,7 @@ public class Player : Character {
 		GetComponent<Rigidbody2D>().AddForce(hurtVector * hurtForce);
 
 		// Reduce the player's health by 10.
-		health -= (damage - defense);
+		health -= damage;
 
 		// Update what the health bar looks like.
 		UpdateHealthBar();
