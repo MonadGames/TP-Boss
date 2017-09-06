@@ -2899,6 +2899,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  scale: {x: 0.8, y: 0.5}
   repeatDamagePeriod: 2
   hurtForce: 10
   healthBar: {fileID: 411399901}
@@ -2943,8 +2944,6 @@ MonoBehaviour:
   damage: 20
   energy: 20
   defense: 0
-  repeatDamagePeriod: 2
-  hurtForce: 10
 --- !u!114 &1711671889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3589,6 +3588,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  scale: {x: 0.2, y: 0.6}
   repeatDamagePeriod: 2
   hurtForce: 10
   healthBar: {fileID: 1499555485}

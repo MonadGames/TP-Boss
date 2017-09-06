@@ -13,7 +13,7 @@ public class Enemy : Character {
 	public void checkForAnimation(){
 	}
 
-	public void OnCollisionEnter2D (Collision collision)
+	public void OnCollisionEnter2D (Collision2D collision)
 	{
 		if (collision.gameObject.name == "Player")
 		{
