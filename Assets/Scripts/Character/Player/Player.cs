@@ -8,6 +8,7 @@ public class Player : Character {
 	private int countOfBadActions = 0;
 	private Health health;
 
+
 	void Start () {
 		health = gameObject.GetComponent<Health>();
 	}
