@@ -52,7 +52,7 @@ public class PlayerMovementInX : MonoBehaviour {
 		anim.SetTrigger ("Idle");
 	}
 
-	private void movePlayer(Vector3 movement, float speed){
+	private void movePlayer(Vector3 movement, float speed) {
 		transform.position += movement * speed * Time.deltaTime;
 	}
 

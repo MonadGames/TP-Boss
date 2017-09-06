@@ -6,7 +6,6 @@ public class Player : Character {
 
 	private int countOfGoodActions = 0;
 	private int countOfBadActions = 0;
-
 	private Health health;
 
 	void Start () {

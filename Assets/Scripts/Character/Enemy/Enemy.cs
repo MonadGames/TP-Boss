@@ -13,21 +13,13 @@ public class Enemy : Character {
 	public void checkForAnimation(){
 	}
 
-	public void OnCollisionEnter2D (Collision2D collision)
-	{
+	public void OnCollisionEnter2D (Collision2D collision) {
 		if (collision.gameObject.name == "Player")
-		{
 			collision.gameObject.GetComponent<Player>().takeDamage(damage, transform);
-			//(collision.gameObject  as Player).damage (damage);
-		}
 	}
 
-	public void OnCollisionExit2D (Collision collision)
-	{
-		if (collision.gameObject.tag == "Player")
-		{
-
-		}
+	public void OnCollisionExit2D (Collision collision) {
+		if (collision.gameObject.tag == "Player"){}
 	}
 
 }
