@@ -28,7 +28,7 @@ public class Health : MonoBehaviour
 	void OnCollisionEnter2D (Collision2D col)
 	{
 		// If the colliding gameobject is an Enemy...
-		/*
+
 		if(col.gameObject.tag == "Enemy")
 		{ 
 			// ... and if the time exceeds the time of the last hit plus the time between hits...
@@ -38,8 +38,9 @@ public class Health : MonoBehaviour
 				if(health > 0f)
 				{
 					// ... take damage and reset the lastHitTime.
-					TakeDamage(col.transform); 
-					lastHitTime = Time.time; 
+					float damage = col.gameObject.GetComponent<Enemy>().damage;
+					takeDamage(damage, col.transform); 
+					lastHitTime = Time.time;
 				}
 				// If the player doesn't have health, do some stuff, let him fall into the river to reload the level.
 				else
@@ -66,11 +67,10 @@ public class Health : MonoBehaviour
 				}
 			}
 		}
-		*/
 	}
 
 
-	public void TakeDamage (float damage, Transform enemyTransform)
+	public void takeDamage (float damage, Transform enemyTransform)
 	{
 		// Make sure the player can't jump.
 		// playerControl.jump = false;

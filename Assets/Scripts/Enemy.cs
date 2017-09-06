@@ -17,7 +17,7 @@ public class Enemy : Character {
 	{
 		if (collision.gameObject.name == "Player")
 		{
-			collision.gameObject.GetComponent<Health> ().TakeDamage (damage, transform);
+			collision.gameObject.GetComponent<Player>().takeDamage(damage, transform);
 			//(collision.gameObject  as Player).damage (damage);
 		}
 	}
