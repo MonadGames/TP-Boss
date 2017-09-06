@@ -1,13 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerHealth : MonoBehaviour
+public class Health : MonoBehaviour
 {	
 	public float health = 100f;					// The player's health.
-	public float damage = 10f;			// The amount of damage to take when enemies touch the player
 	public float repeatDamagePeriod = 2f;		// How frequently the player can be damaged.
 	public float hurtForce = 10f;				// The force with which the player is pushed when hurt.
-	private SpriteRenderer healthBar;			// Reference to the sprite renderer of the health bar.
+	public SpriteRenderer healthBar;			// Reference to the sprite renderer of the health bar.
 	private float lastHitTime;					// The time at which the player was last hit.
 	private Vector3 healthScale;				// The local scale of the health bar initially (with full health).
 	private Player playerControl;		// Reference to the Player script.
@@ -18,7 +17,7 @@ public class PlayerHealth : MonoBehaviour
 	{
 		// Setting up references.
 		playerControl = GetComponent<Player>();
-		healthBar = GameObject.Find("HealthBar").GetComponent<SpriteRenderer>();
+		//healthBar = GameObject.Find("HealthBar").GetComponent<SpriteRenderer>();
 		anim = GetComponent<Animator>();
 
 		// Getting the intial scale of the healthbar (whilst the player has full health).
@@ -29,8 +28,9 @@ public class PlayerHealth : MonoBehaviour
 	void OnCollisionEnter2D (Collision2D col)
 	{
 		// If the colliding gameobject is an Enemy...
+		/*
 		if(col.gameObject.tag == "Enemy")
-		{
+		{ 
 			// ... and if the time exceeds the time of the last hit plus the time between hits...
 			if (Time.time > lastHitTime + repeatDamagePeriod) 
 			{
@@ -66,16 +66,17 @@ public class PlayerHealth : MonoBehaviour
 				}
 			}
 		}
+		*/
 	}
 
 
-	void TakeDamage (Transform enemy)
+	public void TakeDamage (float damage, Transform enemyTransform)
 	{
 		// Make sure the player can't jump.
 		// playerControl.jump = false;
 
 		// Create a vector that's from the enemy to the player with an upwards boost.
-		Vector3 hurtVector = transform.position - enemy.position + Vector3.up * 5f;
+		Vector3 hurtVector = transform.position - enemyTransform.position + Vector3.up * 5f;
 
 		// Add a force to the player in the direction of the vector and multiply by the hurtForce.
 		GetComponent<Rigidbody2D>().AddForce(hurtVector * hurtForce);
@@ -94,6 +95,6 @@ public class PlayerHealth : MonoBehaviour
 		healthBar.material.color = Color.Lerp(Color.green, Color.red, 1 - health * 0.01f);
 
 		// Set the scale of the health bar to be proportional to the player's health.
-		healthBar.transform.localScale = new Vector3(healthScale.x * health * 0.01f, 1, 1);
+		healthBar.transform.localScale = new Vector3(healthScale.x * health * 0.01f, 0.5f, 0.8f);
 	}
 }
