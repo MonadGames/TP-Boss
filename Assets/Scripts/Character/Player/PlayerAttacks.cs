@@ -12,7 +12,7 @@ public class PlayerAttacks : MonoBehaviour {
 
 	void Update () {
 		if (Input.GetKey (KeyCode.LeftAlt)) {
-			gameObject.GetComponent<Enemy>().takeDamage(damage, transform);
+			//GameObject.GetComponent<Enemy>().takeDamage(damage, transform);
 		}
 	}
 }
