@@ -4,6 +4,7 @@ using System.Collections;
 public class Health : MonoBehaviour
 {	
 	public float health = 100f;					// The player's health.
+	public float powerHurtForce = 2f;
 	public Vector2 scale;
 	public float repeatDamagePeriod = 2f;		// How frequently the player can be damaged.
 	public float hurtForce = 10f;				// The force with which the player is pushed when hurt.
@@ -22,12 +23,11 @@ public class Health : MonoBehaviour
 
 	public void takeDamage (float damage, Transform enemyTransform) {
 		if (health > 0f) {
-			Vector3 hurtVector = transform.position - enemyTransform.position + Vector3.up * 0.5f;
+			Vector3 hurtVector = transform.position - enemyTransform.position + enemyTransform.localScale  * powerHurtForce; //Vector3.up
 			GetComponent<Rigidbody2D>().AddForce(hurtVector * hurtForce);
 			health -= damage;
 			UpdateHealthBar();
 		} else anim.SetTrigger ("Die");
-			
 	}
 		
 	public void UpdateHealthBar () {

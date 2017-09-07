@@ -15,9 +15,6 @@ public class Player : Character {
 	}
 		
 	public void OnCollisionEnter2D (Collision2D collision) {
-		// Esto desp vuela, es para probar. El player no debe poder sacarle vida al mob chocandolo.
-		if (collision.gameObject.tag == "Enemy")
-			collision.gameObject.GetComponent<Enemy>().takeDamage(damage, transform);
 	}
 
 	public void OnCollisionExit2D (Collision2D collision) {
