@@ -25,7 +25,7 @@ public class Enemy : Character {
 		health.takeDamage(damage, transform);
 	}
 
-	public void OnCollisionExit2D (Collision collision) {
+	public void OnCollisionExit2D (Collision2D collision) {
 		if (collision.gameObject.tag == "Player"){}
 	}
 
