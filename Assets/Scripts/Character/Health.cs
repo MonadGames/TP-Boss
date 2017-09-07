@@ -26,7 +26,8 @@ public class Health : MonoBehaviour
 			GetComponent<Rigidbody2D>().AddForce(hurtVector * hurtForce);
 			health -= damage;
 			UpdateHealthBar();
-		}
+		} else anim.SetTrigger ("Die");
+			
 	}
 		
 	public void UpdateHealthBar () {
