@@ -22,7 +22,7 @@ public class Health : MonoBehaviour
 
 	public void takeDamage (float damage, Transform enemyTransform) {
 		if (health > 0f) {
-			Vector3 hurtVector = transform.position - enemyTransform.position + Vector3.up * 5f;
+			Vector3 hurtVector = transform.position - enemyTransform.position + Vector3.up * 0.5f;
 			GetComponent<Rigidbody2D>().AddForce(hurtVector * hurtForce);
 			health -= damage;
 			UpdateHealthBar();
