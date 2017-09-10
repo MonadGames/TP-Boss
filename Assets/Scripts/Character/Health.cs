@@ -11,14 +11,18 @@ public class Health : MonoBehaviour
 	public SpriteRenderer healthBar;			// Reference to the sprite renderer of the health bar.
 	private float lastHitTime;					// The time at which the player was last hit.
 	private Vector3 healthScale;				// The local scale of the health bar initially (with full health).
-	private Player playerControl;		// Reference to the Player script.
 	private Animator anim;						// Reference to the Animator on the player
 
 
 	void Awake () {
-		playerControl = GetComponent<Player>();
 		anim = GetComponent<Animator>();
 		healthScale = healthBar.transform.localScale;
+	}
+
+	void Update(){
+		if (health <= 0) {
+			anim.SetTrigger ("Die");
+		}
 	}
 
 	public void takeDamage (float damage, Transform enemyTransform) {
@@ -27,7 +31,7 @@ public class Health : MonoBehaviour
 			GetComponent<Rigidbody2D>().AddForce(hurtVector * hurtForce);
 			health -= damage;
 			UpdateHealthBar();
-		} else anim.SetTrigger ("Die");
+		}
 	}
 		
 	public void UpdateHealthBar () {
