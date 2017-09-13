@@ -23,7 +23,6 @@ public class EnemyAI : MonoBehaviour {
 		enemyRigidBody2D = GetComponent<Rigidbody2D>();
 		player = GameObject.FindGameObjectWithTag("Player");
 		anim = GetComponent<Animator> ();
-		anim.SetTrigger ("Walk");
 	}
 
 	public void Awake() {
