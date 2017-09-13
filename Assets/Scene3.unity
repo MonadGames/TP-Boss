@@ -151,6 +151,114 @@ Prefab:
       propertyPath: m_Name
       value: Map
       objectReference: {fileID: 0}
+    - target: {fileID: 4198257533678246, guid: d97e717a5e60047bd9b098d7e04e7da3, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 3.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 4198257533678246, guid: d97e717a5e60047bd9b098d7e04e7da3, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 35.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 1588508068286308, guid: d97e717a5e60047bd9b098d7e04e7da3, type: 2}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1245908506175474, guid: d97e717a5e60047bd9b098d7e04e7da3, type: 2}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1521671320140298, guid: d97e717a5e60047bd9b098d7e04e7da3, type: 2}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1755950516567370, guid: d97e717a5e60047bd9b098d7e04e7da3, type: 2}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1152147617186732, guid: d97e717a5e60047bd9b098d7e04e7da3, type: 2}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570479185521640, guid: d97e717a5e60047bd9b098d7e04e7da3, type: 2}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1382771911908422, guid: d97e717a5e60047bd9b098d7e04e7da3, type: 2}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1799041495604518, guid: d97e717a5e60047bd9b098d7e04e7da3, type: 2}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1699609146090132, guid: d97e717a5e60047bd9b098d7e04e7da3, type: 2}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1067654856391872, guid: d97e717a5e60047bd9b098d7e04e7da3, type: 2}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1959596864942140, guid: d97e717a5e60047bd9b098d7e04e7da3, type: 2}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1301821656295904, guid: d97e717a5e60047bd9b098d7e04e7da3, type: 2}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1097994296430914, guid: d97e717a5e60047bd9b098d7e04e7da3, type: 2}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1298984245325160, guid: d97e717a5e60047bd9b098d7e04e7da3, type: 2}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1006012174992664, guid: d97e717a5e60047bd9b098d7e04e7da3, type: 2}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1324793232614354, guid: d97e717a5e60047bd9b098d7e04e7da3, type: 2}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1798721777734386, guid: d97e717a5e60047bd9b098d7e04e7da3, type: 2}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1767195122533654, guid: d97e717a5e60047bd9b098d7e04e7da3, type: 2}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978718961222578, guid: d97e717a5e60047bd9b098d7e04e7da3, type: 2}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1286163442187932, guid: d97e717a5e60047bd9b098d7e04e7da3, type: 2}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1792211393832394, guid: d97e717a5e60047bd9b098d7e04e7da3, type: 2}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1649752100703056, guid: d97e717a5e60047bd9b098d7e04e7da3, type: 2}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1268265962076458, guid: d97e717a5e60047bd9b098d7e04e7da3, type: 2}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1326206407066400, guid: d97e717a5e60047bd9b098d7e04e7da3, type: 2}
+      propertyPath: m_TagString
+      value: impulseGround
+      objectReference: {fileID: 0}
+    - target: {fileID: 1122093532692238, guid: d97e717a5e60047bd9b098d7e04e7da3, type: 2}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d97e717a5e60047bd9b098d7e04e7da3, type: 2}
   m_IsPrefabParent: 0
@@ -4084,6 +4192,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpSpeed: 4
+  grounded: 0
+  jumpBoostGround: 0
 --- !u!50 &1711671890
 Rigidbody2D:
   serializedVersion: 4

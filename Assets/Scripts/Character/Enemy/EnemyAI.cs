@@ -13,8 +13,8 @@ public class EnemyAI : MonoBehaviour {
 	public bool enemyDetected = false;
 
 	private Animator anim;
-	private float startPos;
-	private float endPos;
+	private Vector2 startPos;
+	private Vector2 endPos;
 	private Rigidbody2D enemyRigidBody2D;
 	private GameObject player;
 
@@ -27,8 +27,9 @@ public class EnemyAI : MonoBehaviour {
 	}
 
 	public void Awake() {
-		startPos = transform.position.x;
-		endPos = startPos + radiusOfMovement;
+		startPos = transform.position;
+		endPos = startPos;
+		endPos.x = endPos.x + radiusOfMovement;
 		isFacingRight = transform.localScale.x > 0;
 	}
 		
@@ -50,9 +51,9 @@ public class EnemyAI : MonoBehaviour {
 			}
 		}
 
-		if (enemyRigidBody2D.position.x >= endPos)
+		if (enemyRigidBody2D.position.x >= endPos.x)
 			moveRight = false;
-		else if (enemyRigidBody2D.position.x <= startPos)
+		else if (enemyRigidBody2D.position.x <= startPos.x)
 			moveRight = true;
 	}
 
