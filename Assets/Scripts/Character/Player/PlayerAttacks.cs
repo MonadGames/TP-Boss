@@ -4,15 +4,35 @@ using UnityEngine;
 
 public class PlayerAttacks : MonoBehaviour {
 
-	private float damage;
+	public float attackSpeed;
+
+	private Player player;
 
 	void Start () {
-		damage = gameObject.GetComponent<Player> ().damage;
+		player = gameObject.GetComponent<Player> ();
 	}
 
 	void Update () {
 		if (Input.GetKey (KeyCode.LeftAlt)) {
-			//GameObject.GetComponent<Enemy>().takeDamage(damage, transform);
+			useSkill ();
+		}
+	}
+
+	void useSkill () {	
+		// use skill devuelve true si tenia energia suficiente y lo decrementa
+		if (gameObject.GetComponent<Player> ().canUseSkill ()) {
+			
+			Skill skill = player.getSkillSelected ();
+
+			GameObject instanceSkill = (GameObject)Instantiate(
+				player.getSkillSelected().prefab(),
+				// aca deberiamos cambiar la posicion para que salga de la mano.
+				player.transform.position,
+				player.transform.rotation);
+
+			instanceSkill.GetComponent<Rigidbody>().velocity = attackSpeed;
+
+			Destroy(instanceSkill, 2.0f);    
 		}
 	}
 }
