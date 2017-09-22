@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : Character {
+
+	private EnemyAI enemyAI;
 	
 	void Start () {
 		health = gameObject.GetComponent<Health>();
+		enemyAI = gameObject.GetComponent<EnemyAI>();
 	}
 
 	void Update () {
@@ -31,6 +34,9 @@ public class Enemy : Character {
 
 	public void OnCollisionExit2D (Collision2D collision) {
 		if (collision.gameObject.tag == "Player"){}
+		if (collision.gameObject.tag == "spell") {
+			enemyAI.takeDamage ();
+		}
 	}
 
 }

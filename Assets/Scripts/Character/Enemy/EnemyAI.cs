@@ -61,8 +61,7 @@ public class EnemyAI : MonoBehaviour {
 
 		if (range <= radiusOfVision) {
 			enemyDetected = true;
-			flipToPlayer ();
-			transform.position = Vector2.MoveTowards(transform.position, player.transform.position, enemySpeed * Time.deltaTime);
+			followPlayer ();
 		} else
 			enemyDetected = false;
 	}
@@ -80,4 +79,14 @@ public class EnemyAI : MonoBehaviour {
 		transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
 		isFacingRight = transform.localScale.x > 0;
 	}
+	public void followPlayer(){
+		flipToPlayer ();
+		transform.position = Vector2.MoveTowards(transform.position, player.transform.position, enemySpeed * Time.deltaTime);
+	}
+
+	public void takeDamage(){
+		enemyDetected = true;
+		followPlayer ();
+	}
+
 }
