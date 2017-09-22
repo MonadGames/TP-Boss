@@ -6,7 +6,7 @@ public class PlayerAttacks : MonoBehaviour {
 
 	//public float attackSpeed;
 
-	public float delay = 0.5f;
+	public float cd = 0.5f;
 	public float lastTime = 0.5f;
 	private Player player;
 
@@ -16,7 +16,7 @@ public class PlayerAttacks : MonoBehaviour {
 
 	void Update () {
 		if (Input.GetKey (KeyCode.LeftAlt)) {
-			if(lastTime >= delay)
+			if(lastTime >= cd)
 				useSkill ();
 		}
 
@@ -28,10 +28,13 @@ public class PlayerAttacks : MonoBehaviour {
 			GameObject instanceSkill = (GameObject)Instantiate(
 				player.getSkillSelected(),
 				// aca deberiamos cambiar la posicion para que salga de la mano.
+				// tenemos un problema con la posicion del skill. Al parecer 
 				player.transform.position,
 				player.transform.rotation);
 
-			Destroy(instanceSkill, 1.0f);    
+			//instanceSkill.GetComponent<Animator> ().avatar = player;
+
+			Destroy(instanceSkill, 1f);    
 
 			lastTime = 0;
 		}

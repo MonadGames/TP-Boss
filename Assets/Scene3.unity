@@ -1121,7 +1121,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 20
-  energy: 20
   defense: 0
 --- !u!95 &406446489
 Animator:
@@ -3045,7 +3044,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 20
-  energy: 20
   defense: 0
 --- !u!114 &1084219221
 MonoBehaviour:
@@ -3503,7 +3501,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 20
-  energy: 20
   defense: 0
 --- !u!60 &1282022765
 PolygonCollider2D:
@@ -4783,7 +4780,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 20
-  energy: 20
   defense: 0
   skillSelected: {fileID: 1735312153385764, guid: e01a9d4a1729c4016a0cab7355f76ef6,
     type: 2}
@@ -4863,7 +4859,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f1d47250d29447cc8f81c070c683b25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.5
+  cd: 0.5
   lastTime: 0.5
 --- !u!1 &1713777662
 GameObject:
@@ -4916,7 +4912,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 20
-  energy: 20
   defense: 0
 --- !u!60 &1713777665
 PolygonCollider2D:
@@ -5195,7 +5190,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 20
-  energy: 20
   defense: 0
 --- !u!114 &1717465305
 MonoBehaviour:
@@ -5989,7 +5983,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 20
-  energy: 20
   defense: 0
 --- !u!114 &2016707872
 MonoBehaviour:
@@ -6207,7 +6200,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 20
-  energy: 20
   defense: 0
 --- !u!60 &2098287486
 PolygonCollider2D:

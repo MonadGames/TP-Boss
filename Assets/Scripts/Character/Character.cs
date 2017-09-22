@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Character : MonoBehaviour {
 	public float damage = 20f;
-	public float energy = 20f;
 	public float defense = 0f;
 	protected Rigidbody2D myBody;
 	protected Animator anim;
