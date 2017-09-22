@@ -8,6 +8,11 @@ public class Enemy : Character {
 		health = gameObject.GetComponent<Health>();
 	}
 
+	void Update () {
+		if(health.health <= 0)
+			Destroy(gameObject, 1f);
+	}
+
 	public void move(){
 	}
 
