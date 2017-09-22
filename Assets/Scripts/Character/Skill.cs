@@ -7,8 +7,8 @@
 		cost = 20f;
 	}
 
-	public object prefab(){
-		
-	}
+	//public object prefab(){
+	//	
+	//}
 }
 

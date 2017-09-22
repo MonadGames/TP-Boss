@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class PlayerAttacks : MonoBehaviour {
 
-	public float attackSpeed;
+	//public float attackSpeed;
 
+	public float delay = 0.5f;
+	public float lastTime = 0.5f;
 	private Player player;
 
 	void Start () {
@@ -14,25 +16,24 @@ public class PlayerAttacks : MonoBehaviour {
 
 	void Update () {
 		if (Input.GetKey (KeyCode.LeftAlt)) {
-			useSkill ();
+			if(lastTime >= delay)
+				useSkill ();
 		}
+
+		lastTime += Time.deltaTime;
 	}
 
 	void useSkill () {	
-		// use skill devuelve true si tenia energia suficiente y lo decrementa
 		if (gameObject.GetComponent<Player> ().canUseSkill ()) {
-			
-			Skill skill = player.getSkillSelected ();
-
 			GameObject instanceSkill = (GameObject)Instantiate(
-				player.getSkillSelected().prefab(),
+				player.getSkillSelected(),
 				// aca deberiamos cambiar la posicion para que salga de la mano.
 				player.transform.position,
 				player.transform.rotation);
 
-			instanceSkill.GetComponent<Rigidbody>().velocity = attackSpeed;
+			Destroy(instanceSkill, 1.0f);    
 
-			Destroy(instanceSkill, 2.0f);    
+			lastTime = 0;
 		}
 	}
 }

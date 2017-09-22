@@ -4698,9 +4698,9 @@ GameObject:
   - component: {fileID: 1711671888}
   - component: {fileID: 1711671889}
   - component: {fileID: 1711671891}
-  - component: {fileID: 1711671892}
   - component: {fileID: 1711671886}
   - component: {fileID: 1711671893}
+  - component: {fileID: 1711671892}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -4785,6 +4785,8 @@ MonoBehaviour:
   damage: 20
   energy: 20
   defense: 0
+  skillSelected: {fileID: 1735312153385764, guid: e01a9d4a1729c4016a0cab7355f76ef6,
+    type: 2}
 --- !u!114 &1711671889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4839,15 +4841,16 @@ MonoBehaviour:
 --- !u!114 &1711671892
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114067235701439242, guid: 9d9a15bbe73034535be945c30d1eb839,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1711671884}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd32120c6f120478998865966e1be55a, type: 3}
+  m_Script: {fileID: 11500000, guid: 50dd7ba65891f43f79331fe40bc2189b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  totalEnergy: 100000
+  actualEnergy: 100000
 --- !u!114 &1711671893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4860,6 +4863,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f1d47250d29447cc8f81c070c683b25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delay: 0.5
+  lastTime: 0.5
 --- !u!1 &1713777662
 GameObject:
   m_ObjectHideFlags: 0
