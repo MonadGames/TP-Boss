@@ -6,13 +6,15 @@ public class Spell : MonoBehaviour {
 
 	public float damage;
 
+	public float costEnergy;
+
 	// Use this for initialization
 	void Start () {
 		
 	}
 
 	public float cost(){
-		return 20f;
+		return costEnergy;
 	}
 	
 	// Update is called once per frame
