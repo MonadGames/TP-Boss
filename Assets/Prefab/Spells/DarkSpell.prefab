@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4591919641392216}
   - component: {fileID: 198898733294067452}
   - component: {fileID: 199907362160446568}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Sparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4529364954648124}
   - component: {fileID: 198973332044685614}
   - component: {fileID: 199004315361316702}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54,7 +54,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4135192157929846}
   - component: {fileID: 96421899431393492}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 95948359992405596}
   - component: {fileID: 60903980357660858}
   - component: {fileID: 114538615535723872}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: DarkSpell
   m_TagString: spell
   m_Icon: {fileID: 0}

@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4831801898238256}
   - component: {fileID: 212915070231816282}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rogue_wrist_l_06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4116727943816212}
   - component: {fileID: 212786493578014324}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rogue_leg_r_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,7 +52,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4735044530861202}
   - component: {fileID: 212052415264736674}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rogue_shoulder_l_06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,7 +68,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4457791216433228}
   - component: {fileID: 212919810517190778}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rogue_pelvis_06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83,7 +83,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4179167190248866}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rogue_pelvis_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4535392566221134}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rogue_shoulder_R_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,7 +114,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4620618275985426}
   - component: {fileID: 212881001547928660}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rogue_leg_l_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,7 +129,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4290930222154838}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rogue_boot_R_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -144,7 +144,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4577376310297720}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rogue_wrist_L_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -159,7 +159,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4511261877229146}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rogue_leg_R_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -175,7 +175,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4539534719124958}
   - component: {fileID: 212085891114504402}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HealthBar
   m_TagString: HealthBar
   m_Icon: {fileID: 0}
@@ -191,7 +191,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4255174586935310}
   - component: {fileID: 212851102951512868}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rogue_wrist_r_06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -207,7 +207,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4994656743917890}
   - component: {fileID: 114626489006770722}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -223,7 +223,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4933693842798706}
   - component: {fileID: 212930451191661020}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rogue_elbow_r_06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -238,7 +238,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4177412298424082}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rogue_weapon_L_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -259,10 +259,10 @@ GameObject:
   - component: {fileID: 114615968477696394}
   - component: {fileID: 114452942441370010}
   - component: {fileID: 114891731406800318}
-  - component: {fileID: 114067235701439242}
   - component: {fileID: 114187365004175788}
   - component: {fileID: 114818997909037356}
-  m_Layer: 0
+  - component: {fileID: 114616417733028538}
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -278,7 +278,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4932263473956280}
   - component: {fileID: 212999440186121448}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rogue_boot_l_06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -294,7 +294,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4125528522815436}
   - component: {fileID: 212525542121126088}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rogue_weapon_06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -310,7 +310,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4940297667745402}
   - component: {fileID: 212995868065862092}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rogue_elbow_l_06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -325,7 +325,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4580927564780468}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rogue_shoulder_L_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -340,7 +340,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4456068042094428}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rogue_boot_L_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -356,7 +356,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4310520473146736}
   - component: {fileID: 212443727261478966}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rogue_boot_r_06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -371,7 +371,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4602289883947244}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rogue_elbow_R_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -387,7 +387,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4320902502169086}
   - component: {fileID: 212460439040084208}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Health-bg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -403,7 +403,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4523501006560340}
   - component: {fileID: 212140054795861990}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rogue_face_06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -424,7 +424,7 @@ GameObject:
   - component: {fileID: 81769820064124068}
   - component: {fileID: 114931665989897640}
   - component: {fileID: 114818897692507334}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -439,7 +439,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4863438065829696}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rogue_elbow_L_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -454,7 +454,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4332846748952672}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rogue_leg_L_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -469,7 +469,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4614929174465004}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rogue_torso_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -484,7 +484,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4957730745119660}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rogue_wrist_R_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -500,7 +500,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4400851714094390}
   - component: {fileID: 212082642307587182}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rogue_shoulder_r_06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -515,7 +515,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4454291014127252}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rogue_head_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -531,7 +531,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4719109747759786}
   - component: {fileID: 212998423868392412}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rogue_torso_06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -547,13 +547,13 @@ GameObject:
   m_Component:
   - component: {fileID: 4579982961388176}
   - component: {fileID: 212807363197272814}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rogue_weapon_06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1981044333235182
 GameObject:
   m_ObjectHideFlags: 1
@@ -563,7 +563,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4835967726278926}
   - component: {fileID: 212082793473654312}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rogue_hood_06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1171,17 +1171,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114067235701439242
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1396718710149036}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114187365004175788
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1211,6 +1200,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpSpeed: 4
+  grounded: 0
+  jumpBoostGround: 0
 --- !u!114 &114615968477696394
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1223,8 +1214,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 20
-  energy: 20
   defense: 0
+  skillSelected: {fileID: 1300811145041140, guid: b3b1f1cc99d374ceca42df54aa8b0a3f,
+    type: 2}
+--- !u!114 &114616417733028538
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1396718710149036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50dd7ba65891f43f79331fe40bc2189b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalEnergy: 100000
+  actualEnergy: 100000
 --- !u!114 &114626489006770722
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1259,6 +1264,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f1d47250d29447cc8f81c070c683b25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cd: 0.5
+  lastTime: 0.5
 --- !u!114 &114891731406800318
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1911,7 +1918,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: ab59709aadb3a224294b3c3b5c47cc79, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
