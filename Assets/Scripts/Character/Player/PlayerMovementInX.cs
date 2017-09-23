@@ -26,6 +26,10 @@ public class PlayerMovementInX : MonoBehaviour {
 			flip ();
 		}
 	}
+
+	public bool getIsRight(){
+		return this.isRight;
+	}
 		
 	private void move(){
 		var movement = new Vector3 (Input.GetAxis ("Horizontal"), Input.GetAxis ("Vertical"), 0);
