@@ -19,11 +19,10 @@ public class PlayerAttacks : MonoBehaviour {
 	}
 
 	void Update () {
-		if (Input.GetKey (KeyCode.LeftAlt)) {
+		if (Input.GetKey (KeyCode.Z)) {
 			if(lastTime >= cd)
 				useSkill ();
 		}
-
 		lastTime += Time.deltaTime;
 	}
 
@@ -36,15 +35,11 @@ public class PlayerAttacks : MonoBehaviour {
 	public void castSpell(){
 		GameObject instanceSkill = (GameObject)Instantiate(
 			player.getSkillSelected(),
-			// aca deberiamos cambiar la posicion para que salga de la mano.
-			// tenemos un problema con la posicion del skill. Al parecer 
 			new Vector2(player.transform.position.x, player.transform.position.y + 0.4f),
 			player.transform.rotation);
 		if (!movementInX.getIsRight()){
 			instanceSkill.transform.Rotate (0, 0, 180);
 		}
-		//instanceSkill.GetComponent<Animator> ().avatar = player;
-
 		Destroy(instanceSkill, 1f);    
 
 		lastTime = 0;

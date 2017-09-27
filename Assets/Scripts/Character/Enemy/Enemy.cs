@@ -28,7 +28,8 @@ public class Enemy : Character {
 		
 		if (collision.gameObject.tag == "spell") {
 			Spell spell = collision.gameObject.GetComponent<Spell> ();
-			takeDamage (spell.damage, transform);
+			Player player = GameObject.FindObjectOfType<Player> ();
+			takeDamage (player.totalDamage(spell), transform);
 		}
 	}
 

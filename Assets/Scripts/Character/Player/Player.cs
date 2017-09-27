@@ -36,4 +36,8 @@ public class Player : Character {
 		return skillSelected;
 	}
 
+	public float totalDamage(Spell spell){
+		return (spell.damage + damage);
+	}
+
 }
