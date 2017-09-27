@@ -6,8 +6,8 @@ public class PlayerMovementInY : MonoBehaviour {
 
 	[Range(1, 10)]
 	public float jumpSpeed;
-	public bool grounded = false;
-	public bool jumpBoostGround = false;
+	public bool grounded;
+	public bool jumpBoostGround;
 
 	private float speed;
 	private Animator anim;
@@ -43,6 +43,8 @@ public class PlayerMovementInY : MonoBehaviour {
 			changeSpeed ();
 			rb.velocity = Vector2.up * speed;
 			anim.SetTrigger ("Jump");
+			grounded = false;
+			jumpBoostGround = false;
 		}
 	}
 
@@ -66,17 +68,6 @@ public class PlayerMovementInY : MonoBehaviour {
 	}
 
 	public void OnCollisionExit2D (Collision2D collision) {
-		switch (collision.gameObject.tag) {
-		case "ground":
-			grounded = false;
-			break;
-		case "impulseGround":
-			grounded = false;
-			jumpBoostGround = false;
-			break;
-		default:
-			break;
-		}
 	}
 
 }
