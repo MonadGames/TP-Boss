@@ -26,7 +26,7 @@ public class Health : MonoBehaviour
 	}
 
 	public void takeDamage (float damage, Transform enemyTransform) {
-		if (health > 0f) {
+		if (health > 0f && damage > 0) {
 			Vector3 hurtVector = transform.position - enemyTransform.position + enemyTransform.localScale  * powerHurtForce; //Vector3.up
 			GetComponent<Rigidbody2D>().AddForce(hurtVector * hurtForce);
 			health -= damage;

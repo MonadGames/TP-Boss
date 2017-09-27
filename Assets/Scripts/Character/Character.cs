@@ -18,7 +18,7 @@ public class Character : MonoBehaviour {
 	}
 
 	public void takeDamage(float damage,Transform transform){
-		health.takeDamage(damage, transform);
+		health.takeDamage(damage - defense, transform);
 	}
 
 	void Update () {
