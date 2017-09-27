@@ -19,10 +19,9 @@ public class PlayerAttacks : MonoBehaviour {
 	}
 
 	void Update () {
-		if (Input.GetKey (KeyCode.Z)) {
-			if(lastTime >= cd)
-				useSkill ();
-		}
+		if (Input.GetKey (KeyCode.Z) && lastTime >= cd)
+			useSkill ();
+		
 		lastTime += Time.deltaTime;
 	}
 
