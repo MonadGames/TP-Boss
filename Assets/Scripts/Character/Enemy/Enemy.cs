@@ -25,12 +25,6 @@ public class Enemy : Character {
 	public void OnCollisionEnter2D (Collision2D collision) {
 		if (collision.gameObject.name == "Player")
 			collision.gameObject.GetComponent<Player>().takeDamage(damage, transform);
-		
-		if (collision.gameObject.tag == "spell") {
-			Spell spell = collision.gameObject.GetComponent<Spell> ();
-			Player player = GameObject.FindObjectOfType<Player> ();
-			takeDamage (player.totalDamage(spell), transform);
-		}
 	}
 
 	public void OnCollisionExit2D (Collision2D collision) {

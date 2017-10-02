@@ -286,13 +286,13 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.060487375
-  m_TransitionOffset: 0.029096585
-  m_ExitTime: 0.96423227
+  m_TransitionDuration: 0.056489512
+  m_TransitionOffset: 0.01993021
+  m_ExitTime: 0.9642324
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 3
-  m_OrderedInterruption: 1
+  m_OrderedInterruption: 0
   m_CanTransitionToSelf: 1
 --- !u!1101 &1101520768680720828
 AnimatorStateTransition:
@@ -581,7 +581,7 @@ AnimatorState:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Player Cast Spell
-  m_Speed: 3
+  m_Speed: 2
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101422747439947206}
@@ -660,7 +660,7 @@ AnimatorStateMachine:
     m_Position: {x: 445, y: 455, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102208192061402330}
-    m_Position: {x: 72, y: 84, z: 0}
+    m_Position: {x: 132, y: 96, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102710350726617888}
     m_Position: {x: 408, y: 204, z: 0}

@@ -1491,7 +1491,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 192589038}
-  - component: {fileID: 192589039}
   - component: {fileID: 192589040}
   m_Layer: 0
   m_Name: HealthBar
@@ -1516,18 +1515,6 @@ Transform:
   m_Father: {fileID: 1717465300}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &192589039
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114586840710149816, guid: 6fcf787ce36d249ae8a5994e0a3863c3,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 192589037}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22224a374ca224dca935ed0ae2ff1568, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &192589040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1541,6 +1528,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: {fileID: 1717465304}
   health: 100
+  healthBar: {fileID: 66635219}
 --- !u!1 &207151160
 GameObject:
   m_ObjectHideFlags: 0
@@ -2213,7 +2201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LaunchOnStart: 1
-  timeOut: 2
+  timeOut: 1
   MultiStrings:
   - 'Welcome Ismael. Do you remember me? We met many times... in many dreams... '
   - 'or that''s what you thought they were.  '
@@ -3705,7 +3693,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 457489448}
-  - component: {fileID: 457489449}
   - component: {fileID: 457489450}
   m_Layer: 0
   m_Name: HealthBar
@@ -3730,18 +3717,6 @@ Transform:
   m_Father: {fileID: 1713777670}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &457489449
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114326191257652686, guid: 5b210609803658e488f512fc13a6163e,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 457489447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22224a374ca224dca935ed0ae2ff1568, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &457489450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3755,6 +3730,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: {fileID: 1713777664}
   health: 100
+  healthBar: {fileID: 907520616}
 --- !u!1 &480017800
 GameObject:
   m_ObjectHideFlags: 0
@@ -5308,6 +5284,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: {fileID: 1711671888}
   health: 100
+  healthBar: {fileID: 411399901}
 --- !u!4 &765398013
 Transform:
   m_ObjectHideFlags: 0
@@ -6273,6 +6250,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: {fileID: 891025751}
   health: 100
+  healthBar: {fileID: 1067507393}
 --- !u!1 &969997136
 GameObject:
   m_ObjectHideFlags: 0
@@ -6881,6 +6859,11 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!212 &1067507393 stripped
+SpriteRenderer:
+  m_PrefabParentObject: {fileID: 212421648107227224, guid: bff0164e9f350493a96c5329b16f0482,
+    type: 2}
+  m_PrefabInternal: {fileID: 28595870}
 --- !u!1 &1084219215
 GameObject:
   m_ObjectHideFlags: 0
@@ -8545,7 +8528,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1348863325}
   - component: {fileID: 1348863326}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Health-bg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8980,7 +8963,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1439884751}
-  - component: {fileID: 1439884752}
   - component: {fileID: 1439884753}
   m_Layer: 0
   m_Name: HealthBar
@@ -9005,18 +8987,6 @@ Transform:
   m_Father: {fileID: 1084219216}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1439884752
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114586840710149816, guid: 6fcf787ce36d249ae8a5994e0a3863c3,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1439884750}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22224a374ca224dca935ed0ae2ff1568, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1439884753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9030,6 +9000,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: {fileID: 1084219220}
   health: 100
+  healthBar: {fileID: 600696710}
 --- !u!1 &1440657426
 GameObject:
   m_ObjectHideFlags: 0
@@ -9214,7 +9185,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1499555486}
   - component: {fileID: 1499555485}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: HealthBar
   m_TagString: HealthBar
   m_Icon: {fileID: 0}
@@ -9412,6 +9383,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: {fileID: 406446488}
   health: 100
+  healthBar: {fileID: 2109757937}
 --- !u!1 &1533976064
 GameObject:
   m_ObjectHideFlags: 0
@@ -10273,6 +10245,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: {fileID: 1282022764}
   health: 100
+  healthBar: {fileID: 1193656851}
 --- !u!1 &1646055830
 GameObject:
   m_ObjectHideFlags: 0
@@ -12240,9 +12213,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1877580817}
-  - component: {fileID: 1877580818}
   - component: {fileID: 1877580819}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12265,18 +12237,6 @@ Transform:
   m_Father: {fileID: 2016707868}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1877580818
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114326191257652686, guid: 5b210609803658e488f512fc13a6163e,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1877580816}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22224a374ca224dca935ed0ae2ff1568, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1877580819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12290,6 +12250,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: {fileID: 2016707871}
   health: 100
+  healthBar: {fileID: 1499555485}
 --- !u!1 &1879443208
 GameObject:
   m_ObjectHideFlags: 0
@@ -12629,6 +12590,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: {fileID: 2098287485}
   health: 100
+  healthBar: {fileID: 340601754}
 --- !u!1 &1946954225
 GameObject:
   m_ObjectHideFlags: 0

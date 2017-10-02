@@ -6,12 +6,11 @@ public class HealthBar : MonoBehaviour {
 
 	public Character character;
 	public float health = 100;
-	private SpriteRenderer healthBar;			// Reference to the sprite renderer of the health bar.
+	public SpriteRenderer healthBar;			// Reference to the sprite renderer of the health bar.
 	private Vector3 healthScale;				// The local scale of the health bar initially (with full health).
 
 	// Use this for initialization
-	void Start () {
-		healthBar = GetComponent<SpriteRenderer>();
+	void Awake () {
 		// Getting the intial scale of the healthbar (whilst the player has full health).
 		healthScale = healthBar.transform.localScale;
 	}

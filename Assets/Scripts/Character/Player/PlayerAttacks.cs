@@ -28,6 +28,7 @@ public class PlayerAttacks : MonoBehaviour {
 	void useSkill () {	
 		if (gameObject.GetComponent<Player> ().canUseSkill ()) {
 			anim.SetTrigger ("Cast Spell");
+			lastTime = 0;
 		}
 	}
 
