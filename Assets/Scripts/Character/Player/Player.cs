@@ -7,9 +7,12 @@ public class Player : Character {
 	private int countOfGoodActions = 0;
 	public GameObject skillSelected;
 
-	private Spell spellSelected;
-	private int countOfBadActions = 0;
+	private Spell  spellSelected;
+	private int    countOfBadActions = 0;
 	private Energy energy;
+	private bool   isInvulnerable = false;
+	private float  lastHit = 1f;
+	private float  secondsOfInvulnerability = 1f;
 
 	void Start () {
 		health = gameObject.GetComponent<Health>();
@@ -20,6 +23,7 @@ public class Player : Character {
 	}
 
 	void Update () {
+		lastHit -= Time.deltaTime;
 	}
 
 	public bool canUseSkill() {
@@ -34,6 +38,14 @@ public class Player : Character {
 
 	public GameObject getSkillSelected() {
 		return skillSelected;
+	}
+
+	public void takeDamage(float damage,Transform transform){
+		if (lastHit <= 0) {
+			isInvulnerable = true;
+			lastHit = secondsOfInvulnerability;
+			base.takeDamage (damage, transform);
+		}
 	}
 
 	public float totalDamage(Spell spell){
