@@ -12,6 +12,10 @@ public class Character : MonoBehaviour {
 	public Character() {
 	}
 
+	public bool isDead(){
+		return this.health.health <= 0;
+	}
+
 	void Start () {
 		myBody = GetComponent<Rigidbody2D> ();
 		anim = GetComponent<Animator> ();

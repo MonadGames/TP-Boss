@@ -13,16 +13,18 @@ public class PlayerMovementInY : MonoBehaviour {
 	private Animator anim;
 	private bool isDead = false;
 	private Rigidbody2D rb;
+	private Player player;
 
 
 	void Start () {
 		speed = jumpSpeed;
 		rb = GetComponent<Rigidbody2D> ();
 		anim = GetComponent<Animator> ();
+		player = GetComponent<Player> ();
 	}
 
 	void Update () {
-		if (!isDead) {
+		if (!player.isDead()) {
 			checkForMove();
 		}
 	}

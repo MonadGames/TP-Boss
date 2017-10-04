@@ -13,15 +13,17 @@ public class PlayerMovementInX : MonoBehaviour {
 	private bool isRight;
 	private Rigidbody2D rb;
 	private Animator anim;
+	private Player player;
 
 	void Start () {
 		isRight = true;
 		rb = GetComponent<Rigidbody2D> ();
 		anim = GetComponent<Animator> ();
+		player = GetComponent<Player> ();
 	}
 
 	void FixedUpdate () {
-		if (!isDead) {
+		if (!player.isDead()) {
 			move ();
 			flip ();
 		}

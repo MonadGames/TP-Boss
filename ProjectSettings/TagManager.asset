@@ -52,11 +52,11 @@ TagManager:
   - name: level
     uniqueID: 4113206903
     locked: 0
-  - name: player
-    uniqueID: 288543191
-    locked: 0
   - name: npcs
     uniqueID: 707642001
+    locked: 0
+  - name: player
+    uniqueID: 288543191
     locked: 0
   - name: foreground
     uniqueID: 4110427351
