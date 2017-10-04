@@ -10,13 +10,14 @@ public class Player : Character {
 	private Spell  spellSelected;
 	private int    countOfBadActions = 0;
 	private Energy energy;
-	private bool   isInvulnerable = false;
 	private float  lastHit = 0f;
 	private float  secondsOfInvulnerability = 1f;
+	private CameraController camera;
 
 	void Start () {
 		health = gameObject.GetComponent<Health>();
 		energy = gameObject.GetComponent<Energy>();
+		camera = gameObject.GetComponent<CameraController>();
 		spellSelected = skillSelected.GetComponent<Spell> ();
 		// por ahora asi, luego podria haber una lista de instancias de skills a seleccionar.
 		//skillSelected = new Skill ();
@@ -42,9 +43,9 @@ public class Player : Character {
 
 	public void takeDamage(float damage,Transform transform){
 		if (lastHit <= 0) {
-			isInvulnerable = true;
 			lastHit = secondsOfInvulnerability;
 			base.takeDamage (damage, transform);
+			camera.takeDamage ();
 		}
 	}
 
