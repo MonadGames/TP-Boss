@@ -51,17 +51,24 @@ Monad Games esta trabajando en el diseño y desarollo de un nuevo personaje que 
 ### Enemigos
 
   - #### Tipos de enemigos
+    Existen dos tipos de enemigos, uno por tierra y uno por aire. Cada uno con su respectivo ataque y defensa. Por el momento un ataque consiste en la colision misma con el jugador.
 
   - #### IA
+    La "inteligencia artificial" que manejan los Enemy consiste en rondar de izquierda a derecha en un radio de movimiento definido, si en algun momento el player entra en su radio de vision (tambien definido) el Enemy lo seguira hasta que este salga de su radio de vision. Una vez el player "escapo" del Enemy, este volvera a su posicion inicial para seguir con su estado de guardia.
 
   - #### Muerte
+    La muerte de los Enemy esta en estado alpha, consiste simplemente en hacer desaparecer completamente al enemy sin ningun tipo de animacion.
 
-### Npcs
+### NPC
+  Proveemos solo un tipo de NPC el cual consiste en el fantasma de una niña la cual es nuestra introductora del juego como jugadores. Se encarga de contarnos el contexto del uego y su objetivo. Este NPC provee un icono sobre su cabeza señalando que el jugador puede interactuar seleccionando la tecla "E".
 
   - #### Dialogos
+    Los dialogos consisten en una viñeta a la derecha del NPC, el cual nos muestra el contenido del juego.
 
 ### Efectos
 
   - #### Impacto de poderes
+  Como con la animacion de los poderes, utilizamos un prefab diseñado por una persona externa al equipo de desarrollo. Logramos recrear el efecto de "Hit" una vez el Spell colisiona con un Enemy.
 
   - #### Ilusion de sueño
+  Utilizando Post processing configuramos una serie de efectos visuales ligados a la camara. Estos efectos recrean la sensacion de sueño dentro del juego y oscureces el entorno para mostrar una imagen mas lugubre.
