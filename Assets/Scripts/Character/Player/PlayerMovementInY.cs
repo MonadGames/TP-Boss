@@ -9,6 +9,8 @@ public class PlayerMovementInY : MonoBehaviour {
 	public bool grounded;
 	public bool jumpBoostGround;
 
+
+	private Vector2 gravity;
 	private float speed;
 	private Animator anim;
 	private bool isDead = false;
@@ -21,11 +23,16 @@ public class PlayerMovementInY : MonoBehaviour {
 		rb = GetComponent<Rigidbody2D> ();
 		anim = GetComponent<Animator> ();
 		player = GetComponent<Player> ();
+		gravity = new Vector2 (0, -4f);
 	}
 
 	void Update () {
 		if (!player.isDead()) {
 			checkForMove();
+		}
+
+		if (!grounded) {
+			rb.velocity += gravity * Time.deltaTime;
 		}
 	}
 
@@ -59,6 +66,7 @@ public class PlayerMovementInY : MonoBehaviour {
 		switch (collision.gameObject.tag) {
 		case "ground":
 			grounded = true;
+			jumpBoostGround = false;
 			break;
 		case "impulseGround":
 			grounded = true;
@@ -71,5 +79,7 @@ public class PlayerMovementInY : MonoBehaviour {
 
 	public void OnCollisionExit2D (Collision2D collision) {
 	}
+
+
 
 }
