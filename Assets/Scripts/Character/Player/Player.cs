@@ -11,7 +11,7 @@ public class Player : Character {
 	private int    countOfBadActions = 0;
 	private Energy energy;
 	private bool   isInvulnerable = false;
-	private float  lastHit = 1f;
+	private float  lastHit = 0f;
 	private float  secondsOfInvulnerability = 1f;
 
 	void Start () {
