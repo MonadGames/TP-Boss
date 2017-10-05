@@ -6,6 +6,7 @@ public class Health : MonoBehaviour
 	public float health = 100f;					// The player's health.
 	public float powerHurtForce = 2f;
 	public Vector2 scale;
+	public Character character;
 	public float repeatDamagePeriod = 2f;		// How frequently the player can be damaged.
 	public float hurtForce = 10f;				// The force with which the player is pushed when hurt.
 	public SpriteRenderer healthBar;			// Reference to the sprite renderer of the health bar.
@@ -16,12 +17,13 @@ public class Health : MonoBehaviour
 
 	void Awake () {
 		anim = GetComponent<Animator>();
+		character = gameObject.GetComponent<Character> (); 
 		healthScale = healthBar.transform.localScale;
 	}
 
 	void Update(){
 		if (health <= 0) {
-			anim.SetTrigger ("Die");
+			character.die ();
 		}
 	}
 

@@ -9,8 +9,7 @@ public class Character : MonoBehaviour {
 	protected Animator anim;
 	protected Health health;
 
-	public Character() {
-	}
+	public Character() {}
 
 	public bool isDead(){
 		return this.health.health <= 0;
@@ -25,7 +24,7 @@ public class Character : MonoBehaviour {
 		health.takeDamage(damage - defense, transform);
 	}
 
-	void Update () {
-		
-	}
+	void Update () {}
+
+	public void die(){}
 }

@@ -34,4 +34,8 @@ public class Enemy : Character {
 		}
 	}
 
+	public void die(){
+		//Aca definir la accion de la muerte del enemy
+	}
+
 }

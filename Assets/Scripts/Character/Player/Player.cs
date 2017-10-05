@@ -12,13 +12,15 @@ public class Player : Character {
 	private Energy energy;
 	private float  lastHit = 0f;
 	private float  secondsOfInvulnerability = 1f;
+
 	private CameraController camera;
 
 	void Start () {
 		health = gameObject.GetComponent<Health>();
 		energy = gameObject.GetComponent<Energy>();
-		camera = gameObject.GetComponent<CameraController>();
 		spellSelected = skillSelected.GetComponent<Spell> ();
+		camera = gameObject.GetComponentInChildren<CameraController>();
+
 		// por ahora asi, luego podria haber una lista de instancias de skills a seleccionar.
 		//skillSelected = new Skill ();
 	}
@@ -29,12 +31,6 @@ public class Player : Character {
 
 	public bool canUseSkill() {
 		return energy.canUse (spellSelected.damage);
-	}
-		
-	public void OnCollisionEnter2D (Collision2D collision) {
-	}
-
-	public void OnCollisionExit2D (Collision2D collision) {
 	}
 
 	public GameObject getSkillSelected() {
@@ -53,4 +49,8 @@ public class Player : Character {
 		return (spell.damage + damage);
 	}
 
+	public void die(){
+		anim.SetTrigger ("Die");
+		//Aca definir el Game over.
+	}
 }
