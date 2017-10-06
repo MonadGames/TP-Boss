@@ -7,7 +7,7 @@ public class Player : Character {
 	private int countOfGoodActions = 0;
 	public GameObject skillSelected;
 
-	private SpriteRenderer spriteRenderer;
+	private SpriteRenderer[] spritesRenderers;
 	private Spell  spellSelected;
 	private int    countOfBadActions = 0;
 	private Energy energy;
@@ -24,7 +24,7 @@ public class Player : Character {
 		energy = gameObject.GetComponent<Energy>();
 		spellSelected = skillSelected.GetComponent<Spell> ();
 		camera = gameObject.GetComponentInChildren<CameraController>();
-		spriteRenderer = gameObject.GetComponentInChildren<SpriteRenderer>();
+		spritesRenderers = gameObject.GetComponentsInChildren<SpriteRenderer>();
 
 		// por ahora asi, luego podria haber una lista de instancias de skills a seleccionar.
 		//skillSelected = new Skill ();
@@ -37,10 +37,12 @@ public class Player : Character {
 	public void checkVulnerability(){
 		lastHit -= Time.deltaTime;
 
-		Color color = spriteRenderer.color;
-		color.a = (lastHit > 0) ? Mathf.Sin (lastHit) : 1f;
-
-		spriteRenderer.material.color = color;
+		foreach (SpriteRenderer sprite in spritesRenderers) {
+			Color color = sprite.color;
+			color.a = (lastHit > 0) ? Mathf.Sin (Random.Range(-1f, 1f)) : 1f;
+	
+			sprite.material.color = color;
+		}
 	}
 
 	public bool canUseSkill() {
