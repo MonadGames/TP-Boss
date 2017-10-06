@@ -37,10 +37,10 @@ public class Player : Character {
 	public void checkVulnerability(){
 		lastHit -= Time.deltaTime;
 
+		//float transparencyFactor = (lastHit > 0) ? Mathf.Sin (Random.Range(-1f, 1f)) : 1f;
 		foreach (SpriteRenderer sprite in spritesRenderers) {
 			Color color = sprite.color;
 			color.a = (lastHit > 0) ? Mathf.Sin (Random.Range(-1f, 1f)) : 1f;
-	
 			sprite.material.color = color;
 		}
 	}
