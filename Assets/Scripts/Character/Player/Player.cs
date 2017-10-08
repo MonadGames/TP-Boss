@@ -13,6 +13,7 @@ public class Player : Character {
 	private Energy energy;
 	private float  lastHit = 0f;
 	private float  secondsOfInvulnerability = 2f;
+	private bool deadAnim = false;
 
 	public float powerHurtForce = 2f;
 	public float hurtForce = 10f;
@@ -23,6 +24,7 @@ public class Player : Character {
 	void Start () {
 		health = gameObject.GetComponent<Health>();
 		energy = gameObject.GetComponent<Energy>();
+		anim = GetComponent<Animator> ();
 		spellSelected = skillSelected.GetComponent<Spell> ();
 		camera = gameObject.GetComponentInChildren<CameraController>();
 		spritesRenderers = gameObject.GetComponentsInChildren<SpriteRenderer>();
@@ -53,6 +55,11 @@ public class Player : Character {
 
 	public void updateDeath () {
 		timeOfDead -= Time.deltaTime;
+
+		if (!deadAnim) {
+			anim.SetTrigger ("Die");
+			deadAnim = true;
+		}
 
 		if (timeOfDead > 0) {
 			foreach (SpriteRenderer sprite in spritesRenderers) {
