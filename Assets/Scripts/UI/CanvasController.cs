@@ -7,22 +7,29 @@ public class CanvasController : MonoBehaviour {
 	public GameObject player;
 	public GameObject panel;
 
+
+	private Player playerController;
 	private bool visible;
 
-	// Use this for initialization
 	void Start () {
 		visible = false;
+		playerController = player.gameObject.GetComponent<Player> ();
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
 		checkGameOver ();
 	}
 
 	void checkGameOver (){
-		if (player.gameObject.GetComponent<Player> ().isDead () && !visible) {
+		if (playerController.isDead () && !visible) {
 			visible = true;
+			StartCoroutine(wait(playerController.timeOfDead));
 			panel.SetActive (true);
 		}
+	}
+
+	IEnumerator wait(float sec)
+	{
+		yield return new WaitForSeconds(sec);
 	}
 }
