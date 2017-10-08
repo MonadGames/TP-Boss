@@ -8,13 +8,11 @@ public class Enemy : Character {
 	public SpriteRenderer spriteRenderer;
 	public float deadSpeed = 0.0000000000001f;
 	public float timeOfDead = 1f;
-	private bool isAlive;
 	
 	void Start () {
 		health = gameObject.GetComponent<Health>();
 		enemyAI = gameObject.GetComponent<EnemyAI>();
 		spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-		isAlive = true;
 	}
 
 	void Update () {
@@ -24,7 +22,6 @@ public class Enemy : Character {
 	public void checkDead(){
 		if(isDead()) {
 			Color color = spriteRenderer.material.color;
-			print (color.a);
 			if (timeOfDead > 0) {
 				color.a = timeOfDead;
 				timeOfDead -= Time.deltaTime;
@@ -34,12 +31,6 @@ public class Enemy : Character {
 				Destroy(gameObject, 0f);
 			}
 		}
-	}
-
-	public void die(){
-		// No esta llegando aca
-		isAlive = false;
-		//Aca definir la accion de la muerte del enemy
 	}
 
 	public void move(){

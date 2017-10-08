@@ -16,7 +16,7 @@ public class Player : Character {
 
 	public float powerHurtForce = 2f;
 	public float hurtForce = 10f;
-	private bool dead;
+	public float timeOfDead = 1f;
 
 	private CameraController camera;
 
@@ -26,14 +26,18 @@ public class Player : Character {
 		spellSelected = skillSelected.GetComponent<Spell> ();
 		camera = gameObject.GetComponentInChildren<CameraController>();
 		spritesRenderers = gameObject.GetComponentsInChildren<SpriteRenderer>();
-		dead = false;
 		// por ahora asi, luego podria haber una lista de instancias de skills a seleccionar.
 		//skillSelected = new Skill ();
 	}
 
 	void Update () {
-		checkIsAlive ();
-		checkVulnerability ();
+		if (!isDead ()) {
+			checkVulnerability ();	
+		} else {
+			updateDeath ();
+		}
+
+
 	}
 
 	public void checkVulnerability(){
@@ -44,6 +48,18 @@ public class Player : Character {
 			Color color = sprite.color;
 			color.a = (lastHit > 0) ? Mathf.Sin (Random.Range(-1f, 1f)) : 1f;
 			sprite.material.color = color;
+		}
+	}
+
+	public void updateDeath () {
+		timeOfDead -= Time.deltaTime;
+
+		if (timeOfDead > 0) {
+			foreach (SpriteRenderer sprite in spritesRenderers) {
+				Color color = sprite.color;
+				color.a = timeOfDead;
+				sprite.material.color = color;
+			}
 		}
 	}
 
@@ -71,17 +87,6 @@ public class Player : Character {
 
 	public float totalDamage(Spell spell){
 		return (spell.damage + damage);
-	}
-
-	public void die(){
-		//anim.SetTrigger ("Die");
-		dead = true;
-	}
-
-	public void checkIsAlive(){
-		if (isDead () && !dead) {
-			die ();
-		}
 	}
 
 }
