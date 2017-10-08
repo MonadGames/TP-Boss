@@ -27,4 +27,5 @@ public class Character : MonoBehaviour {
 	void Update () {}
 
 	public void die(){}
+
 }

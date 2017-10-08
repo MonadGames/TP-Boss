@@ -16,6 +16,7 @@ public class Player : Character {
 
 	public float powerHurtForce = 2f;
 	public float hurtForce = 10f;
+	private bool dead;
 
 	private CameraController camera;
 
@@ -25,12 +26,13 @@ public class Player : Character {
 		spellSelected = skillSelected.GetComponent<Spell> ();
 		camera = gameObject.GetComponentInChildren<CameraController>();
 		spritesRenderers = gameObject.GetComponentsInChildren<SpriteRenderer>();
-
+		dead = false;
 		// por ahora asi, luego podria haber una lista de instancias de skills a seleccionar.
 		//skillSelected = new Skill ();
 	}
 
 	void Update () {
+		checkIsAlive ();
 		checkVulnerability ();
 	}
 
@@ -72,7 +74,14 @@ public class Player : Character {
 	}
 
 	public void die(){
-		anim.SetTrigger ("Die");
-		//Aca definir el Game over.
+		//anim.SetTrigger ("Die");
+		dead = true;
 	}
+
+	public void checkIsAlive(){
+		if (isDead () && !dead) {
+			die ();
+		}
+	}
+
 }

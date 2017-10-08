@@ -9,6 +9,7 @@ TagManager:
   - ground
   - impulseGround
   - spell
+  - Canvas
   layers:
   - Default
   - TransparentFX
