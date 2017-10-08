@@ -23,13 +23,13 @@ public class CanvasController : MonoBehaviour {
 	void checkGameOver (){
 		if (playerController.isDead () && !visible) {
 			visible = true;
-			StartCoroutine(wait(playerController.timeOfDead));
-			panel.SetActive (true);
+			StartCoroutine(waitAndGameOver(playerController.timeOfDead));
 		}
 	}
 
-	IEnumerator wait(float sec)
+	IEnumerator waitAndGameOver(float waitTime)
 	{
-		yield return new WaitForSeconds(sec);
+		yield return new WaitForSecondsRealtime(waitTime);
+		panel.SetActive (true);
 	}
 }
