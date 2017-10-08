@@ -67,6 +67,8 @@ public class Player : Character {
 				color.a = timeOfDead;
 				sprite.material.color = color;
 			}
+		} else {
+			this.die ();
 		}
 	}
 
@@ -78,11 +80,11 @@ public class Player : Character {
 		return skillSelected;
 	}
 
-	public void takeDamage(float damage,Transform transform){
+	public void takeDamage(float damage){
 		hurtEffect (transform);
 		if (lastHit <= 0) {
 			lastHit = secondsOfInvulnerability;
-			base.takeDamage (damage, transform);
+			base.takeDamage (damage);
 			camera.takeDamage ();
 		}
 	}

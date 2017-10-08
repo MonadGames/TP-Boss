@@ -26,11 +26,19 @@ public class Health : MonoBehaviour
 		}
 	}
 
-	public void takeDamage (float damage, Transform enemyTransform) {
+	public void takeDamage (float damage) {
 		if (health > 0f && damage > 0) {
 			health -= damage;
 			UpdateHealthBar();
 		}
+	}
+
+	public void hide(){
+		healthBar.enabled = false;
+	}
+
+	public void show(){
+		healthBar.enabled = true;
 	}
 		
 	public void UpdateHealthBar () {

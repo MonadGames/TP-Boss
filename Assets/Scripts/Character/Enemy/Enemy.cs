@@ -28,7 +28,8 @@ public class Enemy : Character {
 
 				spriteRenderer.material.color = color;
 			} else {
-				Destroy(gameObject, 0f);
+				this.die ();
+				Destroy(gameObject, 1f);
 			}
 		}
 	}
@@ -41,7 +42,7 @@ public class Enemy : Character {
 
 	public void OnCollisionEnter2D (Collision2D collision) {
 		if (collision.gameObject.name == "Player")
-			collision.gameObject.GetComponent<Player>().takeDamage(damage, transform);
+			collision.gameObject.GetComponent<Player>().takeDamage(damage);
 	}
 
 	public void OnCollisionExit2D (Collision2D collision) {
