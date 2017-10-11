@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: e521d773ed2bf4e4394a649dba035c87
+timeCreated: 1507733034
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Parisienne
+  fontNames:
+  - Parisienne
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
