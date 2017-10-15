@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class Spell : MonoBehaviour {
 
+	public AudioClip hitSound;
 	public float damage;
 	public GameObject hitEffect;
 	public float costEnergy;
+
+
+	private AudioSource source;
 	bool shouldStopMoving = false;
 	Vector2 position;
 
 	// Use this for initialization
 	void Start () {
-		
+		source = GetComponent<AudioSource> ();
 	}
 
 	public float cost(){
@@ -39,6 +43,7 @@ public class Spell : MonoBehaviour {
 	void OnTriggerEnter2D (Collider2D collider) {
 		if (collider.gameObject.tag == "Enemy") {
 			this.shouldStopMoving = true;
+			source.PlayOneShot (hitSound, 1f);
 			this.playHit (collider);
 			this.applyDamage (collider);
 		}

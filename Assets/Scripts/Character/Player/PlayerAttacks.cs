@@ -6,13 +6,18 @@ public class PlayerAttacks : MonoBehaviour {
 
 	//public float attackSpeed;
 
+	public AudioClip spellSound;
 	public float cd = 0.5f;
 	public float lastTime = 0.5f;
+
 	private Player player;
+	private AudioSource source;
 	private Animator anim;
 	private PlayerMovementInX movementInX;
 
+
 	void Start () {
+		source = GetComponent<AudioSource> ();
 		player = gameObject.GetComponent<Player> ();
 		anim = gameObject.GetComponent<Animator> ();
 		movementInX = gameObject.GetComponent<PlayerMovementInX> ();
@@ -33,10 +38,10 @@ public class PlayerAttacks : MonoBehaviour {
 	}
 
 	public void castSpell(){
-		GameObject instanceSkill = (GameObject)Instantiate(
-			player.getSkillSelected(),
-			new Vector2(player.transform.position.x, player.transform.position.y + 0.4f),
-			player.transform.rotation);
+
+		source.PlayOneShot (spellSound, 1f);
+		GameObject instanceSkill = (GameObject)Instantiate( player.getSkillSelected(), new Vector2(player.transform.position.x, player.transform.position.y + 0.4f), player.transform.rotation);
+
 		if (!movementInX.getIsRight()){
 			instanceSkill.transform.Rotate (0, 0, 180);
 		}
