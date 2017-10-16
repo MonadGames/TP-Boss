@@ -17522,6 +17522,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runSpeed: 4
   walkSpeed: 2
+  stepSounds:
+  - {fileID: 8300000, guid: 15eccbf9c2b65410aafb9ccc40269d75, type: 3}
+  - {fileID: 8300000, guid: bb093f4aa7d2f4808bad73ef2b0316e2, type: 3}
+  - {fileID: 8300000, guid: 760265c75366d4bd4a1e01d20217287c, type: 3}
+  - {fileID: 8300000, guid: 0ae0eddadec04409196b34fa2a37e7a6, type: 3}
+  - {fileID: 8300000, guid: 98adaf7d0b8f64a4db9e68a7077474cd, type: 3}
+  - {fileID: 8300000, guid: f1069ab5ffb734509ac51ed6e6af68a3, type: 3}
+  - {fileID: 8300000, guid: 162438c609b7b4e8dbd0a97954693e66, type: 3}
+  - {fileID: 8300000, guid: bc26b9e97ff6e405bbdbc4a710827fec, type: 3}
+  - {fileID: 8300000, guid: 160a64a522f20418a856f407a57af9b5, type: 3}
+  - {fileID: 8300000, guid: a8928fa517c404384ac8204e566de1eb, type: 3}
   isDead: 0
 --- !u!114 &1711671892
 MonoBehaviour:

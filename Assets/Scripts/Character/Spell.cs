@@ -29,6 +29,7 @@ public class Spell : MonoBehaviour {
 	}
 
 	void playHit(Collider2D collider){
+		source.PlayOneShot (hitSound, 1f);
 		hitEffect.SetActive (true);
 		position = new Vector2 (collider.transform.position.x, gameObject.transform.position.y);
 		this.freezePosition ();
@@ -43,7 +44,6 @@ public class Spell : MonoBehaviour {
 	void OnTriggerEnter2D (Collider2D collider) {
 		if (collider.gameObject.tag == "Enemy") {
 			this.shouldStopMoving = true;
-			source.PlayOneShot (hitSound, 1f);
 			this.playHit (collider);
 			this.applyDamage (collider);
 		}
