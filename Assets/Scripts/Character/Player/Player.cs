@@ -89,8 +89,9 @@ public class Player : Character {
 		}
 	}
 
-	public void hurtEffect(Transform transform){
-		Vector3 hurtVector = transform.position - transform.position + transform.localScale  * powerHurtForce;
+	public void hurtEffect(Transform transformE){
+		Vector3 hurtVector = transform.position - transformE.position + Vector3.up + new Vector3(-transformE.localScale.x, 0, 0) * powerHurtForce;
+		//Vector3 hurtVector = transform.position - transform.position + transform.localScale  * powerHurtForce;
 		GetComponent<Rigidbody2D>().AddForce(hurtVector * hurtForce);
 	}
 

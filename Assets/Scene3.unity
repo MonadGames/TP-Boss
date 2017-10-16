@@ -17469,8 +17469,8 @@ MonoBehaviour:
   soulEffect: {fileID: 0}
   skillSelected: {fileID: 1300811145041140, guid: b3b1f1cc99d374ceca42df54aa8b0a3f,
     type: 2}
-  powerHurtForce: 2
-  hurtForce: 10
+  powerHurtForce: 10
+  hurtForce: 20
   timeOfDead: 1
 --- !u!114 &1711671889
 MonoBehaviour:
@@ -17484,7 +17484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1d93751c6ded48818d6307520754294, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpSpeed: 7
+  jumpSpeed: 5.5
   grounded: 0
   jumpBoostGround: 0
 --- !u!50 &1711671890
