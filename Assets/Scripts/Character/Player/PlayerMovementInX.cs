@@ -9,9 +9,11 @@ public class PlayerMovementInX : MonoBehaviour {
 	[Range(1, 2)]
 	public float walkSpeed;
 
+	public float stepsCd;
 	public AudioClip[] stepSounds;
 	public bool isDead = false;
 
+	private float currentCd;
 	private bool isRight;
 	private Rigidbody2D rb;
 	private Animator anim;
@@ -24,6 +26,7 @@ public class PlayerMovementInX : MonoBehaviour {
 		anim = GetComponent<Animator> ();
 		player = GetComponent<Player> ();
 		source = GetComponent<AudioSource> ();
+		currentCd = stepsCd;
 	}
 
 	void FixedUpdate () {
@@ -46,6 +49,8 @@ public class PlayerMovementInX : MonoBehaviour {
 				walk (movement);
 		} else
 			idle ();
+
+		currentCd += Time.deltaTime;
 	}
 
 	private void run(Vector3 movement){
@@ -98,8 +103,11 @@ public class PlayerMovementInX : MonoBehaviour {
 	}
 
 	private void randomAudioStep(float time){
-		AudioClip walkSound = stepSounds [Random.Range (0, stepSounds.Length)];
-		source.PlayOneShot (walkSound, time);
+		if(currentCd >= stepsCd){
+			AudioClip walkSound = stepSounds [Random.Range (0, stepSounds.Length)];
+			source.PlayOneShot (walkSound, time);
+			currentCd = 0;
+		}
 	}
 
 }

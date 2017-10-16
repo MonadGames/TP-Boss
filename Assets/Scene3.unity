@@ -17522,6 +17522,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runSpeed: 4
   walkSpeed: 2
+  stepsCd: 0.5
   stepSounds:
   - {fileID: 8300000, guid: 15eccbf9c2b65410aafb9ccc40269d75, type: 3}
   - {fileID: 8300000, guid: bb093f4aa7d2f4808bad73ef2b0316e2, type: 3}
