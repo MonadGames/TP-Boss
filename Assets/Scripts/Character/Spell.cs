@@ -14,18 +14,12 @@ public class Spell : MonoBehaviour {
 	bool shouldStopMoving = false;
 	Vector2 position;
 
-	// Use this for initialization
 	void Start () {
 		source = GetComponent<AudioSource> ();
 	}
 
 	public float cost(){
 		return costEnergy;
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
 	}
 
 	void playHit(Collider2D collider){

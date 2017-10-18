@@ -28,8 +28,6 @@ public class Player : Character {
 		spellSelected = skillSelected.GetComponent<Spell> ();
 		camera = gameObject.GetComponentInChildren<CameraController>();
 		spritesRenderers = gameObject.GetComponentsInChildren<SpriteRenderer>();
-		// por ahora asi, luego podria haber una lista de instancias de skills a seleccionar.
-		//skillSelected = new Skill ();
 	}
 
 	void Update () {
