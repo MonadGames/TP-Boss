@@ -105,7 +105,7 @@ public class PlayerMovementInX : MonoBehaviour {
 	private void randomAudioStep(float time){
 		if(currentCd >= stepsCd){
 			AudioClip walkSound = stepSounds [Random.Range (0, stepSounds.Length)];
-			source.PlayOneShot (walkSound, time);
+			source.PlayOneShot (walkSound, time * 2);
 			currentCd = 0;
 		}
 	}
