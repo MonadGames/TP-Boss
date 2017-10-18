@@ -40,16 +40,12 @@ public class Enemy : Character {
 	public void checkForAnimation(){
 	}
 
+	public void attack(Player player){
+		player.takeDamage(damage, transform);
+	}
+
 	public void OnCollisionEnter2D (Collision2D collision) {
 		if (collision.gameObject.name == "Player")
-			collision.gameObject.GetComponent<Player>().takeDamage(damage, transform);
+			attack (collision.gameObject.GetComponent<Player> ());
 	}
-
-	public void OnCollisionExit2D (Collision2D collision) {
-		if (collision.gameObject.tag == "Player"){}
-		if (collision.gameObject.tag == "spell") {
-			enemyAI.takeDamage ();
-		}
-	}
-
 }

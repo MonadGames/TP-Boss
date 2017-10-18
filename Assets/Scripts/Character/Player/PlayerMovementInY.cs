@@ -33,7 +33,6 @@ public class PlayerMovementInY : MonoBehaviour {
 
 		if (!grounded) {
 			rb.AddForce (gravity);
-		//	rb.velocity += gravity * Time.deltaTime;
 		}
 	}
 
@@ -51,7 +50,6 @@ public class PlayerMovementInY : MonoBehaviour {
 	public void checkForJump(){
 		if (Input.GetKey(KeyCode.Space) && grounded) {
 			changeSpeed ();
-			//rb.AddForce (new Vector2(0, speed * 10));
 			rb.velocity = Vector2.up * speed;
 			anim.SetTrigger ("Jump");
 			grounded = false;
@@ -78,10 +76,6 @@ public class PlayerMovementInY : MonoBehaviour {
 			break;
 		}
 	}
-
-	public void OnCollisionExit2D (Collision2D collision) {
-	}
-
 
 
 }

@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class PlayerAttacks : MonoBehaviour {
 
-	//public float attackSpeed;
-
 	public AudioClip spellSound;
 	public float cd = 0.5f;
 	public float lastTime = 0.5f;

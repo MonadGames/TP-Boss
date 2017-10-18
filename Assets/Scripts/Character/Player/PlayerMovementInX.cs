@@ -87,21 +87,6 @@ public class PlayerMovementInX : MonoBehaviour {
 		}
 	}
 
-	private void checkForActions() {
-		/*	
-		float speed = rb.velocity.x;
-		if (shouldMove()) {
-			if (speed < runSpeed)
-				anim.SetTrigger ("Walk");
-			else 
-				anim.SetTrigger ("Run");
-		} else {
-			anim.SetTrigger ("Idle");
-			rb.velocity = new Vector2(0, rb.velocity.y);
-		}
-	*/
-	}
-
 	private void randomAudioStep(float time){
 		if(currentCd >= stepsCd){
 			AudioClip walkSound = stepSounds [Random.Range (0, stepSounds.Length)];
