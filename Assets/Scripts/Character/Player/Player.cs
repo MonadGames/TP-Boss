@@ -80,8 +80,8 @@ public class Player : Character {
 		return skillSelected;
 	}
 
-	public void takeDamage(float damage){
-		hurtEffect (transform);
+	public void takeDamage(float damage, Transform transformE){
+		hurtEffect (transformE);
 		if (lastHit <= 0) {
 			lastHit = secondsOfInvulnerability;
 			base.takeDamage (damage);
@@ -90,8 +90,9 @@ public class Player : Character {
 	}
 
 	public void hurtEffect(Transform transformE){
-		Vector3 hurtVector = transform.position - transformE.position + Vector3.up + new Vector3(-transformE.localScale.x, 0, 0) * powerHurtForce;
-		//Vector3 hurtVector = transform.position - transform.position + transform.localScale  * powerHurtForce;
+		float side = (transformE.localScale.x > 0) ? 1 : -1;
+
+		Vector3 hurtVector = new Vector3(side  * powerHurtForce, 0, 0);
 		GetComponent<Rigidbody2D>().AddForce(hurtVector * hurtForce);
 	}
 
