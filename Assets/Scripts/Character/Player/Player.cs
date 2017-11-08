@@ -4,30 +4,34 @@ using UnityEngine;
 
 public class Player : Character {
 
-	private int countOfGoodActions = 0;
+	//ui 
 	public GameObject skillSelected;
-
-	private SpriteRenderer[] spritesRenderers;
-	private Spell  spellSelected;
-	private int    countOfBadActions = 0;
-	private Energy energy;
-	private float  lastHit = 0f;
-	private float  secondsOfInvulnerability = 2f;
-	private bool deadAnim = false;
-
 	public float powerHurtForce = 2f;
 	public float hurtForce = 10f;
 	public float timeOfDead = 1f;
 
-	private CameraController camera;
+	private SpriteRenderer[] spritesRenderers;
+	private Spell  spellSelected;
+	private float  lastHit = 0f;
+	private float  secondsOfInvulnerability = 2f;
+	private bool deadAnim = false;
+	private CameraController cameraController;
+
+	// core
+	private Energy energy;
+	private Stats stats; 
 
 	void Start () {
-		health = gameObject.GetComponent<Health>();
-		energy = gameObject.GetComponent<Energy>();
+		//ui
 		anim = GetComponent<Animator> ();
 		spellSelected = skillSelected.GetComponent<Spell> ();
-		camera = gameObject.GetComponentInChildren<CameraController>();
+		cameraController = gameObject.GetComponentInChildren<CameraController>();
 		spritesRenderers = gameObject.GetComponentsInChildren<SpriteRenderer>();
+
+		//core
+		health = gameObject.GetComponent<Health>();
+		energy = gameObject.GetComponent<Energy>();
+		stats = new Stats ();
 	}
 
 	void Update () {
@@ -82,7 +86,7 @@ public class Player : Character {
 		if (lastHit <= 0) {
 			lastHit = secondsOfInvulnerability;
 			base.takeDamage (damage);
-			camera.takeDamage ();
+			cameraController.takeDamage ();
 		}
 	}
 
@@ -95,6 +99,18 @@ public class Player : Character {
 
 	public float totalDamage(Spell spell){
 		return (spell.damage + damage);
+	}
+
+	public void addExperience(int exp) {
+		stats.addExperience ();
+	}
+
+	public void addBadAction(){
+		stats.addBadAction;
+	}
+
+	public void addGoodAction(){
+		stats.addGoodAction;
 	}
 
 }
