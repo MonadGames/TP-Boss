@@ -31,7 +31,7 @@ public class Player : Character {
 		//core
 		health = gameObject.GetComponent<Health>();
 		energy = gameObject.GetComponent<Energy>();
-		stats = new Stats ();
+		stats = new Stats (this);
 	}
 
 	void Update () {

@@ -9,8 +9,8 @@ public class Stats : MonoBehaviour {
 	private Player player;
 	private Inventory inventory;
 
-	public Stats(){
-		player = gameObject.GetComponentInChildren<Player>();
+	public Stats(Player player){
+		this.player = player;
 		level = new Level(this);
 		sanity = new Kind (this, 0, 0);
 		inventory = new Inventory();
