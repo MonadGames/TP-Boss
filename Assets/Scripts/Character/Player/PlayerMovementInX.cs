@@ -9,19 +9,28 @@ public class PlayerMovementInX : MonoBehaviour {
 	[Range(1, 2)]
 	public float walkSpeed;
 
+	public float stepsCd;
+	public AudioClip[] stepSounds;
 	public bool isDead = false;
+
+	private float currentCd;
 	private bool isRight;
 	private Rigidbody2D rb;
 	private Animator anim;
+	private Player player;
+	private AudioSource source;
 
 	void Start () {
 		isRight = true;
 		rb = GetComponent<Rigidbody2D> ();
 		anim = GetComponent<Animator> ();
+		player = GetComponent<Player> ();
+		source = GetComponent<AudioSource> ();
+		currentCd = stepsCd;
 	}
 
 	void FixedUpdate () {
-		if (!isDead) {
+		if (!player.isDead()) {
 			move ();
 			flip ();
 		}
@@ -40,14 +49,18 @@ public class PlayerMovementInX : MonoBehaviour {
 				walk (movement);
 		} else
 			idle ();
+
+		currentCd += Time.deltaTime;
 	}
 
 	private void run(Vector3 movement){
+		randomAudioStep (0.3f);
 		anim.SetTrigger ("Run");
 		movePlayer (movement, runSpeed);
 	}
 
 	private void walk(Vector3 movement){
+		randomAudioStep (0.2f);
 		anim.SetTrigger ("Walk");
 		movePlayer (movement, walkSpeed);
 	}
@@ -74,19 +87,12 @@ public class PlayerMovementInX : MonoBehaviour {
 		}
 	}
 
-	private void checkForActions() {
-		/*	
-		float speed = rb.velocity.x;
-		if (shouldMove()) {
-			if (speed < runSpeed)
-				anim.SetTrigger ("Walk");
-			else 
-				anim.SetTrigger ("Run");
-		} else {
-			anim.SetTrigger ("Idle");
-			rb.velocity = new Vector2(0, rb.velocity.y);
+	private void randomAudioStep(float time){
+		if(currentCd >= stepsCd){
+			AudioClip walkSound = stepSounds [Random.Range (0, stepSounds.Length)];
+			source.PlayOneShot (walkSound, time * 2);
+			currentCd = 0;
 		}
-	*/
 	}
 
 }

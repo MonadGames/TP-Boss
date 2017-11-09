@@ -7,33 +7,94 @@ public class Player : Character {
 	private int countOfGoodActions = 0;
 	public GameObject skillSelected;
 
-	private Spell spellSelected;
-	private int countOfBadActions = 0;
+	private SpriteRenderer[] spritesRenderers;
+	private Spell  spellSelected;
+	private int    countOfBadActions = 0;
 	private Energy energy;
+	private float  lastHit = 0f;
+	private float  secondsOfInvulnerability = 2f;
+	private bool deadAnim = false;
+
+	public float powerHurtForce = 2f;
+	public float hurtForce = 10f;
+	public float timeOfDead = 1f;
+
+	private CameraController camera;
 
 	void Start () {
 		health = gameObject.GetComponent<Health>();
 		energy = gameObject.GetComponent<Energy>();
+		anim = GetComponent<Animator> ();
 		spellSelected = skillSelected.GetComponent<Spell> ();
-		// por ahora asi, luego podria haber una lista de instancias de skills a seleccionar.
-		//skillSelected = new Skill ();
+		camera = gameObject.GetComponentInChildren<CameraController>();
+		spritesRenderers = gameObject.GetComponentsInChildren<SpriteRenderer>();
 	}
 
 	void Update () {
+		if (!isDead ()) {
+			checkVulnerability ();	
+		} else {
+			updateDeath ();
+		}
+
+
+	}
+
+	public void checkVulnerability(){
+		lastHit -= Time.deltaTime;
+
+		foreach (SpriteRenderer sprite in spritesRenderers) {
+			Color color = sprite.color;
+			color.a = (lastHit > 0) ? Mathf.Sin (Random.Range(-1f, 1f)) : 1f;
+			sprite.material.color = color;
+		}
+	}
+
+	public void updateDeath () {
+		timeOfDead -= Time.deltaTime;
+
+		if (!deadAnim) {
+			anim.SetTrigger ("Die");
+			deadAnim = true;
+		}
+
+		if (timeOfDead > 0) {
+			foreach (SpriteRenderer sprite in spritesRenderers) {
+				Color color = sprite.color;
+				color.a = timeOfDead;
+				sprite.material.color = color;
+			}
+		} else {
+			this.die ();
+		}
 	}
 
 	public bool canUseSkill() {
 		return energy.canUse (spellSelected.damage);
 	}
-		
-	public void OnCollisionEnter2D (Collision2D collision) {
-	}
-
-	public void OnCollisionExit2D (Collision2D collision) {
-	}
 
 	public GameObject getSkillSelected() {
 		return skillSelected;
+	}
+
+	public void takeDamage(float damage, Transform transformE){
+		hurtEffect (transformE);
+		if (lastHit <= 0) {
+			lastHit = secondsOfInvulnerability;
+			base.takeDamage (damage);
+			camera.takeDamage ();
+		}
+	}
+
+	public void hurtEffect(Transform transformE){
+		float side = (transformE.localScale.x > 0) ? 1 : -1;
+
+		Vector3 hurtVector = new Vector3(side  * powerHurtForce, 0, 0);
+		GetComponent<Rigidbody2D>().AddForce(hurtVector * hurtForce);
+	}
+
+	public float totalDamage(Spell spell){
+		return (spell.damage + damage);
 	}
 
 }

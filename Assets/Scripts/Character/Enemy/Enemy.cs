@@ -5,15 +5,33 @@ using UnityEngine;
 public class Enemy : Character {
 
 	private EnemyAI enemyAI;
+	public SpriteRenderer spriteRenderer;
+	public float deadSpeed = 0.0000000000001f;
+	public float timeOfDead = 1f;
 	
 	void Start () {
 		health = gameObject.GetComponent<Health>();
 		enemyAI = gameObject.GetComponent<EnemyAI>();
+		spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
 	}
 
 	void Update () {
-		if(health.health <= 0)
-			Destroy(gameObject, 1f);
+		checkDead ();
+	}
+		
+	public void checkDead(){
+		if(isDead()) {
+			Color color = spriteRenderer.material.color;
+			if (timeOfDead > 0) {
+				color.a = timeOfDead;
+				timeOfDead -= Time.deltaTime;
+
+				spriteRenderer.material.color = color;
+			} else {
+				this.die ();
+				Destroy(gameObject, 1f);
+			}
+		}
 	}
 
 	public void move(){
@@ -22,21 +40,12 @@ public class Enemy : Character {
 	public void checkForAnimation(){
 	}
 
+	public void attack(Player player){
+		player.takeDamage(damage, transform);
+	}
+
 	public void OnCollisionEnter2D (Collision2D collision) {
 		if (collision.gameObject.name == "Player")
-			collision.gameObject.GetComponent<Player>().takeDamage(damage, transform);
-		
-		if (collision.gameObject.tag == "spell") {
-			Spell spell = collision.gameObject.GetComponent<Spell> ();
-			takeDamage (spell.damage, transform);
-		}
+			attack (collision.gameObject.GetComponent<Player> ());
 	}
-
-	public void OnCollisionExit2D (Collision2D collision) {
-		if (collision.gameObject.tag == "Player"){}
-		if (collision.gameObject.tag == "spell") {
-			enemyAI.takeDamage ();
-		}
-	}
-
 }

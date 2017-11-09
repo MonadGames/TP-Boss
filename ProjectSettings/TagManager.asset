@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - HealthBar
+  - Enemy
+  - ground
+  - impulseGround
+  - spell
+  - Canvas
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Spell
+  - Player
+  - Parallax
+  - Front Parallax
+  - Dead
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: background
+    uniqueID: 3840809015
+    locked: 0
+  - name: level
+    uniqueID: 4113206903
+    locked: 0
+  - name: npcs
+    uniqueID: 707642001
+    locked: 0
+  - name: player
+    uniqueID: 288543191
+    locked: 0
+  - name: foreground
+    uniqueID: 4110427351
+    locked: 0

@@ -17,12 +17,14 @@ public class EnemyAI : MonoBehaviour {
 	private Vector2 endPos;
 	private Rigidbody2D enemyRigidBody2D;
 	private GameObject player;
+	private Enemy enemy;
 
 
 	void Start () {
 		enemyRigidBody2D = GetComponent<Rigidbody2D>();
 		player = GameObject.FindGameObjectWithTag("Player");
 		anim = GetComponent<Animator> ();
+		enemy = GetComponent<Enemy> ();
 	}
 
 	public void Awake() {
@@ -33,8 +35,10 @@ public class EnemyAI : MonoBehaviour {
 	}
 		
 	public void Update() {
-		detectPlayer ();
-		normalMovement ();
+		if (!enemy.isDead()) {
+			detectPlayer ();
+			normalMovement ();
+		}
 	}
 
 	public void normalMovement(){
