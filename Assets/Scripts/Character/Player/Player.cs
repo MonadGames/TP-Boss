@@ -97,20 +97,24 @@ public class Player : Character {
 		GetComponent<Rigidbody2D>().AddForce(hurtVector * hurtForce);
 	}
 
-	public float totalDamage(Spell spell){
-		return (spell.damage + damage);
+	public Damage getDamage(Spell spell) {
+		return stats.getDamage (spell);
 	}
 
 	public void addExperience(int exp) {
-		stats.addExperience ();
+		stats.addExperience (exp);
 	}
 
 	public void addBadAction(){
-		stats.addBadAction;
+		stats.addBadAction();
 	}
 
 	public void addGoodAction(){
-		stats.addGoodAction;
+		stats.addGoodAction();
+	}
+
+	public float getDefense() {
+		return defense;
 	}
 
 }

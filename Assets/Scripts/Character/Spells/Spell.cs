@@ -32,7 +32,7 @@ public class Spell : MonoBehaviour {
 	void applyDamage(Collider2D collider){
 		Player player = GameObject.FindObjectOfType<Player> ();
 		Enemy enemy = collider.gameObject.GetComponent<Enemy> ();
-		enemy.takeDamage (player.totalDamage(this));
+		enemy.takeDamage (player.getDamage (this).getDamage());
 	}
 
 	void OnTriggerEnter2D (Collider2D collider) {

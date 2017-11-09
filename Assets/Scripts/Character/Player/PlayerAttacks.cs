@@ -35,8 +35,7 @@ public class PlayerAttacks : MonoBehaviour {
 		}
 	}
 
-	public void castSpell(){
-
+	public void castSpell() {
 		source.PlayOneShot (spellSound, 1f);
 		GameObject instanceSkill = (GameObject)Instantiate( player.getSkillSelected(), new Vector2(player.transform.position.x, player.transform.position.y + 0.4f), player.transform.rotation);
 

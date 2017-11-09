@@ -10,8 +10,8 @@ public class Stats : MonoBehaviour {
 	private Inventory inventory;
 
 	public Stats(){
-		player = gameObject.GetComponentsInChildren<Player>();
-		level = new Level();
+		player = gameObject.GetComponentInChildren<Player>();
+		level = new Level(this);
 		sanity = new Kind (this, 0, 0);
 		inventory = new Inventory();
 	}
@@ -25,11 +25,12 @@ public class Stats : MonoBehaviour {
 	}
 
 	public Damage getDamage(Spell spell){
-		// calculo de daño y generacion de damage.
+		return new Damage (spell, this);
 	}
 
 	public void takeDamage(Damage damage){
-		// calculo de resta de vida 
+		float newDamage = Mathf.Max (0, damage.getDamage () - player.getDefense());
+		player.getHealth().takeDamage(newDamage);
 	}
 
 	public void setSanity(Sanity sanity) {
@@ -60,6 +61,10 @@ public class Stats : MonoBehaviour {
 
 	public void useItem(Item item){
 		inventory.useItem (item);
+	}
+
+	public Player getPlayer() {
+		return player;
 	}
 }
 

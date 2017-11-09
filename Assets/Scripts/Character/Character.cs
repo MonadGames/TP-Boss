@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Character : MonoBehaviour {
+	
 	public float damage = 20f;
 	public float defense = 0f;
+
 	public GameObject soulEffect;
 	protected Rigidbody2D myBody;
 	protected Animator anim;
@@ -23,7 +25,8 @@ public class Character : MonoBehaviour {
 	}
 
 	public void takeDamage(float damage){
-		health.takeDamage(damage - defense);
+		float newDamage = Mathf.Max (0, damage - defense);
+		health.takeDamage(newDamage);
 	}
 
 	void Update () {}
@@ -37,4 +40,7 @@ public class Character : MonoBehaviour {
 		}
 	}
 
+	public Health getHealth() {
+		return this.health;
+	}
 }

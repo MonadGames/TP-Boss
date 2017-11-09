@@ -5,22 +5,43 @@ using UnityEngine;
 public class Inventory : MonoBehaviour {
 
 	private Dictionary<Item, int> items;
-	private int weight;
+	private float actualWeight;
+	private float weightMax;
 
 	public Inventory() {
-		items = new List<Item> ();
-		weight = 10;
+		items = new Dictionary<Item, int>();
+		weightMax = 10f;
+		actualWeight = 0f;
 	}
 
 	public bool addItem(Item item){
-		items.Add(item, )
+		if(canAddItem(item)){
+			if (haveItem (item)) {
+				items [item]++;
+			} else {
+				items.Add (item, 1);
+			}
+
+			actualWeight += item.getWeight();
+			return true;
+		}
+		return false;
 	}
 
+	public bool canAddItem(Item item) {
+		return (actualWeight + item.getWeight ()) <= weightMax;
+	}
+
+
 	public bool haveItem(Item item){
-		return inventory.haveItem (item);
+		return items.ContainsKey (item);
 	}
 
 	public void useItem(Item item){
-		inventory.useItem (item);
+		if (haveItem (item) && items[item] > 0) {
+			actualWeight -= item.getWeight ();
+			item.use ();
+			items [item]--;
+		}
 	}
 }
