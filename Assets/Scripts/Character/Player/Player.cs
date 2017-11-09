@@ -20,6 +20,7 @@ public class Player : Character {
 	// core
 	private Energy energy;
 	private Stats stats; 
+	private List<Quest> actualQuests;
 
 	void Start () {
 		//ui
@@ -32,6 +33,7 @@ public class Player : Character {
 		health = gameObject.GetComponent<Health>();
 		energy = gameObject.GetComponent<Energy>();
 		stats = new Stats (this);
+		actualQuests = new List<Quest> ();
 	}
 
 	void Update () {
@@ -115,6 +117,14 @@ public class Player : Character {
 
 	public float getDefense() {
 		return defense;
+	}
+
+	public void acceptQuest(Quest quest) {
+		actualQuests.Add (quest);
+	}
+
+	public void completeQuest(Quest quest) {
+		actualQuests.Remove (quest);
 	}
 
 }
