@@ -4,16 +4,22 @@ using UnityEngine;
 
 public abstract class Quest : MonoBehaviour {
 
+	protected string description;
 	protected string questName;
 	protected Player player;
+	protected Reward reward;
 
-	public Quest(string questName, Player player){
+	public Quest(string questName, Player player, Reward reward){
 		this.questName = questName;
 		this.player = player;
+		this.reward = reward; 
 	}
 
 	public abstract void verifyProgress ();
 
-	public abstract void applyReward ();
+	public void applyReward (){
+		// EL reward tambien deberia llamar a addGood o bad action;
+		reward.applyReward (player);
+	}
 
 }

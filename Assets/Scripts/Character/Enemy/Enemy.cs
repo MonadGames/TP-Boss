@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class Enemy : Character {
 
-	private EnemyAI enemyAI;
 	public SpriteRenderer spriteRenderer;
 	public float deadSpeed = 0.0000000000001f;
 	public float timeOfDead = 1f;
+	// luego alguien podria setearsela, tal vez hasta deberiamos crear una clase para cada mob
+	protected int experience = 100;
+
+	private Player player;
+	private EnemyAI enemyAI;
+
 	
 	void Start () {
 		health = gameObject.GetComponent<Health>();
 		enemyAI = gameObject.GetComponent<EnemyAI>();
 		spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+		player = GameObject.FindObjectOfType<Player> ();
 	}
 
 	void Update () {
@@ -29,6 +35,7 @@ public class Enemy : Character {
 				spriteRenderer.material.color = color;
 			} else {
 				this.die ();
+				player.addExperience (experience);
 				Destroy(gameObject, 1f);
 			}
 		}

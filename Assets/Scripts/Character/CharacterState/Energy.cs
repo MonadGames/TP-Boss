@@ -4,18 +4,23 @@ using UnityEngine;
 
 public class Energy : MonoBehaviour {
 
-	public float totalEnergy;
-	public float actualEnergy;
+	public float maxEnergy;
+	public float energy;
 
-	public Energy(){
-		actualEnergy = totalEnergy;
+	void Start () {
+		maxEnergy = 50f;
+		energy = maxEnergy;	
 	}
 
 	public bool canUse (float skillCost){
-		if (actualEnergy >= skillCost) {
-			actualEnergy = actualEnergy - skillCost;
+		if (energy >= skillCost) {
+			energy -= skillCost;
 			return true;
 		}
 		return false;
 	}	
+
+	public void addMaxSp(float sp){
+		maxEnergy += sp;
+	}
 }

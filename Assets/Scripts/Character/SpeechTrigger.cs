@@ -14,16 +14,14 @@ public class SpeechTrigger : MonoBehaviour
 	private int currentString;
 	bool isShowingMessage = false;
 
-	void Start()
-	{
+	void Start() {
 		typewriter = text.GetComponent<TW_MultiStrings_Regular> ();
 		stringCount = typewriter.MultiStrings.Length;
 		currentString = 1;
 		panel.SetActive(false);
 	}
 
-	void OnTriggerEnter2D(Collider2D other)
-	{
+	void OnTriggerEnter2D(Collider2D other) {
 		showHint (other.name == "Player");
 	}
 

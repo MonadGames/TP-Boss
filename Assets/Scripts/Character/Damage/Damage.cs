@@ -13,6 +13,6 @@ public class Damage : MonoBehaviour {
 	}
 
 	public float getDamage(){
-		return spell.damage + stats.getPlayer().damage;
+		return stats.getSanity().modifyAttack(spell.damage + stats.getPlayer().damage);
 	}
 }

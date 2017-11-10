@@ -20,7 +20,8 @@ public class Player : Character {
 	// core
 	private Energy energy;
 	private Stats stats; 
-	private List<Quest> actualQuests;
+	private Quest principalQuest;
+	private List<Quest> secondaryQuests;
 
 	void Start () {
 		//ui
@@ -33,7 +34,7 @@ public class Player : Character {
 		health = gameObject.GetComponent<Health>();
 		energy = gameObject.GetComponent<Energy>();
 		stats = new Stats (this);
-		actualQuests = new List<Quest> ();
+		secondaryQuests = new List<Quest> ();
 	}
 
 	void Update () {
@@ -42,8 +43,6 @@ public class Player : Character {
 		} else {
 			updateDeath ();
 		}
-
-
 	}
 
 	public void checkVulnerability(){
@@ -120,11 +119,30 @@ public class Player : Character {
 	}
 
 	public void acceptQuest(Quest quest) {
-		actualQuests.Add (quest);
+		secondaryQuests.Add (quest);
 	}
 
 	public void completeQuest(Quest quest) {
-		actualQuests.Remove (quest);
+		secondaryQuests.Remove (quest);
 	}
 
+	public void setPrincipalQuest(Quest principalQuest){
+		this.principalQuest = principalQuest;
+	}
+
+	public Energy getEnergy(){
+		return energy;
+	}
+
+	public void addDamage(float newDamage){
+		damage += newDamage;
+	}
+
+	public void addDefense(float newDefense){
+		defense += newDefense;
+	}
+
+	public Stats getStats() {
+		return stats;
+	}
 }

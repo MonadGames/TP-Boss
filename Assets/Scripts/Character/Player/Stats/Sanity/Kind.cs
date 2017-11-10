@@ -11,4 +11,12 @@ public class Kind : Sanity {
 			stats.setSanity (new Evil (stats, countOfGoodActions, countOfBadActions));
 		}		
 	}
+
+	public new float modifyAttack(float att) {
+		return att / 1.2f;
+	}
+
+	public new float modifyDefense(float def) {
+		return def * 1.2f;
+	}
 }

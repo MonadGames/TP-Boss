@@ -25,5 +25,13 @@ public abstract class Sanity : MonoBehaviour {
 		checkIfChange ();
 	}
 
+	public float modifyDefense(float def) {
+		return def;
+	}
+
+	public float modifyAttack(float attack) {
+		return attack;
+	}
+
 	public abstract void checkIfChange ();
 }

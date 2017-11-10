@@ -29,7 +29,7 @@ public class Stats : MonoBehaviour {
 	}
 
 	public void takeDamage(Damage damage){
-		float newDamage = Mathf.Max (0, damage.getDamage () - player.getDefense());
+		float newDamage = Mathf.Max (0, damage.getDamage () - (sanity.modifyDefense(player.getDefense())));
 		player.getHealth().takeDamage(newDamage);
 	}
 
@@ -65,6 +65,10 @@ public class Stats : MonoBehaviour {
 
 	public Player getPlayer() {
 		return player;
+	}
+
+	public Sanity getSanity() {
+		return sanity;
 	}
 }
 
