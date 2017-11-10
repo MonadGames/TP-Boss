@@ -12,6 +12,10 @@ public class Energy : MonoBehaviour {
 		energy = maxEnergy;	
 	}
 
+	public void revive() {
+		energy = maxEnergy;
+	}
+
 	public bool canUse (float skillCost){
 		if (energy >= skillCost) {
 			energy -= skillCost;

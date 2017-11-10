@@ -45,6 +45,12 @@ public class Player : Character {
 		}
 	}
 
+	public void revive() {
+		anim.SetTrigger ("Revive");
+		health.revive();
+		energy.revive ();
+	}
+
 	public void checkVulnerability(){
 		lastHit -= Time.deltaTime;
 
