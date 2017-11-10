@@ -26,9 +26,9 @@ public class Player : Character {
 	void Start () {
 		//ui
 		anim = GetComponent<Animator> ();
-		spellSelected = skillSelected.GetComponent<Spell> ();
 		cameraController = gameObject.GetComponentInChildren<CameraController>();
 		spritesRenderers = gameObject.GetComponentsInChildren<SpriteRenderer>();
+		//spellSelected = skillSelected.GetComponent<Spell> ();
 
 		//core
 		health = gameObject.GetComponent<Health>();
@@ -75,6 +75,10 @@ public class Player : Character {
 	}
 
 	public bool canUseSkill() {
+		if(spellSelected == null){
+			return false;
+		}
+
 		return energy.canUse (spellSelected.damage);
 	}
 

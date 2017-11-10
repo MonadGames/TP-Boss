@@ -3835,6 +3835,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c3d239a9bff3497d8262a2cbfe796b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
   health: 100
   scale: {x: 0.6, y: 0.2}
   character: {fileID: 0}
@@ -17421,6 +17422,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c3d239a9bff3497d8262a2cbfe796b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
   health: 100
   scale: {x: 0.8, y: 0.5}
   character: {fileID: 0}
@@ -17467,8 +17469,7 @@ MonoBehaviour:
   damage: 20
   defense: 0
   soulEffect: {fileID: 0}
-  skillSelected: {fileID: 1300811145041140, guid: b3b1f1cc99d374ceca42df54aa8b0a3f,
-    type: 2}
+  skillSelected: {fileID: 0}
   powerHurtForce: 4
   hurtForce: 10
   timeOfDead: 1
@@ -17547,8 +17548,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50dd7ba65891f43f79331fe40bc2189b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalEnergy: 100000
-  actualEnergy: 100000
+  maxEnergy: 0
+  energy: 0
 --- !u!114 &1711671893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19935,6 +19936,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c3d239a9bff3497d8262a2cbfe796b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
   health: 100
   scale: {x: 0.6, y: 0.2}
   character: {fileID: 0}
