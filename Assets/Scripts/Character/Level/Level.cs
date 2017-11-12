@@ -2,21 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Level : MonoBehaviour {
+public class Level {
 
 	private float level;
 	private float actualExperience;
-	private float needExperienceForLevelUp;
+	private float neededExperienceForLevelUp;
 	private Stats stats;
 
 
 	public Level(Stats stats){
 		this.stats = stats;
 		this.level = 1;
-		actualExperience = 0;
-		needExperienceForLevelUp = 1000f;
+		this.actualExperience = 100f;
+		this.neededExperienceForLevelUp = 1000f;
 	}
 
+	public float getActualExperience(){
+		return actualExperience;
+	}
+
+	public float getNeededExperienceForLevelUp(){
+		return neededExperienceForLevelUp;
+	}
 
 	public float getLevel(){
 		return level;
@@ -28,15 +35,15 @@ public class Level : MonoBehaviour {
 	}
 
 	public void checkLevelUp() {
-		if (actualExperience >= needExperienceForLevelUp) {
+		if (actualExperience >= neededExperienceForLevelUp) {
 			levelUp ();
-			actualExperience -= needExperienceForLevelUp;
+			actualExperience -= neededExperienceForLevelUp;
 			checkLevelUp ();
 		} 
 	}
 
 	public void levelUp(){
-		needExperienceForLevelUp *= 1.7f;
+		neededExperienceForLevelUp *= 1.7f;
 		level++;
 		stats.levelUp ();
 		checkLevelUp ();

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Sanity : MonoBehaviour {
+public abstract class Sanity {
 
 	protected int countOfGoodActions;
 	protected int countOfBadActions;

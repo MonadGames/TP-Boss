@@ -9,7 +9,7 @@ public class Health : MonoBehaviour
 	public Character character;
 	public float repeatDamagePeriod = 2f;		// How frequently the player can be damaged.
 	protected float lastHitTime;					// The time at which the player was last hit.
-	public HealthBar healthBar;
+	public StatBar healthBar;
 
 	void Awake () {
 		character = gameObject.GetComponent<Character> (); 
@@ -20,6 +20,7 @@ public class Health : MonoBehaviour
 		if (health <= 0) {
 			character.die ();
 		}
+		UpdateHealthBar ();
 	}
 
 	public void revive() {
@@ -29,7 +30,6 @@ public class Health : MonoBehaviour
 	public void takeDamage (float damage) {
 		if (health > 0f && damage > 0) {
 			health -= damage;
-			UpdateHealthBar();
 		}
 	}
 
@@ -42,7 +42,7 @@ public class Health : MonoBehaviour
 	}
 
 	public void UpdateHealthBar(){
-		healthBar.updateHealthBar (health, maxHealth);
+		healthBar.updateBar (health, maxHealth);
 	}
 
 	public void addMaxHp(float hp){

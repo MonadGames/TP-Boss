@@ -20,7 +20,7 @@ public class Player : Character {
 	// core
 	private Energy energy;
 	private Stats stats; 
-	private Quest principalQuest;
+	private Quest mainQuest;
 	private List<Quest> secondaryQuests;
 
 	void Start () {
@@ -33,7 +33,7 @@ public class Player : Character {
 		//core
 		health = gameObject.GetComponent<Health>();
 		energy = gameObject.GetComponent<Energy>();
-		stats = new Stats (this);
+		stats = gameObject.GetComponent<Stats>();
 		secondaryQuests = new List<Quest> ();
 	}
 
@@ -137,7 +137,7 @@ public class Player : Character {
 	}
 
 	public void setPrincipalQuest(Quest principalQuest){
-		this.principalQuest = principalQuest;
+		this.mainQuest = principalQuest;
 	}
 
 	public Energy getEnergy(){

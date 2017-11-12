@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Energy : MonoBehaviour {
 
-	public float maxEnergy;
+	public float maxEnergy = 50f;
 	public float energy;
+	public StatBar energyBar;
 
 	void Start () {
-		maxEnergy = 50f;
 		energy = maxEnergy;	
 	}
 
@@ -22,7 +22,11 @@ public class Energy : MonoBehaviour {
 			return true;
 		}
 		return false;
-	}	
+	}
+
+	void Update(){
+		energyBar.updateBar (energy, maxEnergy);
+	}
 
 	public void addMaxSp(float sp){
 		maxEnergy += sp;

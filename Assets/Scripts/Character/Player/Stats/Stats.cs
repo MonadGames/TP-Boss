@@ -9,11 +9,17 @@ public class Stats : MonoBehaviour {
 	private Player player;
 	private Inventory inventory;
 
-	public Stats(Player player){
-		this.player = player;
+	public StatBar experienceBar;
+
+	void Start(){
+		this.player = gameObject.GetComponent<Player>();
 		level = new Level(this);
 		sanity = new Kind (this, 0, 0);
 		inventory = new Inventory();
+	}
+
+	void Update(){
+		updateExperience (level.getActualExperience(), level.getNeededExperienceForLevelUp());
 	}
 
 	public void addGoodAction(){
@@ -40,6 +46,15 @@ public class Stats : MonoBehaviour {
 
 	public void addExperience(int exp){
 		level.addExperience (exp);
+	}
+
+	public void updateExperience(float exp, float maxExp){
+		float normalizedExp = mapRange(exp, 0f, maxExp, 0f, 100f );
+		experienceBar.updateBar (normalizedExp, 100f);
+	}
+
+	private float mapRange(float value, float minFrom, float maxFrom, float minTo, float maxTo){
+		return (value - minFrom) / (maxFrom - minFrom) * (maxTo - minTo) + minTo;
 	}
 
 	public void changedSanity() {

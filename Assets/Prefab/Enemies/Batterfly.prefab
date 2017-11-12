@@ -91,8 +91,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4692051171439198}
-  - component: {fileID: 114586840710149816}
-  - component: {fileID: 114359500948662954}
   m_Layer: 0
   m_Name: HealthBar
   m_TagString: Untagged
@@ -252,17 +250,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114359500948662954
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1841695403480816}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114367524196587464
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -313,17 +300,6 @@ MonoBehaviour:
   spriteRenderer: {fileID: 212391417191206204}
   deadSpeed: 1e-13
   timeOfDead: 1
---- !u!114 &114586840710149816
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1841695403480816}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114873199659650010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -335,7 +311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01a73db26986240be9bec380989e0cac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBar: {fileID: 1110476558225502}
+  bar: {fileID: 1110476558225502}
   scale: {x: 0.6, y: 0.2}
 --- !u!198 &198418201967607264
 ParticleSystem:

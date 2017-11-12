@@ -11,7 +11,6 @@ public class PlayerMovementInX : MonoBehaviour {
 
 	public float stepsCd;
 	public AudioClip[] stepSounds;
-	public bool isDead = false;
 
 	private float currentCd;
 	private bool isRight;
