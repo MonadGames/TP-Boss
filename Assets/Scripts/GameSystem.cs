@@ -5,16 +5,24 @@ using UnityEngine;
 public class GameSystem : MonoBehaviour {
 
 	public List<Vector3> checkpoints;
+	public GameObject[] npcs;
 
 	private Player player;
 	private Vector3 lastCheckpoint;
 	private CanvasController canvasController;
+	private List<Quest> quests;
 
 	void Start () {
 		player = GameObject.FindObjectOfType<Player> ();
 		canvasController = GameObject.FindObjectOfType<CanvasController> ();
 		lastCheckpoint = checkpoints [0];
+		quests = new List<Quest> ();
+
+		createAndAssignFirstQuest ();
+
+		createAndAssignSecondQuest ();
 	}
+
 
 	void Update () {
 		if (!canvasController.visible) {
@@ -24,6 +32,20 @@ public class GameSystem : MonoBehaviour {
 			checkContinue ();
 			checkBack ();
 		}
+	}
+
+	public void createAndAssignFirstQuest(){
+		Requirement firstReq = new PositionRequirement(player, new Vector2(75, 4));
+		Reward firstReward = new EmptyReward ();
+		Npc npc = npcs [0].gameObject.GetComponentInChildren<Npc> ();
+		npc.setPrincipalQuest(new Quest ("Observing the world", player, firstReq, firstReward));
+	}
+
+	public void createAndAssignSecondQuest(){
+		Requirement secReq = new TakeAdecisionRequirement(player);
+		Reward secReward = new EmptyReward ();
+		Npc npc = npcs [1].gameObject.GetComponentInChildren<Npc> ();
+		npc.setPrincipalQuest(new Quest ("Choose your destiny", player, secReq, secReward));
 	}
 
 	public void checkLastCheckpoint() {

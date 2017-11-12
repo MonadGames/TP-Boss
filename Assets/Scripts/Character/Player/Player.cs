@@ -11,9 +11,9 @@ public class Player : Character {
 	public float timeOfDead = 1f;
 
 	private SpriteRenderer[] spritesRenderers;
-	private Spell  spellSelected;
-	private float  lastHit = 0f;
-	private float  secondsOfInvulnerability = 2f;
+	private Spell spellSelected = null;
+	private float lastHit = 0f;
+	private float secondsOfInvulnerability = 2f;
 	private bool deadAnim = false;
 	private CameraController cameraController;
 
