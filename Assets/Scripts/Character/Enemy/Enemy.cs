@@ -51,6 +51,7 @@ public class Enemy : Character {
 		player.takeDamage(damage, transform);
 	}
 
+	// TODO: Refactorizar esto a un Collision Stay con cooldown
 	public void OnCollisionEnter2D (Collision2D collision) {
 		if (collision.gameObject.name == "Player")
 			attack (collision.gameObject.GetComponent<Player> ());

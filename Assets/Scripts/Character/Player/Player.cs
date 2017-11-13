@@ -136,8 +136,12 @@ public class Player : Character {
 		secondaryQuests.Remove (quest);
 	}
 
-	public void setPrincipalQuest(Quest principalQuest){
+	public void setMainQuest(Quest principalQuest){
 		this.mainQuest = principalQuest;
+	}
+
+	public Quest getMainQuest(){
+		return mainQuest;
 	}
 
 	public Energy getEnergy(){

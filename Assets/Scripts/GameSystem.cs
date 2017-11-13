@@ -38,14 +38,14 @@ public class GameSystem : MonoBehaviour {
 		Requirement firstReq = new PositionRequirement(player, new Vector2(75, 4));
 		Reward firstReward = new EmptyReward ();
 		Npc npc = npcs [0].gameObject.GetComponentInChildren<Npc> ();
-		npc.setPrincipalQuest(new Quest ("Observing the world", player, firstReq, firstReward));
+		npc.setMainQuest(new Quest ("Observing the world", player, firstReq, firstReward));
 	}
 
 	public void createAndAssignSecondQuest(){
 		Requirement secReq = new TakeAdecisionRequirement(player);
 		Reward secReward = new EmptyReward ();
 		Npc npc = npcs [1].gameObject.GetComponentInChildren<Npc> ();
-		npc.setPrincipalQuest(new Quest ("Choose your destiny", player, secReq, secReward));
+		npc.setMainQuest(new Quest ("Choose your destiny", player, secReq, secReward));
 	}
 
 	public void checkLastCheckpoint() {

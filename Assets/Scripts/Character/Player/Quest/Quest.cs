@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Quest : MonoBehaviour {
+public class Quest : ScriptableObject {
 
-	private string description;
-	private string questName;
+	public string description;
+	public string questName;
 	private Player player;
 	private Reward reward;
 	private Requirement requirement;

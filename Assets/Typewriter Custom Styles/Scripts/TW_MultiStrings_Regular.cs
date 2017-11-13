@@ -66,9 +66,9 @@ public class TW_MultiStrings_Regular : MonoBehaviour {
     public int pointer=0;
 
     private string ORIGINAL_TEXT;
-    private float time = 0f;
+    private int time = 0;
     private int сharIndex = 0;
-    private int index_of_string = 0;
+    public int index_of_string = 0;
     private bool start;
     private List<int> n_l_list;
     private static string[] PointerSymbols = { "None", "<", "_", "|", ">" };
@@ -94,7 +94,7 @@ public class TW_MultiStrings_Regular : MonoBehaviour {
     {
         start = true;
         сharIndex = 0;
-        time = 0f;
+        time = 0;
     }
 
     public void SkipTypewriter()
@@ -106,7 +106,7 @@ public class TW_MultiStrings_Regular : MonoBehaviour {
     {
         start = true;
         сharIndex = 0;
-        time = 0f;
+        time = 0;
         if (index_of_string + 1 < MultiStrings.Length){
             index_of_string++;
         }
@@ -154,7 +154,7 @@ public class TW_MultiStrings_Regular : MonoBehaviour {
             if (сharIndex < ORIGINAL.Length) TEXT = TEXT + POINTER + emptyString.Substring(сharIndex);
             TEXT = InsertNewLine(TEXT, List);
             gameObject.GetComponent<Text>().text = TEXT;
-            time += 1f;
+			time += 1;
             yield return new WaitForSeconds(0.01f);
             CharIndexPlus();
             start = true;
@@ -200,7 +200,7 @@ public class TW_MultiStrings_Regular : MonoBehaviour {
     {
         if (time == timeOut)
         {
-            time = 0f;
+            time = 0;
             сharIndex += 1;
         }
     }

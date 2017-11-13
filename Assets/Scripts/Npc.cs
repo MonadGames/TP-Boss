@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Npc : MonoBehaviour {
 	
-	private Quest principalQuest;
+	public Quest mainQuest;
 	private List<Quest> quests;
 
 	void Start () {
@@ -16,7 +16,15 @@ public class Npc : MonoBehaviour {
 		
 	}
 
-	public void setPrincipalQuest(Quest quest){
-		principalQuest = quest;
+	public bool hasQuest(){
+		return mainQuest != null;
+	}
+
+	public Quest getMainQuest(){
+		return mainQuest;
+	}
+
+	public void setMainQuest(Quest quest){
+		mainQuest = quest;
 	}
 }
