@@ -292,33 +292,22 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 114582727982212370, guid: 9d9a15bbe73034535be945c30d1eb839,
-        type: 2}
-      propertyPath: bar
-      value: 
-      objectReference: {fileID: 734990350}
     - target: {fileID: 114616417733028538, guid: 9d9a15bbe73034535be945c30d1eb839,
         type: 2}
       propertyPath: energyBar
       value: 
       objectReference: {fileID: 685977628}
-    - target: {fileID: 114616417733028538, guid: 9d9a15bbe73034535be945c30d1eb839,
-        type: 2}
-      propertyPath: maxEnergy
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 114616417733028538, guid: 9d9a15bbe73034535be945c30d1eb839,
-        type: 2}
-      propertyPath: energy
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 114515438069337042, guid: 9d9a15bbe73034535be945c30d1eb839,
         type: 2}
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 242051456}
-    m_RemovedComponents:
-    - {fileID: 114582727982212370, guid: 9d9a15bbe73034535be945c30d1eb839, type: 2}
+    - target: {fileID: 114117161871268462, guid: 9d9a15bbe73034535be945c30d1eb839,
+        type: 2}
+      propertyPath: experienceBar
+      value: 
+      objectReference: {fileID: 683374561}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9d9a15bbe73034535be945c30d1eb839, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &25502771
@@ -5582,11 +5571,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
---- !u!1 &734990350 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1318416181992092, guid: 90151185ba9e84f2ba0acdc742da4e0f,
-    type: 2}
-  m_PrefabInternal: {fileID: 242051455}
 --- !u!1 &751339786
 GameObject:
   m_ObjectHideFlags: 0
@@ -10494,18 +10478,6 @@ GameObject:
   m_PrefabParentObject: {fileID: 1396718710149036, guid: 9d9a15bbe73034535be945c30d1eb839,
     type: 2}
   m_PrefabInternal: {fileID: 9751945}
---- !u!114 &1711671885
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1711671884}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a59fc7de9daa4d17aa320e37b22ade4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  experienceBar: {fileID: 683374561}
 --- !u!114 &1711671891 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114615968477696394, guid: 9d9a15bbe73034535be945c30d1eb839,

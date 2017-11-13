@@ -47,7 +47,7 @@ public class Enemy : Character {
 	}
 
 	public void attack(Player player){
-		player.takeDamage(damage, transform);
+		player.takeDamage(Random.Range(damage * 0.8f, damage), transform);
 	}
 
 	// TODO: Refactorizar esto a un Collision Stay con cooldown

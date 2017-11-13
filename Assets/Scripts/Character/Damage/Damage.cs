@@ -13,6 +13,7 @@ public class Damage : MonoBehaviour {
 	}
 
 	public float getDamage(){
-		return stats.getSanity().modifyAttack(spell.damage + stats.getPlayer().damage);
+		float newDamage = stats.getSanity ().modifyAttack (spell.damage + stats.getPlayer ().damage);
+		return Random.Range(newDamage * 0.8f, newDamage);
 	}
 }
