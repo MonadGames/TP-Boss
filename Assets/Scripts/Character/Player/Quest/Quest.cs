@@ -29,7 +29,7 @@ public class Quest : ScriptableObject {
 	}
 
 	// Tendria sentido que el npc diga completar Mision
-	public void applyReward (){
+	public void completeQuest (){
 		reward.applyReward (player);
 	}
 

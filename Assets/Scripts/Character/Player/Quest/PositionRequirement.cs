@@ -11,12 +11,11 @@ public class PositionRequirement : Requirement {
 	}
 
 	public new void checkProgress(){
-		Vector3 playerPos = player.transform.position;
-
+		Vector3 playerPos = player.gameObject.transform.position;
 		float diffX = Mathf.Abs(playerPos.x - objetivePos.x);
 		float diffY = Mathf.Abs(playerPos.y - objetivePos.y);
 
-		isCompleted = (between (diffX, -1, 1) && between (diffY, -1, 1));
+		isCompleted = (between (diffX, -2, 2) && between (diffY, -2, 2));
 	}
 
 	public bool between(float point, float from, float to) {

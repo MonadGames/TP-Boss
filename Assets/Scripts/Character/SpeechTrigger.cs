@@ -50,10 +50,21 @@ public class SpeechTrigger : MonoBehaviour
 
 	private void giveQuest(Collider2D other){
 		if (currentString == stringCount && isPlayer(other) && !questGiven) {
+			// REFACTORIZAR ESE CODIGO FEO.
 			Quest mainQuest = npc.getMainQuest ();
 			Player player = other.GetComponent<Player> ();
-			player.setMainQuest (mainQuest);
-			questGiven = true;
+			if (player.getMainQuest () == null) {
+				player.setMainQuest (mainQuest);
+				questGiven = true;
+			} else {
+				if (player.getMainQuest ().isFinishQuest ()) {
+					player.getMainQuest ().completeQuest ();
+					player.setMainQuest (mainQuest);
+					questGiven = true;
+				} else {
+					print ("no se completo");
+				}
+			}
 		}
 	}
 
