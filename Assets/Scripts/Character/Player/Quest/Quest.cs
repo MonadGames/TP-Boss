@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class Quest : ScriptableObject {
 
-	public string description;
-	public string questName;
+	private string description;
+	private string questName;
 	private Player player;
 	private Reward reward;
 	private Requirement requirement;
 
-	public Quest(string questName, Player player, Requirement requirement, Reward reward){
+	public Quest(string questName, string description, Player player, Requirement requirement, Reward reward){
 		this.requirement = requirement;
 		this.questName = questName;
+		this.description = description;
 		this.player = player;
 		this.reward = reward; 
 	}
@@ -30,6 +31,14 @@ public class Quest : ScriptableObject {
 	// Tendria sentido que el npc diga completar Mision
 	public void applyReward (){
 		reward.applyReward (player);
+	}
+
+	public string getDescription() {
+		return description;
+	}
+
+	public string getName() {
+		return questName;
 	}
 
 }

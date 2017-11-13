@@ -1,8 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class VisibilityToggle : MonoBehaviour
-{
+public class VisibilityToggle : MonoBehaviour {
+
+	public KeyCode key;
+	public GameObject gameObjectB;
+
 	// Use this for initialization
 	void Start ()
 	{
@@ -10,13 +13,18 @@ public class VisibilityToggle : MonoBehaviour
 	}
 	
 	// Update is called once per frame
-	void Update ()
-	{
-	
+	void Update () {
+		checkActiveOrUnactive ();
+	}
+
+	public void checkActiveOrUnactive (){
+		if (Input.GetKey (key)) {
+			ToggleVisibility ();
+		}
 	}
 
 	public void ToggleVisibility(){
-		this.gameObject.SetActive (!this.gameObject.activeSelf);
+		gameObjectB.SetActive (!gameObjectB.activeSelf);
 	}
 }
 
