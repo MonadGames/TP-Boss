@@ -7,8 +7,7 @@ public class Enemy : Character {
 	public SpriteRenderer spriteRenderer;
 	public float deadSpeed = 0.0000000000001f;
 	public float timeOfDead = 1f;
-	// luego alguien podria setearsela, tal vez hasta deberiamos crear una clase para cada mob
-	protected int experience = 100;
+	public int experience;
 
 	private Player player;
 	private EnemyAI enemyAI;
