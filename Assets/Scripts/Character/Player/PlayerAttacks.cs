@@ -22,8 +22,10 @@ public class PlayerAttacks : MonoBehaviour {
 	}
 
 	void Update () {
-		if (Input.GetKey (KeyCode.Z) && lastTime >= cd)
+		
+		if (Input.GetKey (KeyCode.Z) && lastTime >= cd) {
 			useSkill ();
+		}
 		
 		lastTime += Time.deltaTime;
 	}
@@ -37,13 +39,14 @@ public class PlayerAttacks : MonoBehaviour {
 
 	public void castSpell() {
 		source.PlayOneShot (spellSound, 1f);
+		Debug.Log (player.getSkillSelected ());
 		GameObject instanceSkill = (GameObject)Instantiate( player.getSkillSelected(), new Vector2(player.transform.position.x, player.transform.position.y + 0.4f), player.transform.rotation);
 
 		if (!movementInX.getIsRight()){
 			instanceSkill.transform.Rotate (0, 0, 180);
 		}
 		Destroy(instanceSkill, 1f);    
-
+		 
 		lastTime = 0;
 	}
 }

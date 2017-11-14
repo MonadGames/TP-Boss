@@ -16,11 +16,11 @@ public abstract class StatBar : MonoBehaviour
 	public abstract void updateBar(float value, float maxValue);
 
 	public void hide(){
-		bar.GetComponent<MonoBehaviour> ().enabled = false;
+		bar.SetActive(false);
 	}
 
 	public void show(){
-		bar.GetComponent<MonoBehaviour> ().enabled = true;
+		bar.SetActive(true);
 	}
 }
 

@@ -25,6 +25,7 @@ public class Health : MonoBehaviour
 
 	public void revive() {
 		health = maxHealth;
+		(healthBar as PlayerHealthBar).revive (); 
 	}
 
 	public void takeDamage (float damage) {

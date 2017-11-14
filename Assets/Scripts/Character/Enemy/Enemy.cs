@@ -8,6 +8,8 @@ public class Enemy : Character {
 	public float deadSpeed = 0.0000000000001f;
 	public float timeOfDead = 1f;
 	public int experience;
+	public float cd = 0.5f;
+	public float lastTime = 0.5f;
 
 	private Player player;
 	private EnemyAI enemyAI;
@@ -22,6 +24,7 @@ public class Enemy : Character {
 
 	void Update () {
 		checkDead ();
+		lastTime += Time.deltaTime;
 	}
 		
 	public void checkDead(){
@@ -34,8 +37,8 @@ public class Enemy : Character {
 				spriteRenderer.material.color = color;
 			} else {
 				this.die ();
-				player.addExperience (experience);
 				Destroy(gameObject, 1f);
+				player.addExperience (experience);
 			}
 		}
 	}
@@ -51,8 +54,10 @@ public class Enemy : Character {
 	}
 
 	// TODO: Refactorizar esto a un Collision Stay con cooldown
-	public void OnCollisionEnter2D (Collision2D collision) {
-		if (collision.gameObject.name == "Player")
+	public void OnCollisionStay2D (Collision2D collision) {
+		if (collision.gameObject.name == "Player" && lastTime >= cd) {
 			attack (collision.gameObject.GetComponent<Player> ());
+			lastTime = 0;
+		}
 	}
 }

@@ -28,7 +28,8 @@ public class Player : Character {
 		anim = GetComponent<Animator> ();
 		cameraController = gameObject.GetComponentInChildren<CameraController>();
 		spritesRenderers = gameObject.GetComponentsInChildren<SpriteRenderer>();
-		//spellSelected = skillSelected.GetComponent<Spell> ();
+		if(skillSelected != null)
+			spellSelected = skillSelected.GetComponent<Spell> ();
 
 		//core
 		health = gameObject.GetComponent<Health>();
@@ -43,6 +44,11 @@ public class Player : Character {
 		} else {
 			updateDeath ();
 		}
+	}
+
+	public void addSpell(GameObject spell){
+		this.skillSelected = spell;
+		this.spellSelected = skillSelected.GetComponent<Spell> ();
 	}
 
 	public void revive() {

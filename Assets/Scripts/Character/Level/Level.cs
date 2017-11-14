@@ -37,8 +37,7 @@ public class Level {
 	public void checkLevelUp() {
 		if (actualExperience >= neededExperienceForLevelUp) {
 			levelUp ();
-			actualExperience -= neededExperienceForLevelUp;
-			checkLevelUp ();
+			actualExperience = 0;
 		} 
 	}
 
@@ -46,6 +45,6 @@ public class Level {
 		neededExperienceForLevelUp *= 1.7f;
 		level++;
 		stats.levelUp ();
-		checkLevelUp ();
+		Debug.Log ("levelup");
 	}
 }

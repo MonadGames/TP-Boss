@@ -15,7 +15,7 @@ public class PositionRequirement : Requirement {
 		float diffX = Mathf.Abs(playerPos.x - objetivePos.x);
 		float diffY = Mathf.Abs(playerPos.y - objetivePos.y);
 
-		isCompleted = (between (diffX, -2, 2) && between (diffY, -2, 2));
+		isCompleted = (between (diffX, -5, 5) && between (diffY, -5, 5));
 	}
 
 	public bool between(float point, float from, float to) {
