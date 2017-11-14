@@ -311,8 +311,7 @@ Prefab:
         type: 2}
       propertyPath: skillSelected
       value: 
-      objectReference: {fileID: 1822325375283152, guid: f436281401bdd46069e5141025692f78,
-        type: 2}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9d9a15bbe73034535be945c30d1eb839, type: 2}
   m_IsPrefabParent: 0
@@ -9150,6 +9149,7 @@ MonoBehaviour:
   popupTakeDamage: {fileID: 122798, guid: 799e6c7878dd76d4fb7867d455f236e5, type: 2}
   popupGetExp: {fileID: 122798, guid: 233eadf20e9a64c139364249c50b4cba, type: 2}
   popupHeal: {fileID: 122798, guid: 7bae40da4e6e841959800e960100e991, type: 2}
+  canvas: {fileID: 1734111453}
 --- !u!1 &1480611002
 GameObject:
   m_ObjectHideFlags: 0
@@ -10534,6 +10534,11 @@ Transform:
   m_Father: {fileID: 1595704611}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1734111453 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1795497680714588, guid: 8189a880b83f54ef8880dc676800217c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1379590905}
 --- !u!1 &1747404389
 GameObject:
   m_ObjectHideFlags: 0

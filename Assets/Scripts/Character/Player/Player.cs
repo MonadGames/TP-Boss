@@ -54,9 +54,9 @@ public class Player : Character {
 
 	public void revive() {
 		anim.SetTrigger ("Revive");
+		textController.createHeal (health.maxHealth.ToString (), transform);
 		health.revive();
 		energy.revive ();
-		textController.createHeal (health.maxHealth.ToString (), transform);
 	}
 
 	public void checkVulnerability(){
