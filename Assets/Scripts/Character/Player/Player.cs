@@ -36,6 +36,7 @@ public class Player : Character {
 		energy = gameObject.GetComponent<Energy>();
 		stats = gameObject.GetComponent<Stats>();
 		secondaryQuests = new List<Quest> ();
+		textController = GameObject.FindObjectOfType<FloatingTextController> ();
 	}
 
 	void Update () {
@@ -55,6 +56,7 @@ public class Player : Character {
 		anim.SetTrigger ("Revive");
 		health.revive();
 		energy.revive ();
+		textController.createHeal (health.maxHealth.ToString (), transform);
 	}
 
 	public void checkVulnerability(){
@@ -120,6 +122,7 @@ public class Player : Character {
 
 	public void addExperience(int exp) {
 		stats.addExperience (exp);
+		textController.createGetExperience (exp.ToString (), transform);
 	}
 
 	public void addBadAction(){

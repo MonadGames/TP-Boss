@@ -11,6 +11,7 @@ public class Character : MonoBehaviour {
 	protected Rigidbody2D myBody;
 	protected Animator anim;
 	protected Health health;
+	protected FloatingTextController textController;
 
 	public Character() {}
 
@@ -25,8 +26,9 @@ public class Character : MonoBehaviour {
 	}
 
 	public void takeDamage(float damage){
-		float newDamage = Mathf.Max (0, damage - defense);
+		int newDamage = (int) Mathf.Max (0, damage - defense);
 		health.takeDamage(newDamage);
+		textController.createTakeDamage (newDamage.ToString (), transform);
 	}
 
 	void Update () {}

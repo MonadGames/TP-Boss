@@ -20,6 +20,7 @@ public class Enemy : Character {
 		enemyAI = gameObject.GetComponent<EnemyAI>();
 		spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
 		player = GameObject.FindObjectOfType<Player> ();
+		textController = GameObject.FindObjectOfType<FloatingTextController> ();
 	}
 
 	void Update () {
