@@ -35,10 +35,31 @@ public class EnemyAI : MonoBehaviour {
 	}
 		
 	public void Update() {
+		
 		if (!enemy.isDead()) {
 			detectPlayer ();
-			normalMovement ();
+			checkSide ();
+
+			if (enemyDetected) {
+				followPlayer ();
+			} else {
+				normalMovement ();
+			}
+
 		}
+
+		//if (outOfRange () && !enemyDetected) {
+		//	returnToInitialPos ();
+		//}
+	}
+
+	public bool outOfRange() {
+		return !between (transform.position.x, startPos.x, endPos.x) && 
+			!between (transform.position.y, startPos.y, endPos.y);
+	}
+
+	public void returnToInitialPos(){
+		transform.position = Vector2.MoveTowards(transform.position, startPos, enemySpeed * Time.deltaTime);
 	}
 
 	public void normalMovement(){
@@ -53,7 +74,9 @@ public class EnemyAI : MonoBehaviour {
 					flip ();
 			}
 		}
+	}
 
+	public void checkSide(){
 		if (enemyRigidBody2D.position.x >= endPos.x)
 			moveRight = false;
 		else if (enemyRigidBody2D.position.x <= startPos.x)
@@ -65,7 +88,6 @@ public class EnemyAI : MonoBehaviour {
 
 		if (range <= radiusOfVision) {
 			enemyDetected = true;
-			followPlayer ();
 		} else
 			enemyDetected = false;
 	}
@@ -91,6 +113,10 @@ public class EnemyAI : MonoBehaviour {
 	public void takeDamage(){
 		enemyDetected = true;
 		followPlayer ();
+	}
+
+	public bool between(float point, float from, float to) {
+		return (point >= from) && (point <= to);
 	}
 
 }
