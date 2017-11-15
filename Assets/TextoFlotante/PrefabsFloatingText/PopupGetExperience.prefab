@@ -112,6 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 9555622}
+  damageText: {fileID: 11453064}
 --- !u!222 &22228726
 CanvasRenderer:
   m_ObjectHideFlags: 1
