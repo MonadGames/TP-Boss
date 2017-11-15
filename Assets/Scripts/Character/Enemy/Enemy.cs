@@ -10,10 +10,11 @@ public class Enemy : Character {
 	public int experience;
 	public float cd = 0.5f;
 	public float lastTime = 0.5f;
-	public bool giveExp;
+	public bool giveLoot;
 
 	private Player player;
 	private EnemyAI enemyAI;
+	private LootSystem lootSystem;
 
 	
 	void Start () {
@@ -22,7 +23,8 @@ public class Enemy : Character {
 		spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
 		player = GameObject.FindObjectOfType<Player> ();
 		textController = GameObject.FindObjectOfType<FloatingTextController> ();
-		giveExp = false;
+		lootSystem = GameObject.FindObjectOfType<LootSystem> ();
+		giveLoot = false;
 	}
 
 	void Update () {
@@ -40,16 +42,16 @@ public class Enemy : Character {
 				spriteRenderer.material.color = color;
 			} else {
 				this.die ();
-				addExp ();
+				loot ();
 				Destroy(gameObject, 1f);
 			}
 		}
 	}
 
-	public void addExp() {
-		if (!giveExp) {
-			player.addExperience (experience);
-			giveExp = true;
+	public void loot() {
+		if (!giveLoot) {
+			lootSystem.loot (gameObject.transform, experience);
+			giveLoot = true;
 		}
 	}
 
