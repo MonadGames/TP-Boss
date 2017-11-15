@@ -45,6 +45,10 @@ public class Player : Character {
 		} else {
 			updateDeath ();
 		}
+
+		if (transform.position.y <= -0.5f) {
+			health.die();
+		}
 	}
 
 	public void addSpell(GameObject spell){

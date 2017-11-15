@@ -35,18 +35,17 @@ public class EnemyAI : MonoBehaviour {
 	}
 		
 	public void Update() {
-		
-		if (!enemy.isDead()) {
-			detectPlayer ();
-			checkSide ();
 
-			if (enemyDetected) {
-				followPlayer ();
-			} else {
-				normalMovement ();
-			}
+		detectPlayer ();
+		checkSide ();
 
+		if (enemyDetected) {
+			followPlayer ();
+		} else {
+			normalMovement ();
 		}
+
+
 
 		//if (outOfRange () && !enemyDetected) {
 		//	returnToInitialPos ();
@@ -54,7 +53,7 @@ public class EnemyAI : MonoBehaviour {
 	}
 
 	public bool outOfRange() {
-		return !between (transform.position.x, startPos.x, endPos.x) && 
+		return !between (transform.position.x, startPos.x, endPos.x) ||
 			!between (transform.position.y, startPos.y, endPos.y);
 	}
 

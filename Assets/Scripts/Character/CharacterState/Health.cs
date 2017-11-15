@@ -54,5 +54,9 @@ public class Health : MonoBehaviour
 		health += hp;
 	}
 
+	public void die(){
+		health = 0;
+	}
+
 }
 
