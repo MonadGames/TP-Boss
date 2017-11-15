@@ -10,6 +10,7 @@ GameObject:
   - component: {fileID: 22488048}
   - component: {fileID: 11491582}
   - component: {fileID: 222071592141071580}
+  - component: {fileID: 95145433892183156}
   m_Layer: 5
   m_Name: PopupTakeDamage
   m_TagString: Untagged
@@ -166,6 +167,23 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 122798}
   m_IsPrefabParent: 1
+--- !u!95 &95145433892183156
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 122798}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 64a329ccf0b719a48b538751077f6674, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!222 &222071592141071580
 CanvasRenderer:
   m_ObjectHideFlags: 1

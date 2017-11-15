@@ -18,7 +18,7 @@ public class VisibilityToggle : MonoBehaviour {
 	}
 
 	public void checkActiveOrUnactive (){
-		if (Input.GetKey (key)) {
+		if (Input.GetKeyDown (key)) {
 			ToggleVisibility ();
 		}
 	}
