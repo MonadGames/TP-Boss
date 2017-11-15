@@ -66,6 +66,11 @@ public class Player : Character {
 			Color color = sprite.color;
 			color.a = (lastHit > 0) ? Mathf.Sin (Random.Range(-1f, 1f)) : 1f;
 			sprite.material.color = color;
+			if (lastHit > 0) {
+				gameObject.layer = 12;
+			} else {
+				gameObject.layer = 9;
+			}
 		}
 	}
 

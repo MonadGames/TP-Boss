@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Quest : ScriptableObject {
+public class Quest {
 
 	private string description;
 	private string questName;

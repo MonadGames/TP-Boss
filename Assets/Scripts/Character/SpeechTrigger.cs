@@ -61,8 +61,6 @@ public class SpeechTrigger : MonoBehaviour
 					player.getMainQuest ().completeQuest ();
 					player.setMainQuest (mainQuest);
 					questGiven = true;
-				} else {
-					print ("no se completo");
 				}
 			}
 		}

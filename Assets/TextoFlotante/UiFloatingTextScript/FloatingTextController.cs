@@ -28,7 +28,7 @@ public class FloatingTextController : MonoBehaviour {
 		FloatingText instance = Instantiate(objectText.GetComponent<FloatingText>());
 
 		Vector2 screenPosition = new Vector2 ();
-		screenPosition.Set (location.localPosition.x, location.localPosition.y + 1);
+		screenPosition.Set (location.position.x, location.position.y + 1);
 
 		instance.transform.SetParent(canvas.transform, false);
 		instance.transform.position = screenPosition;

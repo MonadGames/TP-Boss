@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Requirement : MonoBehaviour {
+public abstract class Requirement {
 
 	protected bool isCompleted;
 	protected Player player;
@@ -15,13 +15,10 @@ public class Requirement : MonoBehaviour {
 		isCompleted = false;
 	}
 
-	void Update () {
-		checkProgress ();
-	}
-
 	public bool isComplete (){
+		checkProgress ();
 		return isCompleted;
 	}
 
-	public void checkProgress(){}
+	public virtual void checkProgress(){}
 }
