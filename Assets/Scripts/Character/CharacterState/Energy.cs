@@ -31,4 +31,8 @@ public class Energy : MonoBehaviour {
 	public void addMaxSp(float sp){
 		maxEnergy += sp;
 	}
+
+	public void addSP(float value){
+		energy += value;
+	}
 }

@@ -28,9 +28,8 @@ public class EnemyAI : MonoBehaviour {
 	}
 
 	public void Awake() {
-		startPos = transform.position;
-		endPos = startPos;
-		endPos.x = endPos.x + radiusOfMovement;
+		startPos = new Vector2(transform.position.x, transform.position.y);
+		endPos = new Vector2(startPos.x + radiusOfMovement, startPos.y);
 		isFacingRight = transform.localScale.x > 0;
 	}
 		
@@ -39,22 +38,18 @@ public class EnemyAI : MonoBehaviour {
 		detectPlayer ();
 		checkSide ();
 
-		if (enemyDetected) {
-			followPlayer ();
-		} else {
+		if (!enemyDetected) {
 			normalMovement ();
 		}
-
-
-
+			
 		//if (outOfRange () && !enemyDetected) {
 		//	returnToInitialPos ();
 		//}
 	}
 
-	public bool outOfRange() {
-		return !between (transform.position.x, startPos.x, endPos.x) ||
-			!between (transform.position.y, startPos.y, endPos.y);
+	public bool inRange() {
+		return between (transform.position.x, startPos.x, endPos.x) ||
+			between (transform.position.y, startPos.y, endPos.y);
 	}
 
 	public void returnToInitialPos(){
@@ -91,31 +86,21 @@ public class EnemyAI : MonoBehaviour {
 			enemyDetected = false;
 	}
 
-	public void flipToPlayer (){
-		float myX = transform.position.x ;
-		float playerX = player.transform.position.x;
-		float myScaleX = transform.localScale.x;
-
-		if (myX > playerX && myScaleX > 0 || myX < playerX && myScaleX < 0)
-			flip ();
-	}
-
 	public void flip() {
 		transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
 		isFacingRight = transform.localScale.x > 0;
 	}
-	public void followPlayer(){
-		flipToPlayer ();
-		transform.position = Vector2.MoveTowards(transform.position, player.transform.position, enemySpeed * Time.deltaTime);
-	}
 
 	public void takeDamage(){
 		enemyDetected = true;
-		followPlayer ();
 	}
 
 	public bool between(float point, float from, float to) {
 		return (point >= from) && (point <= to);
+	}
+
+	public bool isEnemyDetected() {
+		return enemyDetected;
 	}
 
 }

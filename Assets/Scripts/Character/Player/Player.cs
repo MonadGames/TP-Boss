@@ -177,4 +177,12 @@ public class Player : Character {
 	public Stats getStats() {
 		return stats;
 	}
+
+	public void addHealth(float value){
+		health.addHP (value);
+	}
+
+	public void addEnergy(float value){
+		energy.addSP (value);
+	}
 }
