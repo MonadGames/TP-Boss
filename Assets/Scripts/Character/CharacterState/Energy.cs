@@ -33,6 +33,10 @@ public class Energy : MonoBehaviour {
 	}
 
 	public void addSP(float value){
-		energy += value;
+		if (energy + value >= maxEnergy) {
+			energy = maxEnergy;
+		} else {
+			energy += value;
+		}
 	}
 }

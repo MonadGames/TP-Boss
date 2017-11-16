@@ -51,7 +51,11 @@ public class Health : MonoBehaviour
 	}
 
 	public void addHP(float hp) {
-		health += hp;
+		if (health + hp >= maxHealth) {
+			health = maxHealth;
+		} else {
+			health += hp;
+		}
 	}
 
 	public void die(){

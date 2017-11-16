@@ -6,14 +6,17 @@ public abstract class BubbleLoot : MonoBehaviour {
 
 	protected float value;
 
+	private bool give = false;
+
 	public void setValue(float value){
 		this.value = value;
 	}
 
 	public void OnCollisionStay2D (Collision2D collision) {
-		if (collision.gameObject.name == "Player") {
+		if (collision.gameObject.name == "Player" && !give) {
 			takeValue (collision.gameObject.GetComponent<Player>());
-			Destroy(gameObject, 0.5f);
+			Destroy(gameObject);
+			give = true;
 		}
 	}
 
