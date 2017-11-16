@@ -185,6 +185,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0267ab70d5cb4ffeb6f9a78228f8e3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  distance: 1.5
+  speed: 2
   sound: {fileID: 8300000, guid: f5892cb7518cf4262a04379f41fbef5d, type: 3}
 --- !u!198 &198116684217188450
 ParticleSystem:
