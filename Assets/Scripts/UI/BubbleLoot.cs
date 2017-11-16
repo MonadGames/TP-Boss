@@ -11,9 +11,13 @@ public abstract class BubbleLoot : MonoBehaviour {
 	protected FloatingTextController textController;
 	protected Player player;
 
+	public AudioClip sound;
+	private AudioSource source;
+
 	void Start() {
 		textController = GameObject.FindObjectOfType<FloatingTextController> ();
 		player = GameObject.FindObjectOfType<Player> ();
+		source = GetComponent<AudioSource> ();
 	}
 
 
@@ -24,6 +28,7 @@ public abstract class BubbleLoot : MonoBehaviour {
 	public void OnCollisionStay2D (Collision2D collision) {
 		if (collision.gameObject.name == "Player" && !give) {
 			takeValue (collision.gameObject.GetComponent<Player>());
+			source.PlayOneShot (sound, 1f);
 			Destroy(gameObject);
 			give = true;
 		}
