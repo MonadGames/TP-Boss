@@ -50,6 +50,7 @@ public class Enemy : Character {
 
 	public void loot() {
 		if (!giveLoot) {
+			player.addExperience (experience);
 			textController.createGetExperience (experience.ToString(), player.transform);
 			lootSystem.loot (gameObject.transform);
 			giveLoot = true;

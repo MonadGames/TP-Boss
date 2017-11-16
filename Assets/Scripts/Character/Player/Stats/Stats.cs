@@ -61,9 +61,12 @@ public class Stats : MonoBehaviour {
 		// Aca cambiaria todo lo que el sanity afecta 
 	}
 
-	public void levelUp(){
+	public void levelUp() {
 		// actualizar el weight
-		// Si luego tenemos stats posta aca deberiamos acutalizarlos por lvlup.
+		player.getEnergy ().addMaxSp(10);
+		player.getHealth ().addMaxHp (5);
+		player.addDefense (3);
+		player.addDamage (5);
 	}
 
 	public bool addItem(Item item){
