@@ -31,7 +31,9 @@ public class LootSystem : MonoBehaviour {
 		Vector2 screenPosition = new Vector2 ();
 		screenPosition.Set (location.position.x, location.position.y + 1);
 
-		instance.transform.SetParent(transform, false);
+
+
+		instance.transform.SetParent (transform, false);
 		instance.transform.position = screenPosition;
 		instance.setValue(value);
 	}

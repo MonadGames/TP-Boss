@@ -9,13 +9,16 @@ public class Stats : MonoBehaviour {
 	private Player player;
 	private Inventory inventory;
 
+	private AudioSource audioSource;
 	public StatBar experienceBar;
+	public AudioClip lvlup;
 
 	void Start(){
 		this.player = gameObject.GetComponent<Player>();
 		level = new Level(this);
 		sanity = new Kind (this, 0, 0);
 		inventory = new Inventory();
+		audioSource = GetComponent<AudioSource>();
 	}
 
 	void Update(){
@@ -63,6 +66,7 @@ public class Stats : MonoBehaviour {
 
 	public void levelUp() {
 		// actualizar el weight
+		audioSource.PlayOneShot (lvlup, 1f);
 		player.getEnergy ().addMaxSp(10);
 		player.getHealth ().addMaxHp (5);
 		player.addDefense (3);

@@ -11,7 +11,10 @@ public class Enemy : Character {
 	public float cd = 0.5f;
 	public float lastTime = 0.5f;
 	public bool giveLoot;
+	public AudioClip hitSound;
 
+
+	private AudioSource source;
 	private Player player;
 	private EnemyAI enemyAI;
 	private LootSystem lootSystem;
@@ -25,6 +28,7 @@ public class Enemy : Character {
 		textController = GameObject.FindObjectOfType<FloatingTextController> ();
 		lootSystem = GameObject.FindObjectOfType<LootSystem> ();
 		giveLoot = false;
+		source = GetComponent<AudioSource> ();
 	}
 
 	void Update () {
@@ -71,6 +75,7 @@ public class Enemy : Character {
 	public void OnCollisionStay2D (Collision2D collision) {
 		if (collision.gameObject.name == "Player" && lastTime >= cd) {
 			attack (collision.gameObject.GetComponent<Player> ());
+			source.PlayOneShot (hitSound, 1f);
 			lastTime = 0;
 		}
 	}

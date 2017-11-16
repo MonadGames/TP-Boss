@@ -45,6 +45,5 @@ public class Level {
 		neededExperienceForLevelUp *= 1.7f;
 		level++;
 		stats.levelUp ();
-		Debug.Log ("levelup");
 	}
 }

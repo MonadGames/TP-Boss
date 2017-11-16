@@ -9,6 +9,7 @@ public class Player : Character {
 	public float powerHurtForce = 2f;
 	public float hurtForce = 10f;
 	public float timeOfDead = 1f;
+	public AudioClip hit;
 
 	private SpriteRenderer[] spritesRenderers;
 	private Spell spellSelected = null;
@@ -16,6 +17,7 @@ public class Player : Character {
 	private float secondsOfInvulnerability = 2f;
 	private bool deadAnim = false;
 	private CameraController cameraController;
+	private AudioSource audioSource;
 
 	// core
 	private Energy energy;
@@ -28,6 +30,7 @@ public class Player : Character {
 		anim = GetComponent<Animator> ();
 		cameraController = gameObject.GetComponentInChildren<CameraController>();
 		spritesRenderers = gameObject.GetComponentsInChildren<SpriteRenderer>();
+		audioSource = GetComponent<AudioSource>();
 		if(skillSelected != null)
 			spellSelected = skillSelected.GetComponent<Spell> ();
 
@@ -115,6 +118,7 @@ public class Player : Character {
 			lastHit = secondsOfInvulnerability;
 			base.takeDamage (damage);
 			cameraController.takeDamage ();
+			audioSource.PlayOneShot (hit, 1f);
 		}
 	}
 

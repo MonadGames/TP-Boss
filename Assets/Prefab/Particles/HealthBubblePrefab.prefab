@@ -104,7 +104,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -187,7 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distance: 1.5
   speed: 2
-  sound: {fileID: 8300000, guid: f5892cb7518cf4262a04379f41fbef5d, type: 3}
+  soundEffect: {fileID: 8300000, guid: f977e762f2b21417aac6cc5320f57d34, type: 3}
 --- !u!198 &198116684217188450
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -246,7 +246,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 631752035
+  randomSeed: -370354372
   InitialModule:
     serializedVersion: 3
     enabled: 1
