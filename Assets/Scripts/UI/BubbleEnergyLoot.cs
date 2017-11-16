@@ -6,5 +6,7 @@ public class BubbleEnergyLoot : BubbleLoot {
 
 	public override void takeValue (Player player){
 		player.addEnergy (value);
+		int valueText = (int) value;
+		textController.createEnergy (valueText.ToString (), player.gameObject.transform);
 	}
 }

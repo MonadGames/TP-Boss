@@ -8,6 +8,15 @@ public abstract class BubbleLoot : MonoBehaviour {
 
 	private bool give = false;
 
+	protected FloatingTextController textController;
+	protected Player player;
+
+	void Start() {
+		textController = GameObject.FindObjectOfType<FloatingTextController> ();
+		player = GameObject.FindObjectOfType<Player> ();
+	}
+
+
 	public void setValue(float value){
 		this.value = value;
 	}
