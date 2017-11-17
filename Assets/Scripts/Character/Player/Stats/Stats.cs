@@ -52,12 +52,7 @@ public class Stats : MonoBehaviour {
 	}
 
 	public void updateExperience(float exp, float maxExp){
-		float normalizedExp = mapRange(exp, 0f, maxExp, 0f, 100f );
-		experienceBar.updateBar (normalizedExp, 100f);
-	}
-
-	private float mapRange(float value, float minFrom, float maxFrom, float minTo, float maxTo){
-		return (value - minFrom) / (maxFrom - minFrom) * (maxTo - minTo) + minTo;
+		experienceBar.updateBar (exp, maxExp);
 	}
 
 	public void changedSanity() {

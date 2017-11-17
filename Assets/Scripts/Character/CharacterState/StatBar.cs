@@ -22,5 +22,13 @@ public abstract class StatBar : MonoBehaviour
 	public void show(){
 		bar.SetActive(true);
 	}
+
+	protected float normalizeValue(float value, float maxValue){
+		return mapRange (value, 0, maxValue, 0, 100);
+	}
+
+	protected float mapRange(float value, float minFrom, float maxFrom, float minTo, float maxTo){
+		return (value - minFrom) / (maxFrom - minFrom) * (maxTo - minTo) + minTo;
+	}
 }
 

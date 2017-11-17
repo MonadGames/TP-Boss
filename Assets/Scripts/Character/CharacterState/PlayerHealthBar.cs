@@ -16,7 +16,10 @@ public class PlayerHealthBar : StatBar
 		if (value < 0.5 * maxValue) {
 			image.color = Color.red;
 		}
-		image.transform.localScale = new Vector3(barScale.x * value * 0.01f, scale.y, scale.x);
+
+		float normalizedValue = normalizeValue (value, maxValue);
+
+		image.transform.localScale = new Vector3(barScale.x * normalizedValue * 0.01f, scale.y, scale.x);
 	}
 
 	public void revive(){
