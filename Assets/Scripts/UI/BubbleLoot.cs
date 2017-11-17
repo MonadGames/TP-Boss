@@ -7,7 +7,7 @@ public abstract class BubbleLoot : MonoBehaviour {
 	[Range(0, 3)]
 	public float distance;
 
-	[Range(1, 2)]
+	[Range(1, 3)]
 	public float speed;
 	public AudioClip soundEffect;
 	protected float value;
@@ -18,13 +18,13 @@ public abstract class BubbleLoot : MonoBehaviour {
 
 	protected AudioSource audioSource;
 	private Vector3 target;
+	private Rigidbody2D rb;
 
 	void Start() {
 		textController = GameObject.FindObjectOfType<FloatingTextController> ();
 		player = GameObject.FindObjectOfType<Player> ();
 		audioSource = GetComponent<AudioSource>();
-		target = player.transform.position;
-		target.y += 1f;
+		rb = GetComponent<Rigidbody2D>();
 	}
 
 	void Update() {
@@ -34,8 +34,14 @@ public abstract class BubbleLoot : MonoBehaviour {
 	public void checkFollow() {
 		float range = Vector2.Distance (transform.position, player.transform.position);
 		 
-		if(range <= distance) {
-			transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
+		if (range <= distance) {
+			
+			rb.isKinematic = true;
+			target = player.transform.position;
+			target.y += 0.5f;
+			transform.position = Vector2.MoveTowards (transform.position, target, speed * Time.deltaTime);
+		} else {
+			rb.isKinematic = false;
 		}
 	}
 
