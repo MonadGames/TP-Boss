@@ -13,6 +13,7 @@ public class Enemy : Character {
 	public bool giveLoot;
 
 	public AudioClip hitSound;
+	public AudioClip takeDamageSound;
 	public AudioClip normalSound;
 	public AudioClip dieSound;
 
@@ -68,6 +69,11 @@ public class Enemy : Character {
 	}
 
 	public void move(){
+	}
+
+	public void takeDamage(float damage) {
+		source.PlayOneShot (takeDamageSound, 0.5f);
+		base.takeDamage (damage);
 	}
 
 	public void checkForAnimation(){
