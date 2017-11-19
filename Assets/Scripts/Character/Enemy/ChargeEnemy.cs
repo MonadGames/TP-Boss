@@ -19,7 +19,7 @@ public class ChargeEnemy : MonoBehaviour {
 	}
 
 	void Update () {
-		if (ai.isEnemyDetected ()) {
+		if (ai.isEnemyDetected () && !player.GetComponent<Player>().isDead()) {
 			checkForMovement ();	
 		}
 	}
