@@ -10,6 +10,7 @@ public class Player : Character {
 	public float hurtForce = 10f;
 	public float timeOfDead = 1f;
 	public AudioClip hit;
+	public AudioClip reviveSound;
 
 	private SpriteRenderer[] spritesRenderers;
 	private Spell spellSelected = null;
@@ -62,6 +63,7 @@ public class Player : Character {
 	public void revive() {
 		anim.SetTrigger ("Revive");
 		textController.createHeal (health.maxHealth.ToString (), transform);
+		audioSource.PlayOneShot (reviveSound, 1f);
 		health.revive();
 		energy.revive ();
 	}

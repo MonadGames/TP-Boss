@@ -15,7 +15,7 @@ public class Character : MonoBehaviour {
 
 	public Character() {}
 
-	public bool isDead(){
+	public bool isDead() {
 		return this.health.health <= 0;
 	}
 

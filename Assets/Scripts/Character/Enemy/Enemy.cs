@@ -11,8 +11,10 @@ public class Enemy : Character {
 	public float cd = 0.5f;
 	public float lastTime = 0.5f;
 	public bool giveLoot;
-	public AudioClip hitSound;
 
+	public AudioClip hitSound;
+	public AudioClip normalSound;
+	public AudioClip dieSound;
 
 	private AudioSource source;
 	private Player player;
@@ -29,6 +31,9 @@ public class Enemy : Character {
 		lootSystem = GameObject.FindObjectOfType<LootSystem> ();
 		giveLoot = false;
 		source = GetComponent<AudioSource> ();
+		source.loop = true;
+		source.clip = normalSound;
+		source.Play();
 	}
 
 	void Update () {
@@ -54,6 +59,7 @@ public class Enemy : Character {
 
 	public void loot() {
 		if (!giveLoot) {
+			source.PlayOneShot (dieSound, 0.5f);
 			player.addExperience (experience);
 			textController.createGetExperience (experience.ToString(), player.transform);
 			lootSystem.loot (gameObject.transform);

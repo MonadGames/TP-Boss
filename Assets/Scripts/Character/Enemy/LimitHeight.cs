@@ -13,7 +13,7 @@ public class LimitHeight : MonoBehaviour {
 	}
 
 	void Update () {
-		if (transform.position.y < minHeight) {
+		if (transform.position.y <= minHeight) {
 			limit.x = transform.position.x;
 			limit.z = transform.position.z;
 			transform.position = limit;
