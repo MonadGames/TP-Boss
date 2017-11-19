@@ -1,13 +1,37 @@
 fileFormatVersion: 2
 guid: b91edaeea65d845efb81eadfb316f820
-timeCreated: 1504377935
+timeCreated: 1511110627
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: npc_shrine_friendly__x1_close_png_1354831218_0
+    21300002: npc_shrine_friendly__x1_close_png_1354831218_1
+    21300004: npc_shrine_friendly__x1_close_png_1354831218_2
+    21300006: npc_shrine_friendly__x1_close_png_1354831218_3
+    21300008: npc_shrine_friendly__x1_close_png_1354831218_4
+    21300010: npc_shrine_friendly__x1_close_png_1354831218_5
+    21300012: npc_shrine_friendly__x1_close_png_1354831218_6
+    21300014: npc_shrine_friendly__x1_close_png_1354831218_7
+    21300016: npc_shrine_friendly__x1_close_png_1354831218_8
+    21300018: npc_shrine_friendly__x1_close_png_1354831218_9
+    21300020: npc_shrine_friendly__x1_close_png_1354831218_10
+    21300022: npc_shrine_friendly__x1_close_png_1354831218_11
+    21300024: npc_shrine_friendly__x1_close_png_1354831218_12
+    21300026: npc_shrine_friendly__x1_close_png_1354831218_13
+    21300028: npc_shrine_friendly__x1_close_png_1354831218_14
+    21300030: npc_shrine_friendly__x1_close_png_1354831218_15
+    21300032: npc_shrine_friendly__x1_close_png_1354831218_16
+    21300034: npc_shrine_friendly__x1_close_png_1354831218_17
+    21300036: npc_shrine_friendly__x1_close_png_1354831218_18
+    21300038: npc_shrine_friendly__x1_close_png_1354831218_19
+    21300040: npc_shrine_friendly__x1_close_png_1354831218_20
+    21300042: npc_shrine_friendly__x1_close_png_1354831218_21
+    21300044: npc_shrine_friendly__x1_close_png_1354831218_22
+  externalObjects: {}
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -33,13 +57,13 @@ TextureImporter:
     filterMode: -1
     aniso: -1
     mipBias: -1
-    wrapU: -1
+    wrapU: 1
     wrapV: -1
     wrapW: -1
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -47,9 +71,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
@@ -57,6 +81,61 @@ TextureImporter:
   platformSettings:
   - buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Tizen
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Samsung TV
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
@@ -65,7 +144,329 @@ TextureImporter:
     overridden: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: npc_shrine_friendly__x1_close_png_1354831218_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 564
+        width: 151
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: npc_shrine_friendly__x1_close_png_1354831218_1
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 564
+        width: 151
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: npc_shrine_friendly__x1_close_png_1354831218_2
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 564
+        width: 151
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: npc_shrine_friendly__x1_close_png_1354831218_3
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 564
+        width: 151
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: npc_shrine_friendly__x1_close_png_1354831218_4
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 564
+        width: 151
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: npc_shrine_friendly__x1_close_png_1354831218_5
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 564
+        width: 151
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: npc_shrine_friendly__x1_close_png_1354831218_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 376
+        width: 151
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: npc_shrine_friendly__x1_close_png_1354831218_7
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 376
+        width: 151
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: npc_shrine_friendly__x1_close_png_1354831218_8
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 376
+        width: 151
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: npc_shrine_friendly__x1_close_png_1354831218_9
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 376
+        width: 151
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: npc_shrine_friendly__x1_close_png_1354831218_10
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 376
+        width: 151
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: npc_shrine_friendly__x1_close_png_1354831218_11
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 376
+        width: 151
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: npc_shrine_friendly__x1_close_png_1354831218_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 188
+        width: 151
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: npc_shrine_friendly__x1_close_png_1354831218_13
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 188
+        width: 151
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: npc_shrine_friendly__x1_close_png_1354831218_14
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 188
+        width: 151
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: npc_shrine_friendly__x1_close_png_1354831218_15
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 188
+        width: 151
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: npc_shrine_friendly__x1_close_png_1354831218_16
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 188
+        width: 151
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: npc_shrine_friendly__x1_close_png_1354831218_17
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 188
+        width: 151
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: npc_shrine_friendly__x1_close_png_1354831218_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 151
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: npc_shrine_friendly__x1_close_png_1354831218_19
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 0
+        width: 151
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: npc_shrine_friendly__x1_close_png_1354831218_20
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 0
+        width: 151
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: npc_shrine_friendly__x1_close_png_1354831218_21
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 0
+        width: 151
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: npc_shrine_friendly__x1_close_png_1354831218_22
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 0
+        width: 151
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 

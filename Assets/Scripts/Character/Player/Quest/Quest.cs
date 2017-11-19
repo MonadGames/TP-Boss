@@ -16,6 +16,7 @@ public class Quest : ScriptableObject {
 
 	// Tendria sentido que el npc diga completar Mision
 	public void completeQuest (Player player){
+		player.getHealth ().revive ();
 		reward.applyReward (player);
 	}
 
