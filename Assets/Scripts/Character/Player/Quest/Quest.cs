@@ -7,17 +7,15 @@ public class Quest : ScriptableObject {
 
 	public string questName;
 	public string description;
-	private Player player;
 	public Reward reward;
 	public Requirement requirement;
 
-	public bool isFinishQuest (){
-		Debug.Log("IS FINISH QUEST?");
-		return requirement.isComplete ();
+	public bool isFinishQuest (Player player){
+		return requirement.isComplete (player);
 	}
 
 	// Tendria sentido que el npc diga completar Mision
-	public void completeQuest (){
+	public void completeQuest (Player player){
 		reward.applyReward (player);
 	}
 
@@ -27,10 +25,6 @@ public class Quest : ScriptableObject {
 
 	public string getName() {
 		return questName;
-	}
-
-	public void setPlayer(Player player){
-		this.player = player;
 	}
 
 }

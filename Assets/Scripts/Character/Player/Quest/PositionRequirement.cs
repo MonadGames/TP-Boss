@@ -7,11 +7,12 @@ public class PositionRequirement : Requirement {
 
 	public Vector2 objetivePos;
 
-	public override void checkProgress(){
-		Debug.Log("POSITION REQUIREMENT :: CHECKPROGRESS");
-		Vector3 playerPos = player.gameObject.transform.position;
+	public override void checkProgress(Player aPlayer){
+		Vector3 playerPos = aPlayer.gameObject.transform.position;
+
 		float diffX = Mathf.Abs(playerPos.x - objetivePos.x);
 		float diffY = Mathf.Abs(playerPos.y - objetivePos.y);
+
 		isCompleted = (between (diffX, -5, 5) && between (diffY, -5, 5));
 	}
 

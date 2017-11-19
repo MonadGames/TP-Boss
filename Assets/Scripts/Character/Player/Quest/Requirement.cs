@@ -5,12 +5,11 @@ using UnityEngine;
 public abstract class Requirement : ScriptableObject {
 
 	public bool isCompleted = false;
-	public Player player;
 
-	public bool isComplete (){
-		checkProgress ();
+	public bool isComplete (Player player){
+		checkProgress (player);
 		return isCompleted;
 	}
 
-	public virtual void checkProgress(){}
+	public virtual void checkProgress(Player player){}
 }
