@@ -2,18 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Requirement {
+public abstract class Requirement : ScriptableObject {
 
-	protected bool isCompleted;
-	protected Player player;
-
-	public Requirement(Player player) {
-		this.player = player;
-	}
-
-	void Start () {
-		isCompleted = false;
-	}
+	public bool isCompleted = false;
+	public Player player;
 
 	public bool isComplete (){
 		checkProgress ();

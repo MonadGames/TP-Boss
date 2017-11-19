@@ -2,13 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(fileName = "NewPositionRequirement", menuName = "Requirement/Position")]
 public class PositionRequirement : Requirement {
 
-	private Vector2 objetivePos;
-
-	public PositionRequirement(Player player, Vector2 vector) : base(player) {
-		objetivePos = vector;
-	}
+	public Vector2 objetivePos;
 
 	public override void checkProgress(){
 		Vector3 playerPos = player.gameObject.transform.position;

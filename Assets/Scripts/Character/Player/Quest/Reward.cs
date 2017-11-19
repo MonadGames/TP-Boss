@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Reward : MonoBehaviour {
+public abstract class Reward : ScriptableObject {
 
 	public void addExp(int exp, Player player) {
 		player.addExperience (exp);

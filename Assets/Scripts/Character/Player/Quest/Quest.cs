@@ -2,27 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Quest {
+[CreateAssetMenu(fileName = "NewQuest", menuName = "Quest", order = 1)]
+public class Quest : ScriptableObject {
 
-	private string description;
-	private string questName;
+	public string questName;
+	public string description;
 	private Player player;
-	private Reward reward;
-	private Requirement requirement;
-
-	public Quest(string questName, string description, Player player, Requirement requirement, Reward reward){
-		this.requirement = requirement;
-		this.questName = questName;
-		this.description = description;
-		this.player = player;
-		this.reward = reward; 
-	}
-
-	void Update () {
-		//if (isFinishQuest ()) {
-		//	applyReward ();
-		//}
-	}
+	public Reward reward;
+	public Requirement requirement;
 
 	public bool isFinishQuest (){
 		return requirement.isComplete ();
@@ -39,6 +26,10 @@ public class Quest {
 
 	public string getName() {
 		return questName;
+	}
+
+	public void setPlayer(Player player){
+		this.player = player;
 	}
 
 }

@@ -60,13 +60,14 @@ public class TW_MultiStrings_Regular_Editor : Editor
 public class TW_MultiStrings_Regular : MonoBehaviour {
 
     public bool LaunchOnStart = true;
-    public int timeOut = 1;
+	[Range (0, 0.5f)]
+    public float timeOut = 0.1f;
     public string[] MultiStrings = new string[1];
     [HideInInspector]
     public int pointer=0;
 
     private string ORIGINAL_TEXT;
-    private int time = 0;
+    private float time;
     private int сharIndex = 0;
     public int index_of_string = 0;
     private bool start;
@@ -83,10 +84,15 @@ public class TW_MultiStrings_Regular : MonoBehaviour {
             StartTypewriter();
         }
     }
+
+	// update
+	// write character if cooldown is 0 an charIndex <= string.length - 1
+	// else charIndex = 0 and stringIndex++ 
 	
 	void Update () {
         if (start == true){
-            NewLineCheck(ORIGINAL_TEXT);
+			MakeTypewriterText(ORIGINAL_TEXT, "");
+			time -= Time.deltaTime;
         }
     }
 
@@ -94,8 +100,15 @@ public class TW_MultiStrings_Regular : MonoBehaviour {
     {
         start = true;
         сharIndex = 0;
-        time = 0;
+		time = timeOut;
     }
+
+	public void ResetCounters(){
+		start = true;
+		сharIndex = 0;
+		time = timeOut;
+		index_of_string = 0;
+	}
 
     public void SkipTypewriter()
     {
@@ -106,8 +119,8 @@ public class TW_MultiStrings_Regular : MonoBehaviour {
     {
         start = true;
         сharIndex = 0;
-        time = 0;
-        if (index_of_string + 1 < MultiStrings.Length){
+		time = timeOut;
+        if (index_of_string < MultiStrings.Length -1){
             index_of_string++;
         }
         else{
@@ -116,93 +129,26 @@ public class TW_MultiStrings_Regular : MonoBehaviour {
         ORIGINAL_TEXT = MultiStrings[index_of_string];
     }
 
-    private void NewLineCheck(string S)
+    private void MakeTypewriterText(string ORIGINAL, string POINTER)
     {
-        if (S.Contains("\n"))
-        {
-            StartCoroutine(MakeTypewriterTextWithNewLine(S, GetPointerSymbol(), MakeList(S)));
-        }
-        else
-        {
-            StartCoroutine(MakeTypewriterText(S, GetPointerSymbol()));
-        }
-    }
 
-    private IEnumerator MakeTypewriterText(string ORIGINAL, string POINTER)
-    {
-        start = false;
-        if (сharIndex != ORIGINAL.Length + 1)
+		bool hasCharsLeft = сharIndex <= ORIGINAL.Length;
+		start = hasCharsLeft;
+
+		if (hasCharsLeft && time <= 0)
         {
-            string emptyString = new string(' ', ORIGINAL.Length-POINTER.Length);
+            string emptyString = new string(' ', ORIGINAL.Length);
             string TEXT = ORIGINAL.Substring(0, сharIndex);
-            if (сharIndex < ORIGINAL.Length) TEXT = TEXT + POINTER + emptyString.Substring(сharIndex);
+            TEXT = TEXT + emptyString.Substring(сharIndex);
             gameObject.GetComponent<Text>().text = TEXT;
-            time += 1;
-            yield return new WaitForSeconds(0.01f);
             CharIndexPlus();
-            start = true;
-        }
-    }
-
-    private IEnumerator MakeTypewriterTextWithNewLine(string ORIGINAL, string POINTER, List<int> List)
-    {
-        start = false;
-        if (сharIndex != ORIGINAL.Length + 1)
-        {
-            string emptyString = new string(' ', ORIGINAL.Length - POINTER.Length);
-            string TEXT = ORIGINAL.Substring(0, сharIndex);
-            if (сharIndex < ORIGINAL.Length) TEXT = TEXT + POINTER + emptyString.Substring(сharIndex);
-            TEXT = InsertNewLine(TEXT, List);
-            gameObject.GetComponent<Text>().text = TEXT;
-			time += 1;
-            yield return new WaitForSeconds(0.01f);
-            CharIndexPlus();
-            start = true;
-        }
-    }
-
-    private List<int> MakeList(string S)
-    {
-        n_l_list = new List<int>();
-        for (int i = 0; i < S.Length; i++)
-        {
-            if (S[i] == '\n')
-            {
-                n_l_list.Add(i);
-            }
-        }
-        return n_l_list;
-    }
-
-    private string InsertNewLine(string _TEXT, List<int> _List)
-    {
-        for (int index = 0; index < _List.Count; index++)
-        {
-            if (сharIndex - 1 < _List[index])
-            {
-                _TEXT = _TEXT.Insert(_List[index], "\n");
-            }
-        }
-        return _TEXT;
-    }
-
-    private string GetPointerSymbol()
-    {
-        if (pointer == 0){
-            return "";
-        }
-        else{
-            return PointerSymbols[pointer];
         }
     }
 
     private void CharIndexPlus()
     {
-        if (time == timeOut)
-        {
-            time = 0;
-            сharIndex += 1;
-        }
+			time = timeOut;
+            сharIndex++;
     }
 }
 

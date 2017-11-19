@@ -158,6 +158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 840e631b4f2124ae88d92eb1dbe78159, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainQuest: {fileID: 11400000, guid: 4635666d687bd42f4ab9007efbbcda6a, type: 2}
 --- !u!61 &8587270
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2187,7 +2188,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 138572703}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.12019348, y: -117.99561, z: 0}
+  m_LocalPosition: {x: -0.1782074, y: -111.788055, z: 0}
   m_LocalScale: {x: 1.000335, y: 1.000335, z: 1.000335}
   m_Children:
   - {fileID: 1170850989}
@@ -4225,7 +4226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LaunchOnStart: 1
-  timeOut: 1
+  timeOut: 0.05
   MultiStrings:
   - "Que alivio!  aun sigues en una pieza, me alegra que no te hayan hecho ning\xFAn
     da\xF1o. "
@@ -6029,7 +6030,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 832627635}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 544.5, y: 193, z: 0}
+  m_LocalPosition: {x: 456, y: 181, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2081504503}
@@ -6127,7 +6128,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4363735403919964, guid: 6fcf787ce36d249ae8a5994e0a3863c3, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.6
+      value: -1.998
       objectReference: {fileID: 0}
     - target: {fileID: 4363735403919964, guid: 6fcf787ce36d249ae8a5994e0a3863c3, type: 2}
       propertyPath: m_LocalPosition.z
@@ -6620,7 +6621,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 907261800}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 544.5, y: 142.2, z: 0}
+  m_LocalPosition: {x: 456, y: 130.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 926565199}
@@ -7208,7 +7209,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1252479497920936, guid: 4672b8b6a6e874c2e90cf036a5422615, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4672b8b6a6e874c2e90cf036a5422615, type: 2}
@@ -9238,6 +9239,9 @@ MonoBehaviour:
   npcs:
   - {fileID: 1785224127}
   - {fileID: 8587267}
+  quests:
+  - {fileID: 11400000, guid: 38daf555745b240ba8313aeb036e8904, type: 2}
+  - {fileID: 11400000, guid: 4635666d687bd42f4ab9007efbbcda6a, type: 2}
 --- !u!4 &1475438928
 Transform:
   m_ObjectHideFlags: 0
@@ -11085,6 +11089,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 840e631b4f2124ae88d92eb1dbe78159, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainQuest: {fileID: 11400000, guid: 38daf555745b240ba8313aeb036e8904, type: 2}
 --- !u!1 &1793292438
 GameObject:
   m_ObjectHideFlags: 0
@@ -12154,7 +12159,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1942982619}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -511.09998, y: 169.6, z: 0}
+  m_LocalPosition: {x: -422.6, y: 157.6, z: 0}
   m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_Children:
   - {fileID: 1511470384}
@@ -12511,7 +12516,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2066493441}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 518.8, y: 160, z: 0}
+  m_LocalPosition: {x: 430.3, y: 148, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1407468372}
@@ -12563,8 +12568,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2081504502}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.21484375, y: -0.09286499, z: 100}
-  m_LocalScale: {x: 0.008658009, y: 0.008658009, z: 0.008658009}
+  m_LocalPosition: {x: -0.21481323, y: -0.09286499, z: 100}
+  m_LocalScale: {x: 0.00913242, y: 0.00913242, z: 0.00913242}
   m_Children:
   - {fileID: 1942982620}
   - {fileID: 721154159}
@@ -12759,7 +12764,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LaunchOnStart: 1
-  timeOut: 1
+  timeOut: 0.05
   MultiStrings:
   - "Hola Ismael, probablemente no me conozcas pero yo te he guiado en cada uno de
     tus sue\xF1os..."
@@ -13031,7 +13036,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2138625663}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.37980652, y: -71.834656, z: 0}
+  m_LocalPosition: {x: 0.3217926, y: -68.15494, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1819219033}

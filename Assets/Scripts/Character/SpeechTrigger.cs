@@ -13,15 +13,18 @@ public class SpeechTrigger : MonoBehaviour
 	private bool questGiven = false;
 	private TW_MultiStrings_Regular typewriter;
 	private int stringCount;
-	private int currentString;
 	bool isShowingMessage = false;
+	private bool keyDown = false;
 
 	void Start() {
 		typewriter = text.GetComponent<TW_MultiStrings_Regular> ();
 		stringCount = typewriter.MultiStrings.Length;
-		currentString = 1;
 		panel.SetActive(false);
 		npc = gameObject.GetComponent<Npc> ();
+	}
+
+	void Update() {
+		keyDown = Input.GetKeyDown (KeyCode.E);
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
@@ -32,15 +35,14 @@ public class SpeechTrigger : MonoBehaviour
 	{
 		giveQuest (other);
 		if (shouldShowMessage (other)) {
-			TurnOnMessage ();  
+			TurnOnMessage ();
+			keyDown = false;
 		} else if (shouldShowNextString (other)) {
-			showNextString ();
-		} else if (shouldShowFirstString (other)) {
-			resetCounters ();
-			TurnOnMessage(); 
+			showNextString();
+			keyDown = false;
 		}
 		if (Input.GetKeyDown (KeyCode.Escape)) {
-			hideMessage (true);
+			TurnOffMessage ();
 		}
 	}
 
@@ -49,7 +51,7 @@ public class SpeechTrigger : MonoBehaviour
 	}
 
 	private void giveQuest(Collider2D other){
-		if (currentString == stringCount && isPlayer(other) && !questGiven) {
+		if (typewriter.index_of_string == stringCount -1 && isPlayer(other) && !questGiven) {
 			// REFACTORIZAR ESE CODIGO FEO.
 			Quest mainQuest = npc.getMainQuest ();
 			Player player = other.GetComponent<Player> ();
@@ -76,7 +78,6 @@ public class SpeechTrigger : MonoBehaviour
 
 	private void showNextString() {
 		typewriter.NextString ();
-		currentString++;
 	}
 
 	private void showHint(bool show){
@@ -92,15 +93,11 @@ public class SpeechTrigger : MonoBehaviour
 	}
 
 	private bool shouldShowMessage(Collider2D other){
-		return isPlayer(other) && Input.GetKeyDown (KeyCode.E) && !isShowingMessage;
+		return isPlayer(other) && keyDown && !isShowingMessage;
 	}
 
 	private bool shouldShowNextString (Collider2D other){
-		return isPlayer(other) && Input.GetKeyDown (KeyCode.E) && currentString < stringCount;
-	}
-
-	private bool shouldShowFirstString(Collider2D other) {
-		return isPlayer(other) && Input.GetKeyDown (KeyCode.E) && currentString == stringCount;
+		return isPlayer(other) && keyDown;
 	}
 
 	private void TurnOnMessage()
@@ -112,7 +109,7 @@ public class SpeechTrigger : MonoBehaviour
 	}
 
 	private void resetCounters(){
-		currentString = 1;
+		typewriter.ResetCounters ();
 	}
 
 	private void TurnOffMessage()
