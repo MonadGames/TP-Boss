@@ -12,6 +12,7 @@ public class Quest : ScriptableObject {
 	public Requirement requirement;
 
 	public bool isFinishQuest (){
+		Debug.Log("IS FINISH QUEST?");
 		return requirement.isComplete ();
 	}
 
