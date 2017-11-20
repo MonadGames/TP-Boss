@@ -62,7 +62,6 @@ public class Enemy : Character {
 		if (!giveLoot) {
 			source.PlayOneShot (dieSound, 0.5f);
 			player.addExperience (experience);
-			textController.createGetExperience (experience.ToString(), player.transform);
 			lootSystem.loot (gameObject.transform);
 			giveLoot = true;
 		}

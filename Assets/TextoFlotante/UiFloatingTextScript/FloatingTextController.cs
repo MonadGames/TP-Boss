@@ -25,6 +25,10 @@ public class FloatingTextController : MonoBehaviour {
 		createBattleText ("+" + text, location, popupHeal);
 	}
 
+	public void createLevelUp(Transform location) {
+		createBattleText ("Level Up!", location, popupGetExp);
+	}
+
 	public void createEnergy(string text, Transform location) {
 		createBattleText ("+" + text, location, popupEnergy);
 	}

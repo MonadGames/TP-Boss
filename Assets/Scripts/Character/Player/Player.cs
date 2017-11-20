@@ -137,7 +137,6 @@ public class Player : Character {
 
 	public void addExperience(int exp) {
 		stats.addExperience (exp);
-		textController.createGetExperience (exp.ToString (), transform);
 	}
 
 	public void addBadAction(){
