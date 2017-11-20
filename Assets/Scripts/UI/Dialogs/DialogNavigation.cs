@@ -8,13 +8,17 @@ public class DialogNavigation : MonoBehaviour
 	public bool selfDestroy;
 	private DialogAction currentAction;
 	private int index = 0;
-	// Use this for initialization
-	void Start ()
-	{
-		currentAction = actions [index];
-	}
+	private PlayerMovementInX movX;
+	private PlayerMovementInY movY;
 
-	// Update is called once per frame
+	public GameObject player;
+
+	void Start () {
+		currentAction = actions [index];
+		movX = player.GetComponent<PlayerMovementInX> ();
+		movY = player.GetComponent<PlayerMovementInY> ();
+	}
+		
 	void Update ()
 	{
 
@@ -23,6 +27,8 @@ public class DialogNavigation : MonoBehaviour
 	void OnTriggerStay2D(Collider2D other)
 	{
 		if (panel.activeSelf) {
+			movX.enabled = false;
+			movY.enabled = false;
 			foreach (DialogAction action in actions) {
 				action.showHighlight (false);
 			}
@@ -56,8 +62,9 @@ public class DialogNavigation : MonoBehaviour
 
 	private void applyAction(Collider2D collider){
 		if (isPlayer(collider) && Input.GetKeyDown(KeyCode.Space)) {
+			movX.enabled = true;
+			movY.enabled = true;
 			currentAction.performAction ();
-
 			if (currentAction.closeDialogWhenFinished) {
 				panel.SetActive (false);
 			}

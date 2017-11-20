@@ -155,7 +155,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 840e631b4f2124ae88d92eb1dbe78159, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  npcVoice: {fileID: 8300000, guid: 065cb5ca3101c4e299e59df69bfb4f99, type: 3}
+  defaultText: 
+  presentationText: 
   mainQuest: {fileID: 11400000, guid: 4635666d687bd42f4ab9007efbbcda6a, type: 2}
+  quests: []
 --- !u!61 &8587270
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -195,7 +199,6 @@ MonoBehaviour:
   panel: {fileID: 389397537}
   hint: {fileID: 756665478}
   text: {fileID: 474360716}
-  npcVoice: {fileID: 8300000, guid: 065cb5ca3101c4e299e59df69bfb4f99, type: 3}
 --- !u!95 &8587272
 Animator:
   serializedVersion: 3
@@ -14684,7 +14687,7 @@ MonoBehaviour:
     type: 2}
   energyPrefab: {fileID: 1742167010904240, guid: e0efebfd7803c475ab6980bf0313648d,
     type: 2}
-  canvas: {fileID: 1734111453}
+  canvas: {fileID: 1711671884}
 --- !u!1 &1480611002
 GameObject:
   m_ObjectHideFlags: 0
@@ -14966,6 +14969,7 @@ GameObject:
   - component: {fileID: 1529617804}
   - component: {fileID: 1529617802}
   - component: {fileID: 1529617803}
+  - component: {fileID: 1529617805}
   m_Layer: 0
   m_Name: fountain2
   m_TagString: Untagged
@@ -15061,6 +15065,7 @@ MonoBehaviour:
   - {fileID: 623910055}
   panel: {fileID: 1322782530}
   selfDestroy: 0
+  player: {fileID: 1711671884}
 --- !u!61 &1529617804
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15086,6 +15091,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.51, y: 1.88}
   m_EdgeRadius: 0
+--- !u!114 &1529617805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1529617799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cdf2594a862141e1a4a89232b4eda0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hint: {fileID: 398218716}
 --- !u!1 &1532344121
 GameObject:
   m_ObjectHideFlags: 0
@@ -17041,7 +17058,6 @@ MonoBehaviour:
   panel: {fileID: 1722500265}
   hint: {fileID: 286606102}
   text: {fileID: 2091307988}
-  npcVoice: {fileID: 8300000, guid: 065cb5ca3101c4e299e59df69bfb4f99, type: 3}
 --- !u!95 &1785224131
 Animator:
   serializedVersion: 3
@@ -17112,7 +17128,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 840e631b4f2124ae88d92eb1dbe78159, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  npcVoice: {fileID: 8300000, guid: 065cb5ca3101c4e299e59df69bfb4f99, type: 3}
+  defaultText: 
+  presentationText: 
   mainQuest: {fileID: 11400000, guid: 38daf555745b240ba8313aeb036e8904, type: 2}
+  quests: []
 --- !u!82 &1785224134
 AudioSource:
   m_ObjectHideFlags: 0
@@ -17418,6 +17438,7 @@ GameObject:
   - component: {fileID: 1815781025}
   - component: {fileID: 1815781024}
   - component: {fileID: 1815781026}
+  - component: {fileID: 1815781027}
   m_Layer: 0
   m_Name: fountain1
   m_TagString: Untagged
@@ -17499,6 +17520,7 @@ MonoBehaviour:
   - {fileID: 412630187}
   panel: {fileID: 1610610736}
   selfDestroy: 0
+  player: {fileID: 1711671884}
 --- !u!114 &1815781025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17538,6 +17560,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.51, y: 1.88}
   m_EdgeRadius: 0
+--- !u!114 &1815781027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1815781021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cdf2594a862141e1a4a89232b4eda0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hint: {fileID: 2076961307}
 --- !u!1 &1819219032
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,6 +7,9 @@ public class Quest : ScriptableObject {
 
 	public string questName;
 	public string description;
+	public string historyText;
+	public string finishText;
+
 	public Reward reward;
 	public Requirement requirement;
 

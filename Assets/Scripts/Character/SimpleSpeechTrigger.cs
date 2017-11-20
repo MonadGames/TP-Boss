@@ -28,8 +28,7 @@ public class SimpleSpeechTrigger : MonoBehaviour
 		showHint (isPlayer(other));
 	}
 
-	void OnTriggerStay2D(Collider2D other)
-	{
+	void OnTriggerStay2D(Collider2D other) {
 		if (shouldShowMessage (other)) {
 			TurnOnMessage ();
 			keyDown = false;

@@ -4,50 +4,51 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class SpeechTrigger : MonoBehaviour
-{
+public class SpeechTrigger : MonoBehaviour {
 	public GameObject panel;
 	public GameObject hint;
+
 	public Text text;
-	public AudioClip npcVoice;
 
 
 	private Npc npc;
 	private bool questGiven = false;
 	private TW_MultiStrings_Regular typewriter;
 	private int stringCount;
-	private AudioSource source;
 	bool isShowingMessage = false;
 
 	private bool keyDown = false;
-	private bool initVoice = false;
-
-
 
 	void Start() {
 		typewriter = text.GetComponent<TW_MultiStrings_Regular> ();
 		stringCount = typewriter.MultiStrings.Length;
 		panel.SetActive(false);
 		npc = gameObject.GetComponent<Npc> ();
-		source = GetComponent<AudioSource> ();
 	}
 
 	void Update() {
 		keyDown = Input.GetKeyDown (KeyCode.E);
 
-		checkVoiceSound ();
+		//initializeText();
 	}
 
-	public void checkVoiceSound() {
-		if (keyDown && !initVoice) {
-			source.PlayOneShot (npcVoice, 0.3f);
-			initVoice = true;
-		} 
+	/*
+	public void initializeText() {
+		if(// es la primera vez){
+			typewriter = npc.presentationText
+			} else {
+				typewriter.resetCounter.
+				typewriter = npc.defaultText
 
-		if (!keyDown && initVoice) {
-			initVoice = false;
-		}
-	}
+					// show quests
+
+			}
+
+
+			// chequear que se termino el text.
+
+
+	} */
 
 	void OnTriggerEnter2D(Collider2D other) {
 		showHint (isPlayer(other));
@@ -131,9 +132,12 @@ public class SpeechTrigger : MonoBehaviour
 		typewriter.ResetCounters ();
 	}
 
-	private void TurnOffMessage()
-	{
+	private void TurnOffMessage(){
 		hideMessage (false);
 		resetCounters ();
+	}
+
+	public bool isKeyDown() {
+		return keyDown;
 	}
 }
