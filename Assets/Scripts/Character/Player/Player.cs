@@ -11,6 +11,7 @@ public class Player : Character {
 	public float timeOfDead = 1f;
 	public AudioClip hit;
 	public AudioClip reviveSound;
+	public AudioClip takeItemSound;
 
 	private SpriteRenderer[] spritesRenderers;
 	private Spell spellSelected = null;
@@ -189,5 +190,9 @@ public class Player : Character {
 
 	public void addEnergy(float value){
 		energy.addSP (value);
+	}
+
+	public void takeItem() {
+		audioSource.PlayOneShot (takeItemSound, 1f);
 	}
 }

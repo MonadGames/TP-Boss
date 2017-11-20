@@ -402,6 +402,11 @@ Prefab:
       propertyPath: skillSelected
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 114615968477696394, guid: 9d9a15bbe73034535be945c30d1eb839,
+        type: 2}
+      propertyPath: takeItemSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 6a4863e96b5264cb0b9928ec94e59e21, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9d9a15bbe73034535be945c30d1eb839, type: 2}
   m_IsPrefabParent: 0

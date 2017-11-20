@@ -8,5 +8,6 @@ public class BubbleEnergyLoot : BubbleLoot {
 		player.addEnergy (value);
 		int valueText = (int) value;
 		textController.createEnergy (valueText.ToString (), player.gameObject.transform);
+		player.takeItem ();
 	}
 }

@@ -8,6 +8,7 @@ public class BubbleHealthLoot : BubbleLoot {
 		player.addHealth (value);
 		int valueText = (int) value;
 		textController.createHeal (valueText.ToString (), player.gameObject.transform);
+		player.takeItem ();
 	}
 
 }
