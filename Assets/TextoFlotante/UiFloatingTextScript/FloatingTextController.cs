@@ -7,6 +7,7 @@ public class FloatingTextController : MonoBehaviour {
 	public GameObject popupGetExp;
 	public GameObject popupHeal;
 	public GameObject popupEnergy;
+	public GameObject popupSave;
 
 	public GameObject canvas;
 
@@ -31,6 +32,10 @@ public class FloatingTextController : MonoBehaviour {
 
 	public void createEnergy(string text, Transform location) {
 		createBattleText ("+" + text, location, popupEnergy);
+	}
+
+	public void save(Transform location) {
+		createBattleText ("Saved!", location, popupSave);
 	}
 
 	public void createBattleText(string text, Transform location, GameObject objectText) {

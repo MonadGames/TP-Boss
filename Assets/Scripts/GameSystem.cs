@@ -4,23 +4,21 @@ using UnityEngine;
 
 public class GameSystem : MonoBehaviour {
 
-	public List<Vector3> checkpoints;
 	public GameObject[] npcs;
 
 	private Player player;
-	private Vector3 lastCheckpoint;
+	private Vector3 checkpoint;
 	private CanvasController canvasController;
 
 	void Start () {
 		player = GameObject.FindObjectOfType<Player> ();
 		canvasController = GameObject.FindObjectOfType<CanvasController> ();
-		lastCheckpoint = checkpoints [0];
+		checkpoint = new Vector3(3,0,0);
 	}
 
 
 	void Update () {
 		if (!canvasController.visible) {
-			checkLastCheckpoint ();
 			checkGameOver ();
 		} else {
 			checkContinue ();
@@ -28,20 +26,14 @@ public class GameSystem : MonoBehaviour {
 		}
 	}
 
-	public void checkLastCheckpoint() {
-		Vector3 playerPos = player.gameObject.transform.position;
-		foreach(Vector3 vector in checkpoints) {
-			// Asumo que la lista esta ordenada y los checkpoint comienzan desde el menor hasta el mayor
-			if (playerPos.x > vector.x) {
-				lastCheckpoint = vector;
-			}
-		}
-	}
-
 	public void checkBack(){
 		if (Input.GetKeyDown (KeyCode.Escape)) {
 			canvasController.goToMenu ();
 		}
+	}
+
+	public void save(Vector3 vector) {
+		checkpoint = vector;
 	}
 		
 
@@ -54,7 +46,7 @@ public class GameSystem : MonoBehaviour {
 
 	public void restartToCheckPoint(){
 		Vector3 playerPos = player.gameObject.transform.localPosition;
-		playerPos = lastCheckpoint;
+		playerPos = checkpoint;
 		player.gameObject.transform.localPosition = playerPos;
 		player.revive ();
 	}

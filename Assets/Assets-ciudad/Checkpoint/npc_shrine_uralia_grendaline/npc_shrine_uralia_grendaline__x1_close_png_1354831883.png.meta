@@ -1,0 +1,467 @@
+fileFormatVersion: 2
+guid: ca05311076ca748568c2a6d8382c5c76
+timeCreated: 1511216951
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: npc_shrine_uralia_grendaline__x1_close_png_1354831883_0
+    21300002: npc_shrine_uralia_grendaline__x1_close_png_1354831883_1
+    21300004: npc_shrine_uralia_grendaline__x1_close_png_1354831883_2
+    21300006: npc_shrine_uralia_grendaline__x1_close_png_1354831883_3
+    21300008: npc_shrine_uralia_grendaline__x1_close_png_1354831883_4
+    21300010: npc_shrine_uralia_grendaline__x1_close_png_1354831883_5
+    21300012: npc_shrine_uralia_grendaline__x1_close_png_1354831883_6
+    21300014: npc_shrine_uralia_grendaline__x1_close_png_1354831883_7
+    21300016: npc_shrine_uralia_grendaline__x1_close_png_1354831883_8
+    21300018: npc_shrine_uralia_grendaline__x1_close_png_1354831883_9
+    21300020: npc_shrine_uralia_grendaline__x1_close_png_1354831883_10
+    21300022: npc_shrine_uralia_grendaline__x1_close_png_1354831883_11
+    21300024: npc_shrine_uralia_grendaline__x1_close_png_1354831883_12
+    21300026: npc_shrine_uralia_grendaline__x1_close_png_1354831883_13
+    21300028: npc_shrine_uralia_grendaline__x1_close_png_1354831883_14
+    21300030: npc_shrine_uralia_grendaline__x1_close_png_1354831883_15
+    21300032: npc_shrine_uralia_grendaline__x1_close_png_1354831883_16
+    21300034: npc_shrine_uralia_grendaline__x1_close_png_1354831883_17
+    21300036: npc_shrine_uralia_grendaline__x1_close_png_1354831883_18
+    21300038: npc_shrine_uralia_grendaline__x1_close_png_1354831883_19
+    21300040: npc_shrine_uralia_grendaline__x1_close_png_1354831883_20
+    21300042: npc_shrine_uralia_grendaline__x1_close_png_1354831883_21
+    21300044: npc_shrine_uralia_grendaline__x1_close_png_1354831883_22
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: -1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Tizen
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Samsung TV
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: npc_shrine_uralia_grendaline__x1_close_png_1354831883_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 564
+        width: 123
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: npc_shrine_uralia_grendaline__x1_close_png_1354831883_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 564
+        width: 124
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: npc_shrine_uralia_grendaline__x1_close_png_1354831883_2
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 564
+        width: 121
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: npc_shrine_uralia_grendaline__x1_close_png_1354831883_3
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 564
+        width: 119
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: npc_shrine_uralia_grendaline__x1_close_png_1354831883_4
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 564
+        width: 120
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: npc_shrine_uralia_grendaline__x1_close_png_1354831883_5
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 564
+        width: 118
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: npc_shrine_uralia_grendaline__x1_close_png_1354831883_6
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 376
+        width: 119
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: npc_shrine_uralia_grendaline__x1_close_png_1354831883_7
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 376
+        width: 120
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: npc_shrine_uralia_grendaline__x1_close_png_1354831883_8
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 376
+        width: 122
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: npc_shrine_uralia_grendaline__x1_close_png_1354831883_9
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 376
+        width: 125
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: npc_shrine_uralia_grendaline__x1_close_png_1354831883_10
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 376
+        width: 125
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: npc_shrine_uralia_grendaline__x1_close_png_1354831883_11
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 376
+        width: 125
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: npc_shrine_uralia_grendaline__x1_close_png_1354831883_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 188
+        width: 125
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: npc_shrine_uralia_grendaline__x1_close_png_1354831883_13
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 188
+        width: 125
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: npc_shrine_uralia_grendaline__x1_close_png_1354831883_14
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 188
+        width: 125
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: npc_shrine_uralia_grendaline__x1_close_png_1354831883_15
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 188
+        width: 125
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: npc_shrine_uralia_grendaline__x1_close_png_1354831883_16
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 188
+        width: 124
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: npc_shrine_uralia_grendaline__x1_close_png_1354831883_17
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 188
+        width: 123
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: npc_shrine_uralia_grendaline__x1_close_png_1354831883_18
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 0
+        width: 122
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: npc_shrine_uralia_grendaline__x1_close_png_1354831883_19
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 122
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: npc_shrine_uralia_grendaline__x1_close_png_1354831883_20
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 0
+        width: 122
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: npc_shrine_uralia_grendaline__x1_close_png_1354831883_21
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 0
+        width: 122
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: npc_shrine_uralia_grendaline__x1_close_png_1354831883_22
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 0
+        width: 122
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
