@@ -9,30 +9,51 @@ public class SpeechTrigger : MonoBehaviour
 	public GameObject panel;
 	public GameObject hint;
 	public Text text;
+	public AudioClip npcVoice;
+
+
 	private Npc npc;
 	private bool questGiven = false;
 	private TW_MultiStrings_Regular typewriter;
 	private int stringCount;
+	private AudioSource source;
 	bool isShowingMessage = false;
+
 	private bool keyDown = false;
+	private bool initVoice = false;
+
+
 
 	void Start() {
 		typewriter = text.GetComponent<TW_MultiStrings_Regular> ();
 		stringCount = typewriter.MultiStrings.Length;
 		panel.SetActive(false);
 		npc = gameObject.GetComponent<Npc> ();
+		source = GetComponent<AudioSource> ();
 	}
 
 	void Update() {
 		keyDown = Input.GetKeyDown (KeyCode.E);
+
+		checkVoiceSound ();
+	}
+
+	public void checkVoiceSound() {
+		if (keyDown && !initVoice) {
+			source.PlayOneShot (npcVoice, 0.3f);
+			initVoice = true;
+		} 
+
+		if (!keyDown && initVoice) {
+			initVoice = false;
+		}
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
 		showHint (isPlayer(other));
 	}
 
-	void OnTriggerStay2D(Collider2D other)
-	{
+	void OnTriggerStay2D(Collider2D other) {
 		giveQuest (other);
 		if (shouldShowMessage (other)) {
 			TurnOnMessage ();
@@ -68,10 +89,8 @@ public class SpeechTrigger : MonoBehaviour
 		}
 	}
 
-	void OnTriggerExit2D(Collider2D other)
-	{
-		if (isPlayer(other))
-		{
+	void OnTriggerExit2D(Collider2D other) {
+		if (isPlayer(other)) {
 			TurnOffMessage();
 		}
 	}
