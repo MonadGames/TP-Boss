@@ -8,10 +8,13 @@ public class Stats : MonoBehaviour {
 	private Sanity sanity;
 	private Player player;
 	private Inventory inventory;
+	private float timeRecovery = 0f;
 
 	private AudioSource audioSource;
 	public StatBar experienceBar;
 	public AudioClip lvlup;
+
+
 
 	void Start(){
 		this.player = gameObject.GetComponent<Player>();
@@ -23,6 +26,17 @@ public class Stats : MonoBehaviour {
 
 	void Update(){
 		updateExperience (level.getActualExperience(), level.getNeededExperienceForLevelUp());
+
+		checkSpRecovery ();
+	}
+
+	public void checkSpRecovery() {
+		if (timeRecovery >= 1f) {
+			spRecovery ();
+			timeRecovery -= 1f;
+		}
+
+		timeRecovery += Time.deltaTime;
 	}
 
 	public void addGoodAction(){
@@ -57,6 +71,11 @@ public class Stats : MonoBehaviour {
 
 	public void changedSanity() {
 		// Aca cambiaria todo lo que el sanity afecta 
+	}
+
+	public void spRecovery() {
+		float sp = 0.5f * level.getLevel ();
+		player.getEnergy ().addSP (sp);
 	}
 
 	public void levelUp() {
