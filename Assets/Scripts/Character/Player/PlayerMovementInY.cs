@@ -8,8 +8,9 @@ public class PlayerMovementInY : MonoBehaviour {
 	public float jumpSpeed;
 	public bool grounded;
 	public bool jumpBoostGround;
+	public AudioClip jumpSound;
 
-
+	private AudioSource source;
 	private Vector2 gravity;
 	private float speed;
 	private Animator anim;
@@ -23,6 +24,7 @@ public class PlayerMovementInY : MonoBehaviour {
 		anim = GetComponent<Animator> ();
 		player = GetComponent<Player> ();
 		gravity = new Vector2 (0, -4f);
+		source = GetComponent<AudioSource>();
 	}
 
 	void Update () {
@@ -48,6 +50,7 @@ public class PlayerMovementInY : MonoBehaviour {
 
 	public void checkForJump(){
 		if (Input.GetKey(KeyCode.Space) && grounded) {
+			source.PlayOneShot (jumpSound, 2f);
 			changeSpeed ();
 			rb.velocity = Vector2.up * speed;
 			anim.SetTrigger ("Jump");

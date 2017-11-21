@@ -1421,6 +1421,7 @@ MonoBehaviour:
   jumpSpeed: 5.5
   grounded: 0
   jumpBoostGround: 0
+  jumpSound: {fileID: 8300000, guid: 99e7e2f20760f4530ae107a042f6ce3b, type: 3}
 --- !u!114 &114515438069337042
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1451,13 +1452,13 @@ MonoBehaviour:
   damage: 20
   defense: 10
   soulEffect: {fileID: 0}
-  skillSelected: {fileID: 1300811145041140, guid: b3b1f1cc99d374ceca42df54aa8b0a3f,
-    type: 2}
+  skillSelected: {fileID: 0}
   powerHurtForce: 4
   hurtForce: 10
   timeOfDead: 1
   hit: {fileID: 8300000, guid: feac97a7c95974745800cd7afe809852, type: 3}
   reviveSound: {fileID: 8300000, guid: fb6150db394324d62b3f4d70d1b80d22, type: 3}
+  takeItemSound: {fileID: 8300000, guid: 6a4863e96b5264cb0b9928ec94e59e21, type: 3}
 --- !u!114 &114616417733028538
 MonoBehaviour:
   m_ObjectHideFlags: 1
