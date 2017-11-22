@@ -19,12 +19,14 @@ public abstract class BubbleLoot : MonoBehaviour {
 	protected AudioSource audioSource;
 	private Vector3 target;
 	private Rigidbody2D rb;
+	private float originalGravity;
 
 	void Start() {
 		textController = GameObject.FindObjectOfType<FloatingTextController> ();
 		player = GameObject.FindObjectOfType<Player> ();
 		audioSource = GetComponent<AudioSource>();
 		rb = GetComponent<Rigidbody2D>();
+		originalGravity = rb.gravityScale;
 	}
 
 	void Update() {
@@ -35,13 +37,14 @@ public abstract class BubbleLoot : MonoBehaviour {
 		float range = Vector2.Distance (transform.position, player.transform.position);
 		 
 		if (range <= distance) {
-			
-			rb.isKinematic = true;
 			target = player.transform.position;
 			target.y += 0.5f;
+			if(rb.gravityScale != 0f) {
+				rb.gravityScale = 0f;
+			}
 			transform.position = Vector2.MoveTowards (transform.position, target, speed * Time.deltaTime);
 		} else {
-			rb.isKinematic = false;
+			rb.gravityScale = 1f;
 		}
 	}
 
