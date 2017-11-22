@@ -6,7 +6,9 @@ public class PlayerAttacks : MonoBehaviour {
 
 	public AudioClip spellSound;
 	public float cd = 0.5f;
+	public float cdNormalAttack = 0f;
 	public float lastTime = 0.5f;
+	public GameObject hand;
 
 	private Player player;
 	private AudioSource source;
@@ -22,12 +24,26 @@ public class PlayerAttacks : MonoBehaviour {
 	}
 
 	void Update () {
-		
+		checkSpellAttack ();
+		checkNormalAttack ();
+		lastTime += Time.deltaTime;
+	}
+
+	public void checkSpellAttack () {
 		if (Input.GetKey (KeyCode.Z) && lastTime >= cd) {
 			useSkill ();
 		}
-		
-		lastTime += Time.deltaTime;
+	}
+
+	public void checkNormalAttack() {
+		if (Input.GetKeyUp (KeyCode.X) && lastTime >= cdNormalAttack) {
+			anim.SetTrigger ("NormalAttack");
+			hand.SetActive (true);
+		}
+
+		if (!anim.GetCurrentAnimatorStateInfo (0).IsName ("NormalAttack")) {
+			hand.SetActive (false);
+		}
 	}
 
 	void useSkill () {	

@@ -10,6 +10,8 @@ TagManager:
   - impulseGround
   - spell
   - Canvas
+  - Knife
+  - Hand
   layers:
   - Default
   - TransparentFX

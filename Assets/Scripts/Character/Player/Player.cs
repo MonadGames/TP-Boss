@@ -195,4 +195,8 @@ public class Player : Character {
 	public void takeItem() {
 		audioSource.PlayOneShot (takeItemSound, 1f);
 	}
+
+	public float getNormalAttack() {
+		return damage / 2;
+	} 
 }
