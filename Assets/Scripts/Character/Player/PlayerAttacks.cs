@@ -8,7 +8,6 @@ public class PlayerAttacks : MonoBehaviour {
 	public float cd = 0.5f;
 	public float cdNormalAttack = 0f;
 	public float lastTime = 0.5f;
-	public GameObject hand;
 
 	private Player player;
 	private AudioSource source;
@@ -38,11 +37,6 @@ public class PlayerAttacks : MonoBehaviour {
 	public void checkNormalAttack() {
 		if (Input.GetKeyUp (KeyCode.X) && lastTime >= cdNormalAttack) {
 			anim.SetTrigger ("NormalAttack");
-			hand.SetActive (true);
-		}
-
-		if (!anim.GetCurrentAnimatorStateInfo (0).IsName ("NormalAttack")) {
-			hand.SetActive (false);
 		}
 	}
 
