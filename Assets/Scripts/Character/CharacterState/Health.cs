@@ -30,7 +30,7 @@ public class Health : MonoBehaviour
 
 	public void takeDamage (float damage) {
 		if (health > 0f && damage > 0) {
-			health -= damage;
+			health = Mathf.Max (0, health - damage);
 		}
 	}
 
