@@ -18,7 +18,7 @@ public class InvisiblePlatform : MonoBehaviour {
 	}
 
 	public void checkVisibility() {
-		float distance = Vector2.Distance (transform.position, player.transform.position);
+		float distance = Vector2.Distance (platform.transform.position, player.transform.position);
 
 		if (distance <= visibleDistance) {
 			platform.SetActive (true);
