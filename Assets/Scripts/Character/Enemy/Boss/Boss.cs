@@ -36,10 +36,7 @@ public class Boss : Character {
 	}
 
 	public bool isAwake(){
-		if (state != null) {
-			return state.isAwake ();
-		}
-		return false;
+		return state.isAwake ();
 	}
 
 	public Player getPlayer(){

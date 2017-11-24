@@ -31,7 +31,7 @@ public class ActiveFinalLvl : MonoBehaviour {
 	}
 
 	public void checkShowInvisibleFloors() {
-		bool bossCondition = bossPlatform.active ? GameObject.FindObjectOfType<Boss> ().isAwake () : false;
+		bool bossCondition = bossPlatform.active && GameObject.FindObjectOfType<Boss> ().isAwake ();
 		if(bossCondition && removablePlatform.active && !invisiblePath.active) {
 			removablePlatform.SetActive(false);
 			invisiblePath.SetActive(true);
