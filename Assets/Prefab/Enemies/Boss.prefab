@@ -38,7 +38,6 @@ GameObject:
   - component: {fileID: 4268197097004918}
   - component: {fileID: 212930630351078466}
   - component: {fileID: 50744665109882264}
-  - component: {fileID: 114532514926759684}
   - component: {fileID: 114281517617109034}
   - component: {fileID: 114861477815732290}
   - component: {fileID: 114963481846006332}
@@ -120,7 +119,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1264255848274496}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.47, y: 0.71, z: 0}
+  m_LocalPosition: {x: 21, y: 6.04, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 4666725519415338}
@@ -180,7 +179,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.097699985
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -369,7 +368,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70281456502d041fe87cc179f8cd7140, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rangeOfAwake: 5
+  damage: 1000
+  defense: 1000
+  soulEffect: {fileID: 0}
+  cd: 0.5
+  lastTime: 0.5
+  rangeOfAwake: 2
+  hitSound: {fileID: 8300000, guid: fdd76e32e250a4bf383ea062f107f714, type: 3}
 --- !u!114 &114248396783735172
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -399,34 +404,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10000
   health: 10000
-  character: {fileID: 114532514926759684}
+  character: {fileID: 0}
   repeatDamagePeriod: 2
   healthBar: {fileID: 114861477815732290}
---- !u!114 &114532514926759684
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1264255848274496}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d20c1b1d282c48629b737294a54df4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 1000
-  defense: 1000
-  soulEffect: {fileID: 1223717416747438}
-  spriteRenderer: {fileID: 212930630351078466}
-  deadSpeed: 1e-13
-  timeOfDead: 1
-  experience: 2147483647
-  cd: 0.5
-  lastTime: 0.5
-  giveLoot: 0
-  hitSound: {fileID: 8300000, guid: fdd76e32e250a4bf383ea062f107f714, type: 3}
-  takeDamageSound: {fileID: 0}
-  normalSound: {fileID: 8300000, guid: 2c3edd5f6bd2741c49f0e0535bd78654, type: 3}
-  dieSound: {fileID: 0}
 --- !u!114 &114861477815732290
 MonoBehaviour:
   m_ObjectHideFlags: 1
