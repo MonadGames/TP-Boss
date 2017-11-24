@@ -15,4 +15,8 @@ public class AwakeState : BossState {
 			boss.getAI ().enabled = true;
 		}
 	}
+
+	public override bool isAwake (){
+		return true;
+	}
 }

@@ -5,4 +5,6 @@ using UnityEngine;
 public abstract class BossState : MonoBehaviour {
 
 	public abstract void update ();
+
+	public abstract bool isAwake ();
 }

@@ -18,4 +18,8 @@ public class AsleepState : BossState {
 			boss.setState(new AwakeState (boss));
 		}
 	}
+
+	public override bool isAwake (){
+		return false;
+	}
 }

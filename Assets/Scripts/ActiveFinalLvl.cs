@@ -4,13 +4,38 @@ using UnityEngine;
 
 public class ActiveFinalLvl : MonoBehaviour {
 
-	// Use this for initialization
+	public GameObject removablePlatform;
+	public GameObject bossPlatform;
+	public GameObject invisiblePath;
+
+	private Player player;
+
+
 	void Start () {
-		
+		player = GameObject.FindObjectOfType<Player> ();
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
-		
+		checkShowFinalLvl ();
 	}
+
+	public void checkShowFinalLvl() {
+		checkShowBoss ();
+		checkShowInvisibleFloors();
+	}
+
+	public void checkShowBoss() {
+		if (GameObject.FindObjectsOfType<Enemy> ().Length == 0 && !bossPlatform.active) {
+			bossPlatform.SetActive (true);
+		}
+	}
+
+	public void checkShowInvisibleFloors() {
+		bool bossCondition = bossPlatform.active ? GameObject.FindObjectOfType<Boss> ().isAwake () : false;
+		if(bossCondition && removablePlatform.active && !invisiblePath.active) {
+			removablePlatform.SetActive(false);
+			invisiblePath.SetActive(true);
+		}
+	}
+
 }

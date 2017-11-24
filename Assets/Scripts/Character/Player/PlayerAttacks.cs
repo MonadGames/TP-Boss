@@ -35,8 +35,10 @@ public class PlayerAttacks : MonoBehaviour {
 	}
 
 	public void checkNormalAttack() {
-		if (Input.GetKeyUp (KeyCode.X) && lastTime >= cdNormalAttack) {
-			anim.SetTrigger ("NormalAttack");
+		if(player.skillSelected != null){
+			if (Input.GetKeyUp (KeyCode.X) && lastTime >= cdNormalAttack) {
+				anim.SetTrigger ("NormalAttack");
+			}
 		}
 	}
 
