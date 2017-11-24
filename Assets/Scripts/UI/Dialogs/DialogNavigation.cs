@@ -27,9 +27,8 @@ public class DialogNavigation : MonoBehaviour
 	void OnTriggerStay2D(Collider2D other)
 	{
 		if (panel.activeInHierarchy || panel.activeSelf) {
-			movX.enabled = false;
-			movY.enabled = false;
-			print ("Movements Disabled");
+			movX.setEnabled (false);
+			movY.setEnabled (false);
 			foreach (DialogAction action in actions) {
 				action.showHighlight (false);
 			}
@@ -37,6 +36,9 @@ public class DialogNavigation : MonoBehaviour
 			selectNextAction (other);
 			selectPreviousAction (other);
 			applyAction (other);
+		} else {
+			movX.setEnabled (true);
+			movY.setEnabled (true);
 		}
 
 	}
@@ -64,12 +66,12 @@ public class DialogNavigation : MonoBehaviour
 	private void applyAction(Collider2D collider){
 		if (isPlayer(collider) && Input.GetKeyDown(KeyCode.Space)) {
 			print ("Movements Enabled");
-			movX.enabled = true;
-			movY.enabled = true;
 			currentAction.performAction ();
 			if (currentAction.closeDialogWhenFinished) {
 				panel.SetActive (false);
 			}
+			movX.setEnabled (true);
+			movY.setEnabled (true);
 		}
 	}
 

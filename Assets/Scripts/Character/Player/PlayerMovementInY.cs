@@ -16,6 +16,7 @@ public class PlayerMovementInY : MonoBehaviour {
 	private Animator anim;
 	private Rigidbody2D rb;
 	private Player player;
+	private bool imEnabled = true;
 
 
 	void Start () {
@@ -28,13 +29,21 @@ public class PlayerMovementInY : MonoBehaviour {
 	}
 
 	void Update () {
-		if (!player.isDead()) {
+		if (!player.isDead() && isEnabled()) {
 			checkForMove();
 		}
 
 		if (!grounded) {
 			rb.AddForce (gravity);
 		}
+	}
+
+	public bool isEnabled(){
+		return this.imEnabled;
+	}
+
+	public void setEnabled(bool enabled) {
+		this.imEnabled = enabled;
 	}
 
 	private void checkForMove(){

@@ -18,6 +18,7 @@ public class PlayerMovementInX : MonoBehaviour {
 	private Animator anim;
 	private Player player;
 	private AudioSource source;
+	private bool imEnabled = true;
 
 	void Start () {
 		isRight = true;
@@ -29,7 +30,7 @@ public class PlayerMovementInX : MonoBehaviour {
 	}
 
 	void FixedUpdate () {
-		if (!player.isDead()) {
+		if (!player.isDead() && this.isEnabled()) {
 			move ();
 			flip ();
 		}
@@ -37,6 +38,14 @@ public class PlayerMovementInX : MonoBehaviour {
 
 	public bool getIsRight(){
 		return this.isRight;
+	}
+
+	public bool isEnabled(){
+		return this.imEnabled;
+	}
+
+	public void setEnabled(bool enabled) {
+		this.imEnabled = enabled;
 	}
 		
 	private void move(){
