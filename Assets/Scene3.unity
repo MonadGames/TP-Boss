@@ -399,6 +399,26 @@ Prefab:
       propertyPath: energyBar
       value: 
       objectReference: {fileID: 685977628}
+    - target: {fileID: 198009500399261426, guid: 9d9a15bbe73034535be945c30d1eb839,
+        type: 2}
+      propertyPath: useRigidbodyForVelocity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198009500399261426, guid: 9d9a15bbe73034535be945c30d1eb839,
+        type: 2}
+      propertyPath: randomSeed
+      value: -2025885823
+      objectReference: {fileID: 0}
+    - target: {fileID: 50028335418083598, guid: 9d9a15bbe73034535be945c30d1eb839,
+        type: 2}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50028335418083598, guid: 9d9a15bbe73034535be945c30d1eb839,
+        type: 2}
+      propertyPath: m_Simulated
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9d9a15bbe73034535be945c30d1eb839, type: 2}
   m_IsPrefabParent: 0
@@ -4275,7 +4295,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &398218717
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10552,6 +10572,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlight: {fileID: 1771309494}
   closeDialogWhenFinished: 1
+  fountainParticleEffect: {fileID: 538583279}
   spell: {fileID: 1822325375283152, guid: f436281401bdd46069e5141025692f78, type: 2}
 --- !u!222 &816846164
 CanvasRenderer:
@@ -14611,6 +14632,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlight: {fileID: 1945895730}
   closeDialogWhenFinished: 1
+  fountainParticleEffect: {fileID: 2024955440}
   spell: {fileID: 1300811145041140, guid: b3b1f1cc99d374ceca42df54aa8b0a3f, type: 2}
 --- !u!222 &1443687647
 CanvasRenderer:
@@ -22897,7 +22919,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2076961308
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22999,7 +23021,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2081504502}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.21484375, y: -0.09286499, z: 100}
+  m_LocalPosition: {x: -0.21484375, y: -0.09288025, z: 100}
   m_LocalScale: {x: 0.008658009, y: 0.008658009, z: 0.008658009}
   m_Children:
   - {fileID: 1942982620}

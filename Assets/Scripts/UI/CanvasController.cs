@@ -24,19 +24,23 @@ public class CanvasController : MonoBehaviour {
 	IEnumerator waitAndGameOver(float waitTime) {
 		yield return new WaitForSecondsRealtime(waitTime);
 		panel.SetActive (true);
-		UI.SetActive (false);
+		showUI (false);
 	}
 
 	IEnumerator waitAndRestart(float waitTime) {
 		// Aca me gustaria poner una animacion de regreso o algun sonido.
 		yield return new WaitForSecondsRealtime(waitTime);
 		panel.SetActive (false);
-		UI.SetActive (true);
+		showUI (true);
 	}
 
 	public void restart() {
 		visible = false;
 		StartCoroutine(waitAndRestart(player.timeOfDead));
+	}
+
+	public void showUI(bool show) {
+		UI.SetActive (show);
 	}
 
 	public void goToMenu(){

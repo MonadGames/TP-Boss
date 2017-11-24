@@ -13,6 +13,7 @@ public class Npc : MonoBehaviour {
 	public List<Quest> quests;
 	private AudioSource source;
 	private SpeechTrigger trigger;
+	private bool isPlayer = false;
 
 	private bool initVoice = false;
 	private bool itsShowedText = false;
@@ -27,10 +28,21 @@ public class Npc : MonoBehaviour {
 		checkVoiceSound ();
 	}
 
+	void OnTriggerStay2D(Collider2D other) {
+		isPlayer = other.name == "Player";
+	}
+
+	void OnTriggerExit2D(Collider2D other) {
+		isPlayer = false;
+	}
+
 	public void checkVoiceSound() {
-		if (trigger.isKeyDown() && !initVoice) {
-			source.PlayOneShot (npcVoice, 0.3f);
+		if (isPlayer && trigger.isKeyDown() && !initVoice) {
+			if (!source.isPlaying) {
+				source.PlayOneShot (npcVoice, 0.3f);
+			}
 			initVoice = true;
+			isPlayer = false;
 		} 
 
 		if (!trigger.isKeyDown() && initVoice) {
