@@ -76,8 +76,7 @@ public class TW_MultiStrings_Regular : MonoBehaviour {
 
     void Start ()
     {
-        MultiStrings[0] = gameObject.GetComponent<Text>().text;
-        ORIGINAL_TEXT = gameObject.GetComponent<Text>().text;
+		ORIGINAL_TEXT = MultiStrings[0];
         gameObject.GetComponent<Text>().text = "";
         if (LaunchOnStart)
         {

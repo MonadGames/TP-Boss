@@ -14,41 +14,19 @@ public class SpeechTrigger : MonoBehaviour {
 	private Npc npc;
 	private bool questGiven = false;
 	private TW_MultiStrings_Regular typewriter;
-	private int stringCount;
 	bool isShowingMessage = false;
-
 	private bool keyDown = false;
+	private bool firstTalk = true;
 
 	void Start() {
 		typewriter = text.GetComponent<TW_MultiStrings_Regular> ();
-		stringCount = typewriter.MultiStrings.Length;
 		panel.SetActive(false);
 		npc = gameObject.GetComponent<Npc> ();
 	}
 
 	void Update() {
 		keyDown = Input.GetKeyDown (KeyCode.E);
-
-		//initializeText();
 	}
-
-	/*
-	public void initializeText() {
-		if(// es la primera vez){
-			typewriter = npc.presentationText
-			} else {
-				typewriter.resetCounter.
-				typewriter = npc.defaultText
-
-					// show quests
-
-			}
-
-
-			// chequear que se termino el text.
-
-
-	} */
 
 	void OnTriggerEnter2D(Collider2D other) {
 		showHint (isPlayer(other));
@@ -59,6 +37,7 @@ public class SpeechTrigger : MonoBehaviour {
 		if (shouldShowMessage (other)) {
 			TurnOnMessage ();
 			keyDown = false;
+			firstTalk = false;
 		} else if (shouldShowNextString (other)) {
 			showNextString();
 			keyDown = false;
@@ -68,25 +47,48 @@ public class SpeechTrigger : MonoBehaviour {
 		}
 	}
 
+	private int stringCount(){
+		return typewriter.MultiStrings.Length;
+	}
+
 	private bool isPlayer(Collider2D other) {
 		return other.name == "Player";
 	}
 
 	private void giveQuest(Collider2D other){
-		if (typewriter.index_of_string == stringCount -1 && isPlayer(other) && !questGiven) {
+		Player player = other.GetComponent<Player> ();
+
+		if (!firstTalk && isPlayer(other) && shouldGiveQuest(player) && isShowingMessage) {
 			// REFACTORIZAR ESE CODIGO FEO.
-			Quest mainQuest = npc.getMainQuest ();
-			Player player = other.GetComponent<Player> ();
 			if (player.getMainQuest () == null) {
-				player.setMainQuest (mainQuest);
+				player.setMainQuest (npc.getMainQuest());
 				questGiven = true;
 			} else {
-				if (player.getMainQuest ().isFinishQuest (player)) {
-					player.getMainQuest ().completeQuest (player);
-					player.setMainQuest (mainQuest);
-					questGiven = true;
-				}
+				completeQuestAndAssignNewOne (player);
 			}
+		}
+	}
+
+	private bool isLastString() {
+		return typewriter.index_of_string == stringCount() - 1;
+	}
+
+	private bool shouldGiveQuest(Player player){
+		bool questAvailable = !questGiven || (npc.getMainQuest() != null && npc.getMainQuest().isFinishQuest (player));
+		return isLastString() && questAvailable;
+	}
+
+	private void completeQuestAndAssignNewOne(Player player) {
+		// La quest actual del player se completo
+		if (player.getMainQuest ().isFinishQuest (player)) {
+			player.getMainQuest ().completeQuest (player);
+			// La quest del NPC se completo (eran la misma)
+			if (npc.getMainQuest().isFinishQuest (player)) {
+				// Actualizar mainQuest del NPC con la siguiente en la lista.
+				npc.updateMainQuest ();
+			}
+			player.setMainQuest (npc.getMainQuest());
+			questGiven = true;
 		}
 	}
 
@@ -97,7 +99,14 @@ public class SpeechTrigger : MonoBehaviour {
 	}
 
 	private void showNextString() {
+		// chequear que se termino el text.
+		if (isLastString ()) {
+			print ("Last string");
+			typewriter.MultiStrings = npc.text ();
+			typewriter.index_of_string = typewriter.MultiStrings.Length;
+		}
 		typewriter.NextString ();
+
 	}
 
 	private void showHint(bool show){
@@ -125,6 +134,8 @@ public class SpeechTrigger : MonoBehaviour {
 		panel.SetActive(true);
 		showHint(false);
 		isShowingMessage = true;
+		typewriter.MultiStrings = npc.text();
+		resetCounters ();
 		typewriter.StartTypewriter ();
 	}
 

@@ -13,6 +13,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questName: "Un sue\xF1o hecho realidad"
   description: "Re\xFAnete con Gwendolyn en el altar del destino"
-  player: {fileID: 114615968477696394, guid: 9d9a15bbe73034535be945c30d1eb839, type: 2}
+  historyText:
+  - "Hola Ismael, probablemente no me conozcas pero yo te he guiado en cada uno de
+    tus sue\xF1os..."
+  - "te preguntaras que hacemos aqu\xED, bueno... hoy has pedido algo muy especial,"
+  - 'lo has deseado con tanta intensidad que inconscientemente creaste una forma de
+    regresar sin dormir!. '
+  - "Pero hay un problema, resulta que lo que acabas de hacer ha cambiado dr\xE1sticamente
+    este mundo."
+  - No estoy segura pero creo que el balance entre el bien y el mal ha sido destruido,
+  - "solo tu puedes cambiar esta situaci\xF3n, aunque all\xED afuera asechan grandes
+    peligros."
+  - "Oh no! all\xED vienen!, pronto... huye nos encontraremos en el altar del destino,"
+  - "all\xED podre contarte un poco mas de todo esto. Nos vemos pronto Ismael. Y recuerda,
+    ten cuidado...."
+  finishText: []
   reward: {fileID: 11400000, guid: db58c6a7093694777891af0c6dec1afc, type: 2}
   requirement: {fileID: 11400000, guid: a9cb5aa5e809d46c08a7859c76c3ff1d, type: 2}

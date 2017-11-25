@@ -13,6 +13,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questName: Elige tu destino
   description: Elige sabiamente tu destino.
-  player: {fileID: 114615968477696394, guid: 9d9a15bbe73034535be945c30d1eb839, type: 2}
+  historyText:
+  - "Que alivio!  aun sigues en una pieza, me alegra que no te hayan hecho ning\xFAn
+    da\xF1o. "
+  - "Como te dec\xEDa, el mundo de tus sue\xF1os esta en desequilibro"
+  - y sera necesario que tu influyas en el flujo de las cosas.
+  - "Este altar lleva mas tiempo aqu\xED del que tu podr\xEDas creer, de hecho nadie
+    sabe de donde proviene."
+  - "Antiguamente las personas de este mundo realizaban oraciones a sus dioses y ellos
+    les respond\xEDan. "
+  - Esos tiempos han pasado pero tal vez puedas lograr que te escuchen, despues de
+    todo, eres el creador de este mismo mundo,
+  - '... de fuerzas que ni tu mismo imaginas.'
+  - "Adelante, realiza una oraci\xF3n a aquel dios del que quieras recibir ayuda."
+  finishText:
+  - Ya haz recibido tu bendicion.
   reward: {fileID: 11400000, guid: db58c6a7093694777891af0c6dec1afc, type: 2}
   requirement: {fileID: 11400000, guid: 3fcb0d9b298df4399829e2c57b4f8253, type: 2}
