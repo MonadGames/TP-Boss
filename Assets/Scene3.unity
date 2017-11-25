@@ -16078,6 +16078,7 @@ MonoBehaviour:
   popupEnergy: {fileID: 1066102827685682, guid: 79d596e055c7047baa9d394e0161b740,
     type: 2}
   popupSave: {fileID: 122798, guid: fecefbf26e7984e4ba31cba9302a64cb, type: 2}
+  popUpWarning: {fileID: 122798, guid: d53545b6a8c6c4085b5648c811a5de2e, type: 2}
   canvas: {fileID: 1734111453}
 --- !u!114 &1475438930
 MonoBehaviour:

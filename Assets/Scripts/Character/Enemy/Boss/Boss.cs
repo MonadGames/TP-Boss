@@ -16,6 +16,7 @@ public class Boss : Character {
 	private Player player;
 	private Animator anim;
 	private GameSystem gameSystem;
+	private FloatingTextController textSystem;
 
 
 	void Start () {
@@ -25,6 +26,7 @@ public class Boss : Character {
 		state = new AsleepState (this);
 		source = GetComponent<AudioSource> ();
 		gameSystem = GameObject.FindObjectOfType<GameSystem> ();
+		textSystem = GameObject.FindObjectOfType<FloatingTextController> ();
 	}
 
 	void Update () {
@@ -34,6 +36,10 @@ public class Boss : Character {
 
 	public void restartPos() {
 		transform.position = originalPos;
+	}
+
+	public void warningMessage() {
+		textSystem.createWarningMessage ("RAPIDO...CORRE!!!", player.transform);
 	}
 
 	public bool isAwake(){
