@@ -17,6 +17,7 @@ public class Boss : Character {
 	private Animator anim;
 	private GameSystem gameSystem;
 	private FloatingTextController textSystem;
+	private ActiveFinalLvl finalLvl;
 
 
 	void Start () {
@@ -27,6 +28,7 @@ public class Boss : Character {
 		source = GetComponent<AudioSource> ();
 		gameSystem = GameObject.FindObjectOfType<GameSystem> ();
 		textSystem = GameObject.FindObjectOfType<FloatingTextController> ();
+		finalLvl = GameObject.FindObjectOfType<ActiveFinalLvl> ();
 	}
 
 	void Update () {
@@ -79,7 +81,7 @@ public class Boss : Character {
 			}
 
 			if (collision.gameObject.tag == "DeathBoss") {
-				gameSystem.surviveToBoss ();
+				finalLvl.surviveToBoss ();
 				Destroy (gameObject);
 			}
 		}

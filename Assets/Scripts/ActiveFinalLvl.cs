@@ -7,6 +7,7 @@ public class ActiveFinalLvl : MonoBehaviour {
 	public GameObject removablePlatform;
 	public GameObject bossPlatform;
 	public GameObject invisiblePath;
+	public GameObject finalPresentation;
 
 	public GameObject cameraPlayer;
 	public AudioClip suspensiveSong;
@@ -40,6 +41,10 @@ public class ActiveFinalLvl : MonoBehaviour {
 			invisiblePath.SetActive(true);
 			activeSuspensiveSong ();
 		}
+	}
+
+	public void surviveToBoss() {
+		finalPresentation.SetActive (true);
 	}
 
 	public void activeSuspensiveSong() {

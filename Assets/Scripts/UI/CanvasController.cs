@@ -15,7 +15,6 @@ public class CanvasController : MonoBehaviour {
 		player = GameObject.FindObjectOfType<Player> ();
 	}
 
-
 	public void gameOver(){
 		visible = true;
 		StartCoroutine(waitAndGameOver(player.timeOfDead));
@@ -46,4 +45,6 @@ public class CanvasController : MonoBehaviour {
 	public void goToMenu(){
 		// Por ahora no tenemos menu, asque no hace nada.
 	}
+
+
 }
