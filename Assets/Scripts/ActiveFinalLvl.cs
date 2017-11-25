@@ -8,6 +8,9 @@ public class ActiveFinalLvl : MonoBehaviour {
 	public GameObject bossPlatform;
 	public GameObject invisiblePath;
 
+	public GameObject cameraPlayer;
+	public AudioClip suspensiveSong;
+
 	private Player player;
 
 
@@ -27,6 +30,9 @@ public class ActiveFinalLvl : MonoBehaviour {
 	public void checkShowBoss() {
 		if (GameObject.FindObjectsOfType<Enemy> ().Length == 0 && !bossPlatform.active) {
 			bossPlatform.SetActive (true);
+			AudioSource source = cameraPlayer.GetComponent<AudioSource> ();
+			source.clip = suspensiveSong;
+			source.Play ();
 		}
 	}
 

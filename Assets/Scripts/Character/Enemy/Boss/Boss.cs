@@ -31,12 +31,6 @@ public class Boss : Character {
 		lastTime += Time.deltaTime;
 	}
 
-	void OnCollisionEnter2D(Collision2D collision) {
-		if (collision.gameObject.tag == "StopBoss") {
-			Destroy (gameObject);
-		}
-	}
-
 	public bool isAwake(){
 		return state.isAwake ();
 	}
