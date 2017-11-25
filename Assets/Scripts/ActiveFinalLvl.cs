@@ -30,9 +30,6 @@ public class ActiveFinalLvl : MonoBehaviour {
 	public void checkShowBoss() {
 		if (GameObject.FindObjectsOfType<Enemy> ().Length == 0 && !bossPlatform.active) {
 			bossPlatform.SetActive (true);
-			AudioSource source = cameraPlayer.GetComponent<AudioSource> ();
-			source.clip = suspensiveSong;
-			source.Play ();
 		}
 	}
 
@@ -41,7 +38,14 @@ public class ActiveFinalLvl : MonoBehaviour {
 		if(bossCondition && removablePlatform.active && !invisiblePath.active) {
 			removablePlatform.SetActive(false);
 			invisiblePath.SetActive(true);
+			activeSuspensiveSong ();
 		}
+	}
+
+	public void activeSuspensiveSong() {
+		AudioSource source = cameraPlayer.GetComponent<AudioSource> ();
+		source.clip = suspensiveSong;
+		source.Play ();
 	}
 
 }
