@@ -6,8 +6,8 @@ public class Npc : MonoBehaviour {
 
 	public AudioClip npcVoice;
 
-	public string defaultText;
-	public string presentationText;
+	public string[] defaultText;
+	public string[] presentationText;
 	public Quest mainQuest;
 
 	public List<Quest> quests;
@@ -19,7 +19,6 @@ public class Npc : MonoBehaviour {
 	private bool itsShowedText = false;
 
 	void Start () {
-		quests = new List<Quest> ();
 		source = GetComponent<AudioSource> ();
 		trigger = GetComponent<SpeechTrigger> ();
 	}
@@ -50,16 +49,31 @@ public class Npc : MonoBehaviour {
 		}
 	}
 
-	public string text() {
+	public string[] text() {
+		// CASO 1: Primera vez que hablas
+		// - si tiene mainquest, le tira el texto de la quest 
+		// -- setear multistrings a description
+		// - si no, muestra texto por default
+
+		// CASO 2: quest sin completar 
+		// - mostrar texto de la quest -- description [string]
+		// CASO 3: quest completa
+		// - mostrar finish quest
+
+		string[] textToShow = defaultText;
 		if (!itsShowedText) {
-			return presentationText;
+			textToShow = presentationText;
+			itsShowedText = true;
+		} else if (mainQuest != null) {
+			print ("Show Main quest text");
+			textToShow = questText (mainQuest);
 		}
 
-		return defaultText;
+		return textToShow;
 	} 
 
-	public string questText(Quest quest) {
-		if (quest.isFinishQuest (GetComponent<Player>())) {
+	public string[] questText(Quest quest) {
+		if (quest.isFinishQuest (GameObject.FindObjectOfType<Player>())) {
 			return quest.finishText;
 		} 
 
@@ -70,8 +84,23 @@ public class Npc : MonoBehaviour {
 		return mainQuest != null;
 	}
 
+	public bool firstTalk(){
+		return itsShowedText;
+	}
+
 	public Quest getMainQuest(){
 		return mainQuest;
+	}
+
+	public void updateMainQuest() {
+		Quest quest = null;
+
+		if (quests.Count > 0) {
+			quest = quests.Find(aquest => true);
+			quests.Remove (quest);
+		}
+
+		mainQuest = quest;
 	}
 
 	public void setMainQuest(Quest quest){

@@ -12,4 +12,6 @@ public abstract class Requirement : ScriptableObject {
 	}
 
 	public virtual void checkProgress(Player player){}
+
+	public virtual void notify(string message){}
 }

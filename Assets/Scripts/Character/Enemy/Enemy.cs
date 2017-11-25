@@ -11,6 +11,7 @@ public class Enemy : Character {
 	public float cd = 0.5f;
 	public float lastTime = 0.5f;
 	public bool giveLoot;
+	public string type = "enemy";
 
 	public AudioClip hitSound;
 	public AudioClip takeDamageSound;
@@ -21,15 +22,18 @@ public class Enemy : Character {
 	private Player player;
 	private EnemyAI enemyAI;
 	private LootSystem lootSystem;
+	private EnemyNotificationSystem notificationSystem;
 
 	
 	void Start () {
-		health = gameObject.GetComponent<Health>();
-		enemyAI = gameObject.GetComponent<EnemyAI>();
-		spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-		player = GameObject.FindObjectOfType<Player> ();
-		textController = GameObject.FindObjectOfType<FloatingTextController> ();
-		lootSystem = GameObject.FindObjectOfType<LootSystem> ();
+		health 				= gameObject.GetComponent<Health>();
+		enemyAI 			= gameObject.GetComponent<EnemyAI>();
+		spriteRenderer 		= gameObject.GetComponent<SpriteRenderer>();
+		player 				= GameObject.FindObjectOfType<Player> ();
+		textController 		= GameObject.FindObjectOfType<FloatingTextController> ();
+		lootSystem 			= GameObject.FindObjectOfType<LootSystem> ();
+		notificationSystem 	= GameObject.FindObjectOfType<EnemyNotificationSystem> ();
+
 		giveLoot = false;
 		source = GetComponent<AudioSource> ();
 		source.loop = true;
@@ -53,6 +57,7 @@ public class Enemy : Character {
 			} else {
 				this.die ();
 				loot ();
+				notificationSystem.notifyDeath (type);
 				Destroy(gameObject, 1f);
 			}
 		}

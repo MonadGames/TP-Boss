@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08fe6fd6d60c54f5b84ac830a42b652a, type: 3}
+  m_Name: Q3-KillAllEnemies
+  m_EditorClassIdentifier: 
+  questName: Mata a todos los monstruos
+  description: Usa tu poder para liberar nuestro mundo de estas abominaciones
+  historyText:
+  - Ahora usa tu poder para liberar nuestro mundo de estas abominaciones
+  - Matalos a todos.
+  - "Te estar\xE9 esperando cerca del portal."
+  finishText:
+  - Bien hecho. Eso era una prueba.
+  reward: {fileID: 11400000, guid: db58c6a7093694777891af0c6dec1afc, type: 2}
+  requirement: {fileID: 11400000, guid: 5fbe6079bf61a45e6a9132494bf4bb63, type: 2}
