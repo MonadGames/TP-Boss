@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 114438179338362120}
   m_Layer: 0
   m_Name: InvisibleFloor
-  m_TagString: ground
+  m_TagString: impulseGround
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39,11 +39,11 @@ GameObject:
   - component: {fileID: 60003263410589956}
   m_Layer: 0
   m_Name: Platform
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4065648860583444
 Transform:
   m_ObjectHideFlags: 1
@@ -51,7 +51,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1083821201674604}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.3, y: 1.5999999, z: 0}
+  m_LocalPosition: {x: 22.75, y: 4.55, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4950814775431418}
@@ -65,7 +65,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1393971275655082}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.07, y: -1.1, z: 0}
+  m_LocalPosition: {x: 1.68, y: -0.72, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4065648860583444}
@@ -135,6 +135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platform: {fileID: 1393971275655082}
   visibleDistance: 0.5
+  savePosition: {x: 24, y: 1.6, z: 0}
 --- !u!212 &212365688888658314
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -16,6 +16,7 @@ public class AsleepState : BossState {
 		if (range <= boss.rangeOfAwake) {
 			boss.getAnim().SetTrigger ("Awake");
 			boss.setState(new AwakeState (boss));
+			boss.warningMessage ();
 		}
 	}
 

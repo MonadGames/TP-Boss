@@ -8,6 +8,7 @@ public class Boss : Character {
 	public float lastTime = 0.5f;
 	public float rangeOfAwake;
 	public AudioClip hitSound;
+	public Vector3 originalPos;
 
 	private BossState state;
 	private AudioSource source;
@@ -15,6 +16,7 @@ public class Boss : Character {
 	private Player player;
 	private Animator anim;
 	private GameSystem gameSystem;
+	private FloatingTextController textSystem;
 
 
 	void Start () {
@@ -24,11 +26,20 @@ public class Boss : Character {
 		state = new AsleepState (this);
 		source = GetComponent<AudioSource> ();
 		gameSystem = GameObject.FindObjectOfType<GameSystem> ();
+		textSystem = GameObject.FindObjectOfType<FloatingTextController> ();
 	}
 
 	void Update () {
 		state.update ();
 		lastTime += Time.deltaTime;
+	}
+
+	public void restartPos() {
+		transform.position = originalPos;
+	}
+
+	public void warningMessage() {
+		textSystem.createWarningMessage ("RAPIDO...CORRE!!!", player.transform);
 	}
 
 	public bool isAwake(){
