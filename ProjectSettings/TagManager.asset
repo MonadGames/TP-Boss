@@ -12,6 +12,7 @@ TagManager:
   - Canvas
   - Knife
   - Hand
+  - DeathBoss
   layers:
   - Default
   - TransparentFX

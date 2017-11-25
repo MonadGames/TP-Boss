@@ -44,6 +44,10 @@ public class GameSystem : MonoBehaviour {
 		}
 	}
 
+	public void surviveToBoss() {
+		// Aca podriamos activar una animacion que se ponga todo borroso y diga el nombre del juego.
+	}
+
 	public void restartToCheckPoint(){
 		Vector3 playerPos = player.gameObject.transform.localPosition;
 		playerPos = checkpoint;

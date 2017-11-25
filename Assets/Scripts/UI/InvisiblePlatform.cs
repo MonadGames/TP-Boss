@@ -6,11 +6,14 @@ public class InvisiblePlatform : MonoBehaviour {
 
 	public GameObject platform;
 	public float visibleDistance;
+	public Vector3 savePosition;
 
 	private Player player;
+	private GameSystem gameSystem;
 
 	void Start () {
 		player = GameObject.FindObjectOfType<Player> ();
+		gameSystem = GameObject.FindObjectOfType<GameSystem> ();
 	}
 
 	void Update () {
@@ -22,6 +25,7 @@ public class InvisiblePlatform : MonoBehaviour {
 
 		if (distance <= visibleDistance) {
 			platform.SetActive (true);
+			gameSystem.save (savePosition);
 		}
 	}
 }

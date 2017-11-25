@@ -11,7 +11,7 @@ public class AwakeState : BossState {
 	}
 
 	public override void update() {
-		if (!boss.getAI ().enabled) {
+		if (!boss.getAI ().enabled && boss.IsPlayingIdle()) {
 			boss.getAI ().enabled = true;
 		}
 	}

@@ -14,6 +14,7 @@ public class Boss : Character {
 	private ChargeEnemy iaAttack;
 	private Player player;
 	private Animator anim;
+	private GameSystem gameSystem;
 
 
 	void Start () {
@@ -22,6 +23,7 @@ public class Boss : Character {
 		player = GameObject.FindObjectOfType<Player> ();
 		state = new AsleepState (this);
 		source = GetComponent<AudioSource> ();
+		gameSystem = GameObject.FindObjectOfType<GameSystem> ();
 	}
 
 	void Update () {
@@ -51,6 +53,10 @@ public class Boss : Character {
 		return iaAttack;
 	}
 
+	public bool IsPlayingIdle() {
+		return anim.GetCurrentAnimatorStateInfo(0).IsName ("Idle");
+	}
+
 	public void setState(BossState newState) {
 		state = newState;
 	}
@@ -65,6 +71,11 @@ public class Boss : Character {
 				attack (collision.gameObject.GetComponent<Player> ());
 				source.PlayOneShot (hitSound, 1f);
 				lastTime = 0;
+			}
+
+			if (collision.gameObject.tag == "DeathBoss") {
+				gameSystem.surviveToBoss ();
+				Destroy (gameObject);
 			}
 		}
 	}
