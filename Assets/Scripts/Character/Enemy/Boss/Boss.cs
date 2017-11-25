@@ -8,6 +8,7 @@ public class Boss : Character {
 	public float lastTime = 0.5f;
 	public float rangeOfAwake;
 	public AudioClip hitSound;
+	public Vector3 originalPos;
 
 	private BossState state;
 	private AudioSource source;
@@ -29,6 +30,10 @@ public class Boss : Character {
 	void Update () {
 		state.update ();
 		lastTime += Time.deltaTime;
+	}
+
+	public void restartPos() {
+		transform.position = originalPos;
 	}
 
 	public bool isAwake(){
