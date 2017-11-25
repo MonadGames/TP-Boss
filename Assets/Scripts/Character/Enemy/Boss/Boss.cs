@@ -67,7 +67,7 @@ public class Boss : Character {
 
 	public void OnCollisionStay2D (Collision2D collision) {
 		if (iaAttack.enabled) {
-			if (collision.gameObject.name == "Player" && lastTime >= cd) {
+			if (collision.gameObject.name == "Player" && lastTime >= cd && !player.isDead()) {
 				attack (collision.gameObject.GetComponent<Player> ());
 				source.PlayOneShot (hitSound, 1f);
 				lastTime = 0;
