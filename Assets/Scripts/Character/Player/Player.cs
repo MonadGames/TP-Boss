@@ -162,6 +162,8 @@ public class Player : Character {
 
 	public void setMainQuest(Quest principalQuest){
 		this.mainQuest = principalQuest;
+		QuestWatcherUI questWatcher = GameObject.FindObjectOfType<QuestWatcherUI> ();
+		questWatcher.showQuest ();
 	}
 
 	public Quest getMainQuest(){

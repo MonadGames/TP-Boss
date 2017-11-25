@@ -6,6 +6,7 @@ public class QuestWatcherUI : MonoBehaviour
 {
 	public Player player;
 	public Text questDescription;
+	public GameObject questContainer;
 	// Use this for initialization
 	void Start () {
 	
@@ -17,6 +18,10 @@ public class QuestWatcherUI : MonoBehaviour
 		if (quest != null) {
 			questDescription.text = player.getMainQuest ().getDescription();
 		}
+	}
+
+	public void showQuest(){
+		questContainer.SetActive(true);
 	}
 }
 
