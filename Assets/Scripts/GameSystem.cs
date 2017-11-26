@@ -10,6 +10,7 @@ public class GameSystem : MonoBehaviour {
 	private Player player;
 	private Vector3 checkpoint;
 	private CanvasController canvasController;
+	public bool uiLocked = false;
 
 	void Start () {
 		player = GameObject.FindObjectOfType<Player> ();
@@ -40,8 +41,9 @@ public class GameSystem : MonoBehaviour {
 	}
 
 	public void checkOpenMenu (){
-		if (Input.GetKeyDown (KeyCode.Escape)) {
+		if (Input.GetKeyDown (KeyCode.Escape) && getUILock()) {
 			controllerMenu.SetActive (!controllerMenu.active);
+			releaseUILock ();
 		}
 	}
 
@@ -63,5 +65,24 @@ public class GameSystem : MonoBehaviour {
 		if (player.isDead () && !canvasController.visible) {
 			canvasController.gameOver ();	
 		}
+	}
+
+	public bool getUILock() {
+		if (uiLocked) {
+			return !uiLocked;
+		} else {
+			uiLocked = true;
+			return uiLocked;
+		}
+	}
+
+	public void releaseUILock(){
+		StartCoroutine(WaitAndRelease (0.1f));
+	}
+
+	private IEnumerator WaitAndRelease(float waitTime)
+	{
+		yield return new WaitForSeconds(waitTime);
+		uiLocked = false;
 	}
 }

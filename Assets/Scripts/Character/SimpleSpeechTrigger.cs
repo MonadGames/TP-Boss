@@ -13,11 +13,13 @@ public class SimpleSpeechTrigger : MonoBehaviour
 	private int stringCount;
 	bool isShowingMessage = false;
 	private bool keyDown = false;
+	private GameSystem system;
 
 	void Start() {
 		typewriter = text.GetComponent<TW_MultiStrings_Regular> ();
 		stringCount = typewriter.MultiStrings.Length;
 		panel.SetActive(false);
+		system = GameObject.FindObjectOfType<GameSystem> ();
 	}
 
 	void Update() {
@@ -31,6 +33,7 @@ public class SimpleSpeechTrigger : MonoBehaviour
 	void OnTriggerStay2D(Collider2D other) {
 		if (shouldShowMessage (other)) {
 			TurnOnMessage ();
+			system.getUILock ();
 			keyDown = false;
 		} else if (shouldShowNextString (other)) {
 			showNextString();
@@ -38,6 +41,7 @@ public class SimpleSpeechTrigger : MonoBehaviour
 		}
 		if (Input.GetKeyDown (KeyCode.Escape)) {
 			TurnOffMessage ();
+			system.releaseUILock ();
 		}
 	}
 
@@ -50,6 +54,7 @@ public class SimpleSpeechTrigger : MonoBehaviour
 		if (isPlayer(other))
 		{
 			TurnOffMessage();
+			system.releaseUILock ();
 		}
 	}
 

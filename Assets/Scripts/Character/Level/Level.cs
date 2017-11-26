@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Level {
 
-	private float level;
+	private int level;
 	private float actualExperience;
 	private float neededExperienceForLevelUp;
 	private Stats stats;
@@ -26,7 +26,7 @@ public class Level {
 		return neededExperienceForLevelUp;
 	}
 
-	public float getLevel(){
+	public int getLevel(){
 		return level;
 	}
 

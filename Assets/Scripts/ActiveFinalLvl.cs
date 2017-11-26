@@ -48,7 +48,8 @@ public class ActiveFinalLvl : MonoBehaviour {
 		AudioSource source = cameraPlayer.GetComponent<AudioSource> ();
 		source.clip = backgroundSong;
 		source.Play ();
-
+		CanvasController uiController = GameObject.FindObjectOfType<CanvasController> ();
+		uiController.showUI (false);
 		finalPresentation.SetActive (true);
 	}
 

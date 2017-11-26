@@ -106,5 +106,9 @@ public class Stats : MonoBehaviour {
 	public Sanity getSanity() {
 		return sanity;
 	}
+
+	public int getLevel() {
+		return level.getLevel ();
+	}
 }
 

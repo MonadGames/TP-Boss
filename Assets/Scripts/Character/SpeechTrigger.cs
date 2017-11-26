@@ -17,11 +17,13 @@ public class SpeechTrigger : MonoBehaviour {
 	bool isShowingMessage = false;
 	private bool keyDown = false;
 	private bool firstTalk = true;
+	private GameSystem system;
 
 	void Start() {
 		typewriter = text.GetComponent<TW_MultiStrings_Regular> ();
 		panel.SetActive(false);
 		npc = gameObject.GetComponent<Npc> ();
+		system = GameObject.FindObjectOfType<GameSystem> ();
 	}
 
 	void Update() {
@@ -36,6 +38,7 @@ public class SpeechTrigger : MonoBehaviour {
 		giveQuest (other);
 		if (shouldShowMessage (other)) {
 			TurnOnMessage ();
+			system.getUILock ();
 			keyDown = false;
 			firstTalk = false;
 		} else if (shouldShowNextString (other)) {
@@ -44,6 +47,7 @@ public class SpeechTrigger : MonoBehaviour {
 		}
 		if (Input.GetKeyDown (KeyCode.Escape)) {
 			TurnOffMessage ();
+			system.releaseUILock ();
 		}
 	}
 
@@ -95,6 +99,7 @@ public class SpeechTrigger : MonoBehaviour {
 	void OnTriggerExit2D(Collider2D other) {
 		if (isPlayer(other)) {
 			TurnOffMessage();
+			system.releaseUILock ();
 		}
 	}
 

@@ -37,8 +37,7 @@ public class DialogNavigation : MonoBehaviour
 			selectPreviousAction (other);
 			applyAction (other);
 		} else {
-			movX.setEnabled (true);
-			movY.setEnabled (true);
+			StartCoroutine (WaitAndEnableMovements (0.1f));
 		}
 
 	}
@@ -70,9 +69,15 @@ public class DialogNavigation : MonoBehaviour
 			if (currentAction.closeDialogWhenFinished) {
 				panel.SetActive (false);
 			}
-			movX.setEnabled (true);
-			movY.setEnabled (true);
+			StartCoroutine (WaitAndEnableMovements (0.1f));
 		}
+	}
+
+	private IEnumerator WaitAndEnableMovements(float waitTime)
+	{
+		yield return new WaitForSeconds(waitTime);
+		movX.setEnabled (true);
+		movY.setEnabled (true);
 	}
 
 }
