@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameSystem : MonoBehaviour {
 
 	public GameObject[] npcs;
+	public GameObject controllerMenu;
 
 	private Player player;
 	private Vector3 checkpoint;
@@ -24,6 +25,8 @@ public class GameSystem : MonoBehaviour {
 			checkContinue ();
 			checkBack ();
 		}
+
+		checkOpenMenu ();
 	}
 
 	public void checkBack(){
@@ -35,7 +38,12 @@ public class GameSystem : MonoBehaviour {
 	public void save(Vector3 vector) {
 		checkpoint = vector;
 	}
-		
+
+	public void checkOpenMenu (){
+		if (Input.GetKeyDown (KeyCode.Escape)) {
+			controllerMenu.SetActive (!controllerMenu.active);
+		}
+	}
 
 	public void checkContinue(){
 		if (Input.GetKeyDown (KeyCode.E)) {

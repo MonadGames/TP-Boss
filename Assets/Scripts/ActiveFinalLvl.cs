@@ -11,6 +11,7 @@ public class ActiveFinalLvl : MonoBehaviour {
 
 	public GameObject cameraPlayer;
 	public AudioClip suspensiveSong;
+	public AudioClip backgroundSong;
 
 	private Player player;
 
@@ -44,6 +45,10 @@ public class ActiveFinalLvl : MonoBehaviour {
 	}
 
 	public void surviveToBoss() {
+		AudioSource source = cameraPlayer.GetComponent<AudioSource> ();
+		source.clip = backgroundSong;
+		source.Play ();
+
 		finalPresentation.SetActive (true);
 	}
 
