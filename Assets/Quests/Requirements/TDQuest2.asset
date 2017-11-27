@@ -11,5 +11,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e3aaed7fbf1b4223af035d376c49d3c, type: 3}
   m_Name: TDQuest2
   m_EditorClassIdentifier: 
-  isCompleted: 0
-  player: {fileID: 0}
+  isCompleted: 1

@@ -14,7 +14,11 @@ public class Quest : ScriptableObject {
 	public Requirement requirement;
 
 	public bool isFinishQuest (Player player){
-		return requirement.isComplete (player);
+		bool complete = requirement.isComplete (player);
+		if (complete) {
+			Debug.Log ("Quest Completed: " + description);
+		}
+		return complete;
 	}
 
 	// Tendria sentido que el npc diga completar Mision

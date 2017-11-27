@@ -16,7 +16,7 @@ public class KillEnemiesRequirement : Requirement {
 
 	}
 
-	public void Awake() {
+	void OnEnable() {
 		EnemyNotificationSystem system = GameObject.FindObjectOfType<EnemyNotificationSystem> ();
 		system.subscribe (this);
 	}

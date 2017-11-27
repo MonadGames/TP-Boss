@@ -6,6 +6,7 @@ using UnityEngine;
 public class TakeAdecisionRequirement : Requirement {
 
 	public void takedecision() {
+		Debug.Log ("TAKE DECISION");
 		isCompleted = true;
 	}
 
