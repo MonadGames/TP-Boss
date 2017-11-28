@@ -19,7 +19,7 @@ public class Stats : MonoBehaviour {
 	void Start(){
 		this.player = gameObject.GetComponent<Player>();
 		level = new Level(this);
-		sanity = new Kind (this, 0, 0);
+		sanity = new Neutral (this, 0, 0);
 		inventory = new Inventory();
 		audioSource = GetComponent<AudioSource>();
 	}

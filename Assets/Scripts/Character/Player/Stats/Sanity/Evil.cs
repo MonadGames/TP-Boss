@@ -19,4 +19,8 @@ public class Evil : Sanity {
 	public new float modifyDefense(float def) {
 		return def / 1.2f;
 	}
+
+	public new bool isBad() {
+		return true;
+	}
 }

@@ -42,4 +42,16 @@ public abstract class Sanity {
 	public int getCountOfGoodActions() {
 		return countOfGoodActions; 
 	}
+
+	public bool isNetrual() {
+		return false;
+	}
+
+	public bool isGood() {
+		return false;
+	}
+
+	public bool isBad() {
+		return false;
+	}
 }

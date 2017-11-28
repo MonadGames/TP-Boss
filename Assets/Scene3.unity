@@ -2220,7 +2220,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.72200006, y: 0.15218218}
   m_AnchorMax: {x: 0.9691676, y: 0.29041857}
-  m_AnchoredPosition: {x: -0.49998856, y: 0.519001}
+  m_AnchoredPosition: {x: -0.49998856, y: 0.5189972}
   m_SizeDelta: {x: -1, y: -1.0000153}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &56479421
@@ -2345,7 +2345,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.72200006, y: 0.29029074}
   m_AnchorMax: {x: 0.9691676, y: 0.43323645}
-  m_AnchoredPosition: {x: 0.5, y: 0.46899986}
+  m_AnchoredPosition: {x: 0.5, y: 0.46899796}
   m_SizeDelta: {x: -1, y: -2.0000153}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &77460852
@@ -6243,7 +6243,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.7343352, y: 0.69052714}
   m_AnchorMax: {x: 0.9691676, y: 0.8284729}
-  m_AnchoredPosition: {x: -0.5, y: 0.000011444092}
+  m_AnchoredPosition: {x: -0.5, y: 0.000015258789}
   m_SizeDelta: {x: 1, y: -1.0000153}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &505679555
@@ -11482,6 +11482,7 @@ GameObject:
   - component: {fileID: 764975874}
   - component: {fileID: 764975876}
   - component: {fileID: 764975875}
+  - component: {fileID: 764975877}
   m_Layer: 5
   m_Name: Karma
   m_TagString: Untagged
@@ -11540,6 +11541,20 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 764975873}
+--- !u!114 &764975877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 764975873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e0656c2fecd24e61bacb3edcbf0ab90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goodImage: {fileID: 21300000, guid: b20a3604b57054649905e5f6d7d2f464, type: 3}
+  badImage: {fileID: 21300000, guid: a15f1f9285e914e5398cdd461375bb9e, type: 3}
+  neutralImage: {fileID: 21300000, guid: a15f1f9285e914e5398cdd461375bb9e, type: 3}
 --- !u!1 &770796089
 GameObject:
   m_ObjectHideFlags: 0
