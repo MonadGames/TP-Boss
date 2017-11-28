@@ -136,6 +136,10 @@ public class Player : Character {
 		return stats.getDamage (spell);
 	}
 
+	public float getDamage() {
+		return stats.getDamage ();
+	}
+
 	public void addExperience(int exp) {
 		stats.addExperience (exp);
 	}
@@ -149,7 +153,7 @@ public class Player : Character {
 	}
 
 	public float getDefense() {
-		return defense;
+		return stats.getDefense();
 	}
 
 	public void acceptQuest(Quest quest) {

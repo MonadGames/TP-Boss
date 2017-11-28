@@ -34,4 +34,12 @@ public abstract class Sanity {
 	}
 
 	public abstract void checkIfChange ();
+
+	public int getCountOfBadActions() {
+		return countOfBadActions; 
+	}
+
+	public int getCountOfGoodActions() {
+		return countOfGoodActions; 
+	}
 }

@@ -51,6 +51,14 @@ public class Stats : MonoBehaviour {
 		return new Damage (spell, this);
 	}
 
+	public float getDamage() {
+		return sanity.modifyAttack (player.damage);
+	}
+
+	public float getDefense() {
+		return sanity.modifyDefense (player.defense);
+	}
+
 	public void takeDamage(Damage damage){
 		float newDamage = Mathf.Max (0, damage.getDamage () - (sanity.modifyDefense(player.getDefense())));
 		player.getHealth().takeDamage(newDamage);
