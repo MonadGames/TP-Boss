@@ -15,7 +15,7 @@ public class Neutral : Sanity {
 		}	
 	}
 
-	public new bool isNetrual() {
+	public override bool isNetrual() {
 		return true;
 	}
 }

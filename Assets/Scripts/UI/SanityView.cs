@@ -16,7 +16,6 @@ public class SanityView : MonoBehaviour {
 
 	void Start () {
 		player = GameObject.FindObjectOfType<Player> ();
-		actualState = null;
 		myImage = GetComponent<Image> ();
 	}
 
@@ -28,6 +27,7 @@ public class SanityView : MonoBehaviour {
 		Sanity state = player.getStats ().getSanity ();
 		if (state != actualState) {
 			myImage.sprite = (state.isNetrual ()) ? neutralImage : (state.isGood ()) ? goodImage : badImage;
+
 			actualState = state;
 		}
 	}

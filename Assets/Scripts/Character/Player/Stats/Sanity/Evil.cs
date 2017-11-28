@@ -20,7 +20,7 @@ public class Evil : Sanity {
 		return def / 1.2f;
 	}
 
-	public new bool isBad() {
+	public override bool isBad() {
 		return true;
 	}
 }

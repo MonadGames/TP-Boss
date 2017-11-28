@@ -20,7 +20,7 @@ public class Kind : Sanity {
 		return def * 1.2f;
 	}
 
-	public new bool isGood() {
+	public override bool isGood() {
 		return true;
 	}
 }

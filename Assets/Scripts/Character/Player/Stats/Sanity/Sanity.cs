@@ -43,15 +43,15 @@ public abstract class Sanity {
 		return countOfGoodActions; 
 	}
 
-	public bool isNetrual() {
+	public virtual bool isNetrual() {
 		return false;
 	}
 
-	public bool isGood() {
+	public virtual bool isGood() {
 		return false;
 	}
 
-	public bool isBad() {
+	public virtual bool isBad() {
 		return false;
 	}
 }
