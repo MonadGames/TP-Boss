@@ -171,7 +171,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &292261798
 GameObject:
@@ -216,8 +216,8 @@ Camera:
   m_GameObject: {fileID: 292261798}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -351,17 +351,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   intro: 8
   story: 105
-  logo: {fileID: 433157698}
+  logo: {fileID: 435067936}
   video: {fileID: 59477996}
---- !u!1 &433157698
+--- !u!1 &435067936
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 433157700}
-  - component: {fileID: 433157699}
+  - component: {fileID: 435067938}
+  - component: {fileID: 435067937}
   m_Layer: 0
   m_Name: monad-compressed (1)
   m_TagString: Untagged
@@ -369,12 +369,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!328 &433157699
+--- !u!328 &435067937
 VideoPlayer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 433157698}
+  m_GameObject: {fileID: 435067936}
   m_Enabled: 1
   m_VideoClip: {fileID: 32900000, guid: 7269e03a07de542a2a02de2752bdd675, type: 3}
   m_TargetCameraAlpha: 1
@@ -401,18 +401,18 @@ VideoPlayer:
   m_Looping: 0
   m_WaitForFirstFrame: 1
   m_FrameReadyEventEnabled: 0
---- !u!4 &433157700
+--- !u!4 &435067938
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 433157698}
+  m_GameObject: {fileID: 435067936}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1078938385
 GameObject:

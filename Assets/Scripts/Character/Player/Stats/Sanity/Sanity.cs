@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Sanity {
+public class Sanity {
 
 	protected int countOfGoodActions;
 	protected int countOfBadActions;
@@ -33,7 +33,8 @@ public abstract class Sanity {
 		return attack;
 	}
 
-	public abstract void checkIfChange ();
+	public virtual void checkIfChange (){
+	}
 
 	public int getCountOfBadActions() {
 		return countOfBadActions; 

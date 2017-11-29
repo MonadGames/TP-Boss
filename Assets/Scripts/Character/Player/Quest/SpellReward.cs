@@ -12,9 +12,9 @@ public class SpellReward : Reward
 	public override void applyReward(Player player) {
 		player.addSpell (spell);
 		if (goodAction) {
-			player.addGoodAction ();
+			player.getStats ().setSanity (new Kind (player.getStats (), 1, 0));
 		} else if(badAction) {
-			player.addBadAction ();
+			player.getStats ().setSanity (new Evil (player.getStats (), 0, 1));
 		}
 	}
 }

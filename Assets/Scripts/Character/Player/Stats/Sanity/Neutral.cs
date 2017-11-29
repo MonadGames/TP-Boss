@@ -7,7 +7,7 @@ public class Neutral : Sanity {
 	public Neutral(Stats stats, int countOfGoodActions, int countOfBadActions) :base(stats, countOfGoodActions, countOfBadActions){}
 
 
-	public override void checkIfChange (){
+	public new void checkIfChange (){
 		if (countOfBadActions >= countOfGoodActions) {
 			stats.setSanity (new Evil (stats, countOfGoodActions, countOfBadActions));
 		} else if (countOfGoodActions >= countOfBadActions) {
