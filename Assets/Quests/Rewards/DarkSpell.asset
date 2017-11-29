@@ -12,3 +12,5 @@ MonoBehaviour:
   m_Name: DarkSpell
   m_EditorClassIdentifier: 
   spell: {fileID: 1822325375283152, guid: f436281401bdd46069e5141025692f78, type: 2}
+  goodAction: 0
+  badAction: 1

@@ -12,3 +12,5 @@ MonoBehaviour:
   m_Name: LightSpell
   m_EditorClassIdentifier: 
   spell: {fileID: 1300811145041140, guid: b3b1f1cc99d374ceca42df54aa8b0a3f, type: 2}
+  goodAction: 1
+  badAction: 0
