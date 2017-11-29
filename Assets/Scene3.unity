@@ -11554,7 +11554,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goodImage: {fileID: 21300000, guid: b20a3604b57054649905e5f6d7d2f464, type: 3}
   badImage: {fileID: 21300000, guid: a15f1f9285e914e5398cdd461375bb9e, type: 3}
-  neutralImage: {fileID: 21300000, guid: c6dd5cb7a6d17da428c25bcfc4269a5c, type: 3}
+  neutralImage: {fileID: 21300000, guid: b255683786a4a4800ade7816a1dc9e6c, type: 3}
 --- !u!1 &770796089
 GameObject:
   m_ObjectHideFlags: 0
